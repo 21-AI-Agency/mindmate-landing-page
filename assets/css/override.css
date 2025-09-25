@@ -1,0 +1,214 @@
+/* overrides.css - Mindmate brand overrides */
+
+/* Brand color palette */
+:root {
+    --bs-primary: #82CDE0;   /* Light Blue */
+    --bs-secondary: #FFDDBF; /* Light Peach */
+    --bs-primary-rgb: 130, 205, 224;
+    --bs-secondary-rgb: 255, 221, 191;
+}
+
+/* ============================= */
+/* Hero Section (ud-hero)        */
+/* ============================= */
+
+.ud-hero {
+    /* background: linear-gradient(
+            135deg,
+            var(--bs-primary) 0%,
+            var(--bs-secondary) 100%
+    ) !important; */
+    background: #fff !important; /* flat white */
+    color: #1a1a1a;
+    padding: 150px 0;
+}
+
+
+/* ============================= */
+/* Buttons (ud-main-btn, ud-white-btn) */
+/* ============================= */
+.ud-main-btn {
+    background-color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+    color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+.ud-main-btn:hover,
+.ud-main-btn:focus {
+    background-color: #6cb9cf !important;
+    border-color: #6cb9cf !important;
+    color: #fff !important;
+}
+
+.ud-white-btn {
+    background-color: #fff !important;
+    color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+.ud-white-btn:hover,
+.ud-white-btn:focus {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* ============================= */
+/* Navbar links                  */
+/* ============================= */
+.ud-header a {
+    color: var(--bs-primary) !important;
+}
+.ud-header a:hover {
+    color: #6cb9cf !important;
+}
+
+/* ============================= */
+/* FAQ accordion (ud-faq-btn)    */
+/* ============================= */
+.ud-faq-btn:not(.collapsed) {
+    background-color: var(--bs-secondary) !important;
+    color: #000 !important;
+    border-color: var(--bs-secondary) !important;
+}
+
+/* ============================= */
+/* Headings                      */
+/* ============================= */
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+/* Default navbar links (before scroll) */
+.ud-header .navbar-nav .nav-item a {
+    color: #000 !important;       /* White on hero */
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+/* When navbar is sticky (after scroll), make all links black */
+.ud-header.sticky .navbar-nav .nav-item a {
+    color: #000 !important;
+}
+
+.ud-header.sticky .navbar-nav .nav-item a:hover,
+.ud-header.sticky .navbar-nav .nav-item a.active {
+    color: #000 !important;       /* Keep black on hover/active too */
+}
+
+
+/* ============================= */
+/* Store Badges (App Store / Google Play ) */
+/* ============================= */
+.store-badge img {
+    height: 40px;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 0.2s ease;
+}
+
+.store-badge img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ============================= */
+/* Store Badges adjustments      */
+/* ============================= */
+.store-badge img {
+    height: 40px;              /* smaller size */
+    border-radius: 12px;       /* soft rounded corners */
+    background: transparent;   /* no background box */
+    box-shadow: none;
+}
+
+.store-badge img:hover {
+    transform: scale(1.03);    /* subtle hover effect */
+    transition: transform 0.2s ease;
+}
+
+/* Make the badges centered and spaced */
+.ud-hero-buttons {
+    display: flex;
+    gap: 12px;                 /* space between badges */
+    justify-content: center;   /* center them horizontally */
+    flex-wrap: wrap;           /* wrap if screen is small */
+}
+
+/* ============================= */
+/* Hero Heading & Description    */
+/* ============================= */
+.ud-hero-content .ud-hero-title {
+    font-family: 'MidasSans-Semi-Bold', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 55px;
+    line-height: 70px;
+    margin-bottom: 20px;
+    color: #000; /* Black text */
+}
+
+.ud-hero-content .ud-hero-desc {
+    color: #000 !important;   /* Black description */
+    font-size: 20px;
+    line-height: 32px;
+    opacity: 1;               /* Prevent faded look */
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+@media screen and (max-width: 991px) { /* Title and description on smaller screens */
+    .ud-hero-content .ud-hero-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .ud-hero-content .ud-hero-desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* ============================= */
+/* Signup Button  */
+/* ============================= */
+.ud-header .navbar-btn .signup-btn {
+    border-radius: 999px !important;   /* fully oval shape */
+    padding: 10px 28px;               /* balanced size */
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;                 /* prevents shrinking on mobile */
+    background-color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+    color: #fff !important;           /* always white text */
+    transition: all 0.3s ease;
+}
+
+.ud-header .navbar-btn .signup-btn:hover,
+.ud-header .navbar-btn .signup-btn:focus {
+    background-color: #6abac5 !important; /* slightly darker blue on hover */
+    border-color: #6bd8d4 !important;
+    color: #fff !important;               /* keep white text on hover */
+}
+
+
+
+/* ============================= */
+/* Global Button Responsive Fix  */
+/* ============================= */
+@media (max-width: 576px) {
+    .ud-main-btn,
+    .ud-white-btn,
+    .signup-btn {
+        padding: 8px 24px;
+        font-size: 0.95rem;
+        min-width: 100px;
+    }
+}
+
+
+

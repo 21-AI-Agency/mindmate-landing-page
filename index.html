@@ -154,13 +154,15 @@
               </p>
                 <ul class="ud-hero-buttons">
                     <li>
-                        <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener" class="store-badge">
-                            <img src="assets/images/badge/appstore-badge.svg" alt="App Store’dan İndirin" />
+<!--                        <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener" class="store-badge">-->
+                        <a href="#" class="store-badge" data-bs-toggle="modal" data-bs-target="#comingSoonModal">
+                        <img src="assets/images/badge/appstore-badge.svg" alt="App Store’dan İndirin" />
                         </a>
                     </li>
                     <li>
-                        <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" rel="noopener" class="store-badge">
-                            <img src="assets/images/badge/googleplay-badge.svg" alt="Google Play’den Edinin" />
+<!--                        <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" rel="noopener" class="store-badge">-->
+                        <a href="#" class="store-badge" data-bs-toggle="modal" data-bs-target="#comingSoonModal">
+                        <img src="assets/images/badge/googleplay-badge.svg" alt="Google Play’den Edinin" />
                         </a>
                     </li>
                 </ul>
@@ -189,6 +191,25 @@
       </div>
     </section>
     <!-- ====== Hero End ====== -->
+
+    <!-- Coming Soon Modal -->
+    <div class="modal fade" id="comingSoonModal" tabindex="-1" aria-labelledby="comingSoonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title w-100" id="comingSoonModalLabel">Çok Yakında Sizlerle!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Uygulamamız çok yakında App Store ve Google Play’de yayında olacak.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tamam</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- ====== Features Start ====== -->
     <section id="features" class="ud-features">
@@ -384,325 +405,274 @@
     </section>
     <!-- ====== Pricing End ====== -->
 
-    <!--    &lt;!&ndash; ====== FAQ Start ====== &ndash;&gt;-->  <!--to do -->
-<!--    <section id="faq" class="ud-faq">-->
-<!--      <div class="shape">-->
-<!--        <img src="assets/images/faq/shape.svg" alt="shape" />-->
-<!--      </div>-->
-<!--      <div class="container">-->
-<!--        <div class="row">-->
-<!--          <div class="col-lg-12">-->
-<!--            <div class="ud-section-title text-center mx-auto">-->
-<!--              <span>FAQ</span>-->
-<!--              <h2>Any Questions? Answered</h2>-->
-<!--              <p>-->
-<!--                There are many variations of passages of Lorem Ipsum available-->
-<!--                but the majority have suffered alteration in some form.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
+        <!-- ====== FAQ Start ====== -->  to do
+    <section id="faq" class="ud-faq">
+      <div class="shape">
+        <img src="assets/images/faq/shape.svg" alt="shape" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <span>FAQ</span>
+              <h2>Any Questions? Answered</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available
+                but the majority have suffered alteration in some form.
+              </p>
+            </div>
+          </div>
+        </div>
 
-<!--        <div class="row">-->
-<!--          <div class="col-lg-6">-->
-<!--            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">-->
-<!--              <div class="accordion">-->
-<!--                <button-->
-<!--                  class="ud-faq-btn collapsed"-->
-<!--                  data-bs-toggle="collapse"-->
-<!--                  data-bs-target="#collapseOne"-->
-<!--                >-->
-<!--                  <span class="icon flex-shrink-0">-->
-<!--                    <i class="lni lni-chevron-down"></i>-->
-<!--                  </span>-->
-<!--                  <span>How to use UIdeck?</span>-->
-<!--                </button>-->
-<!--                <div id="collapseOne" class="accordion-collapse collapse">-->
-<!--                  <div class="ud-faq-body">-->
-<!--                    Lorem Ipsum is simply dummy text of the printing and-->
-<!--                    typesetting industry. Lorem Ipsum has been the industry's-->
-<!--                    standard dummy text ever since the 1500s, when an unknown-->
-<!--                    printer took a galley of type and scrambled it to make a-->
-<!--                    type specimen book.-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">-->
-<!--              <div class="accordion">-->
-<!--                <button-->
-<!--                  class="ud-faq-btn collapsed"-->
-<!--                  data-bs-toggle="collapse"-->
-<!--                  data-bs-target="#collapseTwo"-->
-<!--                >-->
-<!--                  <span class="icon flex-shrink-0">-->
-<!--                    <i class="lni lni-chevron-down"></i>-->
-<!--                  </span>-->
-<!--                  <span>How to download icons from Lineicons?</span>-->
-<!--                </button>-->
-<!--                <div id="collapseTwo" class="accordion-collapse collapse">-->
-<!--                  <div class="ud-faq-body">-->
-<!--                    Lorem Ipsum is simply dummy text of the printing and-->
-<!--                    typesetting industry. Lorem Ipsum has been the industry's-->
-<!--                    standard dummy text ever since the 1500s, when an unknown-->
-<!--                    printer took a galley of type and scrambled it to make a-->
-<!--                    type specimen book.-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">-->
-<!--              <div class="accordion">-->
-<!--                <button-->
-<!--                  class="ud-faq-btn collapsed"-->
-<!--                  data-bs-toggle="collapse"-->
-<!--                  data-bs-target="#collapseThree"-->
-<!--                >-->
-<!--                  <span class="icon flex-shrink-0">-->
-<!--                    <i class="lni lni-chevron-down"></i>-->
-<!--                  </span>-->
-<!--                  <span>Is GrayGrids part of UIdeck?</span>-->
-<!--                </button>-->
-<!--                <div id="collapseThree" class="accordion-collapse collapse">-->
-<!--                  <div class="ud-faq-body">-->
-<!--                    Lorem Ipsum is simply dummy text of the printing and-->
-<!--                    typesetting industry. Lorem Ipsum has been the industry's-->
-<!--                    standard dummy text ever since the 1500s, when an unknown-->
-<!--                    printer took a galley of type and scrambled it to make a-->
-<!--                    type specimen book.-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-6">-->
-<!--            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">-->
-<!--              <div class="accordion">-->
-<!--                <button-->
-<!--                  class="ud-faq-btn collapsed"-->
-<!--                  data-bs-toggle="collapse"-->
-<!--                  data-bs-target="#collapseFour"-->
-<!--                >-->
-<!--                  <span class="icon flex-shrink-0">-->
-<!--                    <i class="lni lni-chevron-down"></i>-->
-<!--                  </span>-->
-<!--                  <span>Can I use this template for commercial project?</span>-->
-<!--                </button>-->
-<!--                <div id="collapseFour" class="accordion-collapse collapse">-->
-<!--                  <div class="ud-faq-body">-->
-<!--                    Lorem Ipsum is simply dummy text of the printing and-->
-<!--                    typesetting industry. Lorem Ipsum has been the industry's-->
-<!--                    standard dummy text ever since the 1500s, when an unknown-->
-<!--                    printer took a galley of type and scrambled it to make a-->
-<!--                    type specimen book.-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">-->
-<!--              <div class="accordion">-->
-<!--                <button-->
-<!--                  class="ud-faq-btn collapsed"-->
-<!--                  data-bs-toggle="collapse"-->
-<!--                  data-bs-target="#collapseFive"-->
-<!--                >-->
-<!--                  <span class="icon flex-shrink-0">-->
-<!--                    <i class="lni lni-chevron-down"></i>-->
-<!--                  </span>-->
-<!--                  <span>Do you have plan releasing Play Pro?</span>-->
-<!--                </button>-->
-<!--                <div id="collapseFive" class="accordion-collapse collapse">-->
-<!--                  <div class="ud-faq-body">-->
-<!--                    Lorem Ipsum is simply dummy text of the printing and-->
-<!--                    typesetting industry. Lorem Ipsum has been the industry's-->
-<!--                    standard dummy text ever since the 1500s, when an unknown-->
-<!--                    printer took a galley of type and scrambled it to make a-->
-<!--                    type specimen book.-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">-->
-<!--              <div class="accordion">-->
-<!--                <button-->
-<!--                  class="ud-faq-btn collapsed"-->
-<!--                  data-bs-toggle="collapse"-->
-<!--                  data-bs-target="#collapseSix"-->
-<!--                >-->
-<!--                  <span class="icon flex-shrink-0">-->
-<!--                    <i class="lni lni-chevron-down"></i>-->
-<!--                  </span>-->
-<!--                  <span>Where and how to host this template?</span>-->
-<!--                </button>-->
-<!--                <div id="collapseSix" class="accordion-collapse collapse">-->
-<!--                  <div class="ud-faq-body">-->
-<!--                    Lorem Ipsum is simply dummy text of the printing and-->
-<!--                    typesetting industry. Lorem Ipsum has been the industry's-->
-<!--                    standard dummy text ever since the 1500s, when an unknown-->
-<!--                    printer took a galley of type and scrambled it to make a-->
-<!--                    type specimen book.-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; ====== FAQ End ====== &ndash;&gt;-->
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>How to use UIdeck?</span>
+                </button>
+                <div id="collapseOne" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>How to download icons from Lineicons?</span>
+                </button>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Is GrayGrids part of UIdeck?</span>
+                </button>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Can I use this template for commercial project?</span>
+                </button>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Do you have plan releasing Play Pro?</span>
+                </button>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Where and how to host this template?</span>
+                </button>
+                <div id="collapseSix" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== FAQ End ====== -->
 
-<!--    &lt;!&ndash; ====== Testimonials Start ====== &ndash;&gt;-->  <!--to do -->
-<!--    <section id="testimonials" class="ud-testimonials">-->
-<!--      <div class="container">-->
-<!--        <div class="row">-->
-<!--          <div class="col-lg-12">-->
-<!--            <div class="ud-section-title mx-auto text-center">-->
-<!--              <span>Testimonials</span>-->
-<!--              <h2>What our Customers Says</h2>-->
-<!--              <p>-->
-<!--                There are many variations of passages of Lorem Ipsum available-->
-<!--                but the majority have suffered alteration in some form.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
+    <!-- ====== Testimonials Start ====== -->
+    <section id="testimonials" class="ud-testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ud-section-title mx-auto text-center">
+                        <span>Kullanıcı Yorumları</span>
+                        <h2>Gerçek Deneyimler</h2>
+                        <p>
+                            Sohbet Terapi’yi deneyen kullanıcılarımızdan bazı samimi geri bildirimler
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-<!--        <div class="row">-->
-<!--          <div class="col-lg-4 col-md-6">-->
-<!--            <div-->
-<!--              class="ud-single-testimonial wow fadeInUp"-->
-<!--              data-wow-delay=".1s"-->
-<!--            >-->
-<!--              <div class="ud-testimonial-ratings">-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--              </div>-->
-<!--              <div class="ud-testimonial-content">-->
-<!--                <p>-->
-<!--                  “Our members are so impressed. It's intuitive. It's clean.-->
-<!--                  It's distraction free. If you're building a community.-->
-<!--                </p>-->
-<!--              </div>-->
-<!--              <div class="ud-testimonial-info">-->
-<!--                <div class="ud-testimonial-image">-->
-<!--                  <img-->
-<!--                    src="assets/images/testimonials/author-01.png"-->
-<!--                    alt="author"-->
-<!--                  />-->
-<!--                </div>-->
-<!--                <div class="ud-testimonial-meta">-->
-<!--                  <h4>Sabo Masties</h4>-->
-<!--                  <p>Founder @UIdeck</p>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-4 col-md-6">-->
-<!--            <div-->
-<!--              class="ud-single-testimonial wow fadeInUp"-->
-<!--              data-wow-delay=".15s"-->
-<!--            >-->
-<!--              <div class="ud-testimonial-ratings">-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--              </div>-->
-<!--              <div class="ud-testimonial-content">-->
-<!--                <p>-->
-<!--                  “Our members are so impressed. It's intuitive. It's clean.-->
-<!--                  It's distraction free. If you're building a community.-->
-<!--                </p>-->
-<!--              </div>-->
-<!--              <div class="ud-testimonial-info">-->
-<!--                <div class="ud-testimonial-image">-->
-<!--                  <img-->
-<!--                    src="assets/images/testimonials/author-02.png"-->
-<!--                    alt="author"-->
-<!--                  />-->
-<!--                </div>-->
-<!--                <div class="ud-testimonial-meta">-->
-<!--                  <h4>Margin Gesmu</h4>-->
-<!--                  <p>Founder @Lineicons</p>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-4 col-md-6">-->
-<!--            <div-->
-<!--              class="ud-single-testimonial wow fadeInUp"-->
-<!--              data-wow-delay=".2s"-->
-<!--            >-->
-<!--              <div class="ud-testimonial-ratings">-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--                <i class="lni lni-star-filled"></i>-->
-<!--              </div>-->
-<!--              <div class="ud-testimonial-content">-->
-<!--                <p>-->
-<!--                  “Our members are so impressed. It's intuitive. It's clean.-->
-<!--                  It's distraction free. If you're building a community.-->
-<!--                </p>-->
-<!--              </div>-->
-<!--              <div class="ud-testimonial-info">-->
-<!--                <div class="ud-testimonial-image">-->
-<!--                  <img-->
-<!--                    src="assets/images/testimonials/author-03.png"-->
-<!--                    alt="author"-->
-<!--                  />-->
-<!--                </div>-->
-<!--                <div class="ud-testimonial-meta">-->
-<!--                  <h4>William Smith</h4>-->
-<!--                  <p>Founder @GrayGrids</p>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--          <div class="col-lg-12">-->
-<!--            <div class="ud-brands wow fadeInUp" data-wow-delay=".2s">-->
-<!--              <div class="ud-title">-->
-<!--                <h6>Trusted and Used by</h6>-->
-<!--              </div>-->
-<!--              <div class="ud-brands-logo">-->
-<!--                <div class="ud-single-logo">-->
-<!--                  <img src="assets/images/brands/ayroui.svg" alt="ayroui" />-->
-<!--                </div>-->
-<!--                <div class="ud-single-logo">-->
-<!--                  <img src="assets/images/brands/uideck.svg" alt="uideck" />-->
-<!--                </div>-->
-<!--                <div class="ud-single-logo">-->
-<!--                  <img-->
-<!--                    src="assets/images/brands/graygrids.svg"-->
-<!--                    alt="graygrids"-->
-<!--                  />-->
-<!--                </div>-->
-<!--                <div class="ud-single-logo">-->
-<!--                  <img-->
-<!--                    src="assets/images/brands/lineicons.svg"-->
-<!--                    alt="lineicons"-->
-<!--                  />-->
-<!--                </div>-->
-<!--                <div class="ud-single-logo">-->
-<!--                  <img-->
-<!--                    src="assets/images/brands/ecommerce-html.svg"-->
-<!--                    alt="ecommerce-html"-->
-<!--                  />-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; ====== Testimonials End ====== &ndash;&gt;-->
+            <div class="row">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="ud-single-testimonial wow fadeInUp" data-wow-delay=".1s">
+                        <div class="ud-testimonial-ratings">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                        <div class="ud-testimonial-content">
+                            <p>
+                                “Bazen anlatacak kimse bulamıyordum. Sohbet Terapi sayesinde içimi dökebiliyorum ve gerçekten daha hafif hissediyorum.”
+                            </p>
+                        </div>
+                        <div class="ud-testimonial-info">
+                            <div class="ud-testimonial-image">
+                                <img src="assets/images/testimonials/author-01.png" alt="author" />
+                            </div>
+                            <div class="ud-testimonial-meta">
+                                <h4>Elif K.</h4>
+                                <p>Üniversite Öğrencisi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="ud-single-testimonial wow fadeInUp" data-wow-delay=".15s">
+                        <div class="ud-testimonial-ratings">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                        <div class="ud-testimonial-content">
+                            <p>
+                                “Yargılanmadan konuşabilmek çok değerli. Uygulama bana gerçekten güvenli bir alan sağlıyor.”
+                            </p>
+                        </div>
+                        <div class="ud-testimonial-info">
+                            <div class="ud-testimonial-image">
+                                <img src="assets/images/testimonials/author-02.png" alt="author" />
+                            </div>
+                            <div class="ud-testimonial-meta">
+                                <h4>Ahmet Y.</h4>
+                                <p>Genç Profesyonel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="ud-single-testimonial wow fadeInUp" data-wow-delay=".2s">
+                        <div class="ud-testimonial-ratings">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                        <div class="ud-testimonial-content">
+                            <p>
+                                “Geceleri kaygılarım artıyordu. Sohbet Terapi’de birkaç mesaj yazmak bile bana iyi geliyor. Sanki biri gerçekten dinliyor.”
+                            </p>
+                        </div>
+                        <div class="ud-testimonial-info">
+                            <div class="ud-testimonial-image">
+                                <img src="assets/images/testimonials/author-03.png" alt="author" />
+                            </div>
+                            <div class="ud-testimonial-meta">
+                                <h4>Zeynep A.</h4>
+                                <p>Yeni Mezun</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== Testimonials End ====== -->
+
 
 <!--    &lt;!&ndash; ====== Team Start ====== &ndash;&gt;--> <!--to do -->
 <!--    <section id="team" class="ud-team">-->
@@ -978,240 +948,78 @@
 <!--    </section>-->
 <!--    &lt;!&ndash; ====== Contact End ====== &ndash;&gt;-->
 
-<!--    &lt;!&ndash; ====== Footer Start ====== &ndash;&gt;-->
-<!--    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">-->
-<!--      <div class="shape shape-1">-->
-<!--        <img src="assets/images/footer/shape-1.svg" alt="shape" />-->
-<!--      </div>-->
-<!--      <div class="shape shape-2">-->
-<!--        <img src="assets/images/footer/shape-2.svg" alt="shape" />-->
-<!--      </div>-->
-<!--      <div class="shape shape-3">-->
-<!--        <img src="assets/images/footer/shape-3.svg" alt="shape" />-->
-<!--      </div>-->
-<!--      <div class="ud-footer-widgets">-->
-<!--        <div class="container">-->
-<!--          <div class="row">-->
-<!--            <div class="col-xl-3 col-lg-4 col-md-6">-->
-<!--              <div class="ud-widget">-->
-<!--                <a href="index.html" class="ud-footer-logo">-->
-<!--                  <img src="assets/images/logo/logo.svg" alt="logo" />-->
-<!--                </a>-->
-<!--                <p class="ud-widget-desc">-->
-<!--                  We create digital experiences for brands and companies by-->
-<!--                  using technology.-->
-<!--                </p>-->
-<!--                <ul class="ud-widget-socials">-->
-<!--                  <li>-->
-<!--                    <a href="https://twitter.com/MusharofChy">-->
-<!--                      <i class="lni lni-facebook-filled"></i>-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="https://twitter.com/MusharofChy">-->
-<!--                      <i class="lni lni-twitter-filled"></i>-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="https://twitter.com/MusharofChy">-->
-<!--                      <i class="lni lni-instagram-filled"></i>-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="https://twitter.com/MusharofChy">-->
-<!--                      <i class="lni lni-linkedin-original"></i>-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
+    <!-- ====== Footer Start ====== -->
+    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
+        <div class="ud-footer-widgets">
+            <div class="container">
+                <div class="row">
 
-<!--            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">-->
-<!--              <div class="ud-widget">-->
-<!--                <h5 class="ud-widget-title">About Us</h5>-->
-<!--                <ul class="ud-widget-links">-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">Home</a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">Features</a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">About</a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">Testimonial</a>-->
-<!--                  </li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">-->
-<!--              <div class="ud-widget">-->
-<!--                <h5 class="ud-widget-title">Features</h5>-->
-<!--                <ul class="ud-widget-links">-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">How it works</a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">Privacy policy</a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">Terms of service</a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a href="javascript:void(0)">Refund policy</a>-->
-<!--                  </li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">-->
-<!--              <div class="ud-widget">-->
-<!--                <h5 class="ud-widget-title">Our Products</h5>-->
-<!--                <ul class="ud-widget-links">-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://lineicons.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                      >Lineicons-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://ecommercehtml.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                      >Ecommerce HTML</a-->
-<!--                    >-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://ayroui.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                      >Ayro UI</a-->
-<!--                    >-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://graygrids.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                      >Plain Admin</a-->
-<!--                    >-->
-<!--                  </li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10">-->
-<!--              <div class="ud-widget">-->
-<!--                <h5 class="ud-widget-title">Partners</h5>-->
-<!--                <ul class="ud-widget-brands">-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://ayroui.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                    >-->
-<!--                      <img-->
-<!--                        src="assets/images/footer/brands/ayroui.svg"-->
-<!--                        alt="ayroui"-->
-<!--                      />-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://ecommercehtml.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                    >-->
-<!--                      <img-->
-<!--                        src="assets/images/footer/brands/ecommerce-html.svg"-->
-<!--                        alt="ecommerce-html"-->
-<!--                      />-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://graygrids.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                    >-->
-<!--                      <img-->
-<!--                        src="assets/images/footer/brands/graygrids.svg"-->
-<!--                        alt="graygrids"-->
-<!--                      />-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://lineicons.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                    >-->
-<!--                      <img-->
-<!--                        src="assets/images/footer/brands/lineicons.svg"-->
-<!--                        alt="lineicons"-->
-<!--                      />-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://uideck.com/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                    >-->
-<!--                      <img-->
-<!--                        src="assets/images/footer/brands/uideck.svg"-->
-<!--                        alt="uideck"-->
-<!--                      />-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                  <li>-->
-<!--                    <a-->
-<!--                      href="https://tailwindtemplates.co/"-->
-<!--                      rel="nofollow noopner"-->
-<!--                      target="_blank"-->
-<!--                    >-->
-<!--                      <img-->
-<!--                        src="assets/images/footer/brands/tailwindtemplates.svg"-->
-<!--                        alt="tailwindtemplates"-->
-<!--                      />-->
-<!--                    </a>-->
-<!--                  </li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="ud-footer-bottom">-->
-<!--        <div class="container">-->
-<!--          <div class="row">-->
-<!--            <div class="col-md-8">-->
-<!--              <ul class="ud-footer-bottom-left">-->
-<!--                <li>-->
-<!--                  <a href="javascript:void(0)">Privacy policy</a>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                  <a href="javascript:void(0)">Support policy</a>-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                  <a href="javascript:void(0)">Terms of service</a>-->
-<!--                </li>-->
-<!--              </ul>-->
-<!--            </div>-->
-<!--            <div class="col-md-4">-->
-<!--              <p class="ud-footer-bottom-right">-->
-<!--                Designed and Developed by-->
-<!--                <a href="https://uideck.com" rel="nofollow">UIdeck</a>-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </footer>-->
-<!--    &lt;!&ndash; ====== Footer End ====== &ndash;&gt;-->
+                    <!-- Logo ve kısa açıklama -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="ud-widget">
+                            <a href="index.html" class="ud-footer-logo">
+                                <img src="assets/images/logo/logo.svg" alt="Sohbet Terapi" />
+                            </a>
+                            <p class="ud-widget-desc">
+                                Yapay zekâ destekli sohbet ile kendini daha iyi hisset.
+                                Anonim, güvenli ve 7/24 erişilebilir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hızlı Linkler -->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="ud-widget">
+                            <h5 class="ud-widget-title">Hızlı Erişim</h5>
+                            <ul class="ud-widget-links">
+                                <li><a href="#about">Hakkımızda</a></li>
+                                <li><a href="#features">Nasıl Çalışır</a></li>
+                                <li><a href="#pricing">Paketlerimiz</a></li>
+                                <li><a href="#contact">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Yasal Linkler -->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="ud-widget">
+                            <h5 class="ud-widget-title">Yasal</h5>
+                            <ul class="ud-widget-links">
+                                <li><a href="/footer-pages/privacy.html">Gizlilik Politikası</a></li>
+                                <li><a href="/footer-pages/terms.html">Kullanım Şartları</a></li>
+                                <li><a href="/footer-pages/kvkk.html">KVKK Aydınlatma</a></li>
+                                <li><a href="/footer-pages/cookies.html">Çerez Politikası</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Acil Durum -->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="ud-widget">
+                            <h5 class="ud-widget-title">Acil Durum</h5>
+                            <p>Acil bir durumda lütfen <strong>112</strong>’yi arayın.
+                                Sohbet Terapi kriz müdahalesi sağlamaz.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ud-footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="ud-footer-bottom-right">
+                            © 2025 Sohbet Terapi • Tüm hakları saklıdır
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== Footer End ====== -->
+
 
     <!-- ====== Back To Top Start ====== -->
     <a href="javascript:void(0)" class="back-to-top">

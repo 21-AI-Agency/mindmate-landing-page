@@ -56,9 +56,7 @@
 /* ============================= */
 /* Navbar links                  */
 /* ============================= */
-.ud-header a {
-    color: var(--bs-primary) !important;
-}
+
 .ud-header a:hover {
     color: #6cb9cf !important;
 }
@@ -209,6 +207,47 @@ h1, h2, h3, h4 {
         min-width: 100px;
     }
 }
+
+/* === FAQ Section Custom Overrides === */
+
+/* Faster and smoother accordion animation */
+.accordion-collapse {
+    transition: height 0.18s ease-out !important;
+    background: #f9f9f9;          /* prevents orange background bleed */
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+/* Answer box styling */
+.ud-faq-body {
+    background: #f9f9f9;
+    padding: 14px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* FAQ button hover state */
+.ud-faq-btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* Highlight active FAQ question */
+.ud-faq-btn:not(.collapsed) {
+    background-color: #f2fdf9;
+    font-weight: 600;
+}
+
+/* Rotate chevron icon when open */
+.ud-faq-btn .lni-chevron-down {
+    transition: transform 0.2s ease;
+}
+.ud-faq-btn:not(.collapsed) .lni-chevron-down {
+    transform: rotate(180deg);
+}
+
+
+
+
 
 
 

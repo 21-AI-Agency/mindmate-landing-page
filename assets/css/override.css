@@ -245,8 +245,20 @@ h1, h2, h3, h4 {
     transform: rotate(180deg);
 }
 
+/* ============================= */
+/* Global Button Colour Fix */
+/* ============================= */
 
+/* Override feature icons */
+.ud-feature-icon {
+    background: var(--bs-primary) !important; /* senin seçtiğin açık mavi */
+    color: #fff !important;
+}
 
+/* Override section small titles */
+.ud-section-title span {
+    color: var(--bs-primary) !important;
+}
 
 
 

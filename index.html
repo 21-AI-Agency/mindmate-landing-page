@@ -43,7 +43,12 @@
 
           <!-- Theme Color -->
           <meta name="theme-color" content="#5bbad5" />
-      </head>
+
+          <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+          />
+  </head>
 
 
     <!-- ===== All CSS files ===== -->
@@ -69,28 +74,18 @@
               </button>
 
               <div class="navbar-collapse">
-                <ul id="nav" class="navbar-nav mx-auto">
-                  <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#home">Merhaba </a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#about">Hakkımızda</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#pricing">Paketlerimiz</a>
-                  </li>
-
-                    <li class="nav-item">
-                        <a href="blog.html">Blog</a>
-                    </li>
-
-                    <!--                  <li class="nav-item">-->
+                  <ul id="nav" class="navbar-nav mx-auto">
+                      <li class="nav-item"><a class="ud-menu-scroll" href="#home">Merhaba</a></li>
+                      <li class="nav-item"><a class="ud-menu-scroll" href="#features">Özellikler</a></li>
+                      <li class="nav-item"><a class="ud-menu-scroll" href="#about">Hakkımızda</a></li>
+                      <li class="nav-item"><a class="ud-menu-scroll" href="#pricing">Paketlerimiz</a></li>
+                      <li class="nav-item"><a class="ud-menu-scroll" href="#faq">S.S.S.</a></li>
+                      <li class="nav-item"><a href="blog.html">Blog</a></li>
+                      <li class="nav-item"><a class="ud-menu-scroll" href="#contact">Destek</a></li>
+                  </ul>
+                  <!--                  <li class="nav-item">-->
 <!--                    <a class="ud-menu-scroll" href="#team">Team</a>-->
 <!--                  </li>-->
-                  <li class="nav-item">
-                    <a class="ud-menu-scroll" href="#contact">Destek</a>
-                  </li>
 <!--                  <li class="nav-item nav-item-has-children">-->
 <!--                    <a href="javascript:void(0)"> Pages </a>-->
 <!--                    <ul class="ud-submenu">-->
@@ -129,13 +124,7 @@
 <!--                      </li>-->
 <!--                    </ul>-->
 <!--                  </li>-->
-                </ul>
               </div>
-                <div class="navbar-btn d-none d-sm-inline-block">
-                    <a class="ud-main-btn ud-white-btn signup-btn" href="javascript:void(0)">
-                        Kaydol
-                    </a>
-                </div>
             </nav>
           </div>
         </div>
@@ -170,12 +159,6 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div
-              class="ud-hero-brands-wrapper wow fadeInUp"
-              data-wow-delay=".3s"
-            >
-              <img src="assets/images/hero/brand.svg" alt="brand" />
             </div>
             <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
               <img src="assets/images/hero/screens.png" alt="hero-image" />
@@ -578,86 +561,160 @@
                 </div>
             </div>
 
-            <div class="row">
-                <!-- Testimonial 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="ud-single-testimonial wow fadeInUp" data-wow-delay=".1s">
-                        <div class="ud-testimonial-ratings">
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                        </div>
-                        <div class="ud-testimonial-content">
-                            <p>
-                                “Bazen anlatacak kimse bulamıyordum. Sohbet Terapi sayesinde içimi dökebiliyorum ve gerçekten daha hafif hissediyorum.”
-                            </p>
-                        </div>
-                        <div class="ud-testimonial-info">
-                            <div class="ud-testimonial-image">
-                                <img src="assets/images/testimonials/author-01.png" alt="author" />
-                            </div>
-                            <div class="ud-testimonial-meta">
-                                <h4>Elif K.</h4>
-                                <p>Üniversite Öğrencisi</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Swiper Container -->
+            <div class="swiper ud-testimonials-swiper">
+                <div class="swiper-wrapper">
 
-                <!-- Testimonial 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="ud-single-testimonial wow fadeInUp" data-wow-delay=".15s">
-                        <div class="ud-testimonial-ratings">
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                        </div>
-                        <div class="ud-testimonial-content">
-                            <p>
-                                “Yargılanmadan konuşabilmek çok değerli. Uygulama bana gerçekten güvenli bir alan sağlıyor.”
-                            </p>
-                        </div>
-                        <div class="ud-testimonial-info">
-                            <div class="ud-testimonial-image">
-                                <img src="assets/images/testimonials/author-02.png" alt="author" />
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="ud-single-testimonial">
+                            <div class="ud-testimonial-ratings">
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
                             </div>
-                            <div class="ud-testimonial-meta">
-                                <h4>Ahmet Y.</h4>
-                                <p>Genç Profesyonel</p>
+                            <div class="ud-testimonial-content">
+                                <p>
+                                    “Bazen anlatacak kimse bulamıyordum. Sohbet Terapi sayesinde içimi dökebiliyorum ve gerçekten daha hafif hissediyorum.”
+                                </p>
+                            </div>
+                            <div class="ud-testimonial-info">
+                                <div class="ud-testimonial-image">
+                                    <img src="assets/images/testimonials/author-01.png" alt="author" />
+                                </div>
+                                <div class="ud-testimonial-meta">
+                                    <h4>Elif K.</h4>
+                                    <p>Üniversite Öğrencisi</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="ud-single-testimonial wow fadeInUp" data-wow-delay=".2s">
-                        <div class="ud-testimonial-ratings">
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                        </div>
-                        <div class="ud-testimonial-content">
-                            <p>
-                                “Geceleri kaygılarım artıyordu. Sohbet Terapi’de birkaç mesaj yazmak bile bana iyi geliyor. Sanki biri gerçekten dinliyor.”
-                            </p>
-                        </div>
-                        <div class="ud-testimonial-info">
-                            <div class="ud-testimonial-image">
-                                <img src="assets/images/testimonials/author-03.png" alt="author" />
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="ud-single-testimonial">
+                            <div class="ud-testimonial-ratings">
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
                             </div>
-                            <div class="ud-testimonial-meta">
-                                <h4>Zeynep A.</h4>
-                                <p>Yeni Mezun</p>
+                            <div class="ud-testimonial-content">
+                                <p>
+                                    “Yargılanmadan konuşabilmek çok değerli. Uygulama bana gerçekten güvenli bir alan sağlıyor.”
+                                </p>
+                            </div>
+                            <div class="ud-testimonial-info">
+                                <div class="ud-testimonial-image">
+                                    <img src="assets/images/testimonials/author-02.png" alt="author" />
+                                </div>
+                                <div class="ud-testimonial-meta">
+                                    <h4>Ahmet Y.</h4>
+                                    <p>Genç Profesyonel</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="ud-single-testimonial">
+                            <div class="ud-testimonial-ratings">
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                            </div>
+                            <div class="ud-testimonial-content">
+                                <p>
+                                    “Geceleri kaygılarım artıyordu. Sohbet Terapi’de birkaç mesaj yazmak bile bana iyi geliyor. Sanki biri gerçekten dinliyor.”
+                                </p>
+                            </div>
+                            <div class="ud-testimonial-info">
+                                <div class="ud-testimonial-image">
+                                    <img src="assets/images/testimonials/author-03.png" alt="author" />
+                                </div>
+                                <div class="ud-testimonial-meta">
+                                    <h4>Zeynep A.</h4>
+                                    <p>Yeni Mezun</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="ud-single-testimonial">
+                            <div class="ud-testimonial-ratings">
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                            </div>
+                            <div class="ud-testimonial-content">
+                                <p>
+                                    “İş stresinden sonra rahatlamak için birebir. Sanki karşımdaki gerçekten beni anlıyor.”
+                                </p>
+                            </div>
+                            <div class="ud-testimonial-info">
+                                <div class="ud-testimonial-image">
+                                    <img src="assets/images/testimonials/author-04.png" alt="author" />
+                                </div>
+                                <div class="ud-testimonial-meta">
+                                    <h4>Mehmet D.</h4>
+                                    <p>Mühendis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide">
+                        <div class="ud-single-testimonial">
+                            <div class="ud-testimonial-ratings">
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                            </div>
+                            <div class="ud-testimonial-content">
+                                <p>
+                                    “Kendimi ifade etmekte zorlanıyordum, burada yazarak anlatabilmek çok iyi geldi.”
+                                </p>
+                            </div>
+                            <div class="ud-testimonial-info">
+                                <div class="ud-testimonial-image">
+                                    <img src="assets/images/testimonials/author-05.png" alt="author" />
+                                </div>
+                                <div class="ud-testimonial-meta">
+                                    <h4>Selin T.</h4>
+                                    <p>Lise Öğrencisi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="swiper-slide">
+                        <div class="ud-single-testimonial">
+                            <div class="ud-testimonial-ratings">
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i>
+                                <i class="lni lni-star-filled"></i>
+                            </div>
+                            <div class="ud-testimonial-content">
+                                <p>
+                                    “Uykusuz kaldığım gecelerde sohbet etmek kaygımı azalttı. Kendimi yalnız hissetmiyorum artık.”
+                                </p>
+                            </div>
+                            <div class="ud-testimonial-info">
+                                <div class="ud-testimonial-image">
+                                    <img src="assets/images/testimonials/author-06.png" alt="author" />
+                                </div>
+                                <div class="ud-testimonial-meta">
+                                    <h4>Burak S.</h4>
+                                    <p>Üniversite Mezunu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -665,7 +722,9 @@
     <!-- ====== Testimonials End ====== -->
 
 
-<!--    &lt;!&ndash; ====== Team Start ====== &ndash;&gt;--> <!--to do -->
+
+
+    <!--    &lt;!&ndash; ====== Team Start ====== &ndash;&gt;--> <!--to do -->
 <!--    <section id="team" class="ud-team">-->
 <!--      <div class="container">-->
 <!--        <div class="row">-->
@@ -935,6 +994,40 @@
     </section>
     <!-- ====== Contact End ====== -->
 
+    <!-- ====== Social Media Follow Start ====== -->
+    <section class="ud-social-follow">
+        <div class="container text-center">
+            <div class="ud-section-title mx-auto text-center">
+                <h2>Sosyal Medyadan Takip Et</h2>
+            </div>
+            <ul class="ud-social-icons">
+                <li>
+                    <a href="https://www.instagram.com/sohbet_terapi_app" target="_blank" rel="noopener">
+                        <i class="lni lni-instagram-filled"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@sohbet_terapi_app" target="_blank" rel="noopener">
+                        <i class="lni lni-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@sohbet_terapi_app" target="_blank" rel="noopener">
+                        <i class="lni lni-tiktok"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/sohbet_terapi" target="_blank" rel="noopener">
+                        <i class="lni lni-twitter-filled"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- ====== Social Media Follow End ====== -->
+
+
+
     <!-- ====== Footer Start ====== -->
     <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
         <div class="ud-footer-widgets">
@@ -959,9 +1052,12 @@
                         <div class="ud-widget">
                             <h5 class="ud-widget-title">Hızlı Erişim</h5>
                             <ul class="ud-widget-links">
-                                <li><a href="#about">Hakkımızda</a></li>
+                                <li><a href="#home">Merhaba</a></li>
                                 <li><a href="#features">Özellikler</a></li>
+                                <li><a href="#about">Hakkımızda</a></li>
                                 <li><a href="#pricing">Paketlerimiz</a></li>
+                                <li><a href="#faq">S.S.S.</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                                 <li><a href="#contact">Destek</a></li>
                             </ul>
                         </div>
@@ -973,18 +1069,23 @@
                             <h5 class="ud-widget-title">Bizi Takip Edin</h5>
                             <ul class="ud-widget-socials">
                                 <li>
-                                    <a href="https://www.youtube.com/@sohbetterapi" target="_blank" rel="noopener">
+                                    <a href="https://www.youtube.com/@sohbet_terapi_app" target="_blank" rel="noopener">
                                         <i class="lni lni-youtube"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/sohbetterapi" target="_blank" rel="noopener">
+                                    <a href="https://www.instagram.com/sohbet_terapi_app" target="_blank" rel="noopener">
                                         <i class="lni lni-instagram-filled"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.tiktok.com/@sohbetterapi" target="_blank" rel="noopener">
+                                    <a href="https://www.tiktok.com/@sohbet_terapi_app" target="_blank" rel="noopener">
                                         <i class="lni lni-tiktok"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/sohbet_terapi" target="_blank" rel="noopener">
+                                        <i class="lni lni-twitter-filled"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -1041,6 +1142,7 @@
     <!-- ====== All Javascript Files ====== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
       // ==== for menu scroll

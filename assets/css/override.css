@@ -260,6 +260,151 @@ h1, h2, h3, h4 {
     color: var(--bs-primary) !important;
 }
 
+/* ============================= */
+/* Social Account Image Size */
+/* ============================= */
+
+
+/* Default: Desktop (>=1200px) */
+.ud-widget-socials i {
+    font-size: 28px;  /* büyük ekranlarda daha belirgin */
+    transition: transform 0.2s ease;
+}
+
+.ud-widget-socials i:hover {
+    transform: scale(1.2);
+}
+
+/* Tablet (>=768px ve <1200px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .ud-widget-socials i {
+        font-size: 24px;  /* orta ekranlarda biraz küçült */
+    }
+}
+
+/* Mobile (<=767px) */
+@media (max-width: 767px) {
+    .ud-widget-socials i {
+        font-size: 20px;  /* küçük ekranlarda daha kompakt */
+    }
+}
 
 
 
+/* ============================= */
+/* === Testimonial Card Styling === */
+/* ============================= */
+
+/* === Testimonial Card Styling (real card look) === */
+.ud-single-testimonial {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    min-height: 280px; /* fixed default height for all cards */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+
+    /* deeper shadow for card effect */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* subtle border for definition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect (like lifting the card) */
+.ud-single-testimonial:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* Equal height across all testimonials */
+.swiper-slide {
+    display: flex;
+    height: auto;
+}
+
+/* Testimonial text */
+.ud-testimonial-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+/* Author info section */
+.ud-testimonial-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+
+/* ============================= */
+/* Social Media Follow Section */
+/* ============================= */
+
+/* === Social Follow Section (Bigger Icons, Perfect Alignment) === */
+.ud-social-follow {
+    padding: 200px 0;
+    text-align: center;
+}
+
+.ud-social-follow .ud-section-title h2 {
+    margin-bottom: 70px; !important;/* title and icons gap */
+}
+
+/* Container for social icons */
+.ud-social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;   /* center align horizontally */
+    align-items: center;       /* center vertically */
+    gap: 40px;                 /* balanced spacing */
+    flex-wrap: wrap;           /* wrap icons if small screen */
+}
+
+/* Each social link style */
+.ud-social-icons li a {
+    width: 80px;               /* bigger icons */
+    height: 80px;
+    font-size: 36px;           /* larger icon font size */
+    background: #1a1a1a;       /* black circle background */
+    border-radius: 50%;        /* circle shape */
+    color: #fff;               /* white icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* stronger shadow */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.ud-social-icons li a:hover {
+    background: var(--bs-primary); /* brand blue */
+    transform: translateY(-6px);   /* lift effect */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .ud-social-icons li a {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    .ud-social-follow h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* === Fix Contact Section Bottom Spacing === */
+#contact {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px !important; /* reduce bottom space */
+}

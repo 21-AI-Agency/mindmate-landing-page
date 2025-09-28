@@ -470,23 +470,21 @@ h1, h2, h3, h4 {
 /* Footer Styling Overrides      */
 /* ============================= */
 
-/* Footer widget titles (Quick Links, Legal, etc.) */
+/* === Footer Font Size Enhancements === */
 .ud-footer .ud-widget-title {
-    font-size: 18px;   /* larger size for section titles */
-    font-weight: 600;
+    font-size: 20px;  /* was 16px → +25% */
+    font-weight: 700;
 }
 
-/* Footer links, descriptions, and social media text */
 .ud-footer .ud-widget-links li a,
 .ud-footer .ud-widget-desc,
-.ud-footer .ud-widget-socials li a {
-    font-size: 16px;   /* increase readability */
+.ud-footer .ud-widget-socials a {
+    font-size: 18px;  /* was 14px → now larger */
+    line-height: 1.7;
+}
+
+.ud-footer-bottom p {
+    font-size: 17px;  /* was 13–14px */
     line-height: 1.6;
 }
 
-/* Footer bottom copyright text */
-.ud-footer-bottom-right {
-    font-size: 16px;   /* slightly larger than default */
-    font-weight: 500;
-    color: #333;       /* adjust color for better contrast */
-}

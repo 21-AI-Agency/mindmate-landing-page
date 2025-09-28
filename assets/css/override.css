@@ -464,3 +464,29 @@ h1, h2, h3, h4 {
     margin-bottom: 0 !important;
     padding-bottom: 20px !important; /* reduce bottom space */
 }
+
+
+/* ============================= */
+/* Footer Styling Overrides      */
+/* ============================= */
+
+/* Footer widget titles (Quick Links, Legal, etc.) */
+.ud-footer .ud-widget-title {
+    font-size: 18px;   /* larger size for section titles */
+    font-weight: 600;
+}
+
+/* Footer links, descriptions, and social media text */
+.ud-footer .ud-widget-links li a,
+.ud-footer .ud-widget-desc,
+.ud-footer .ud-widget-socials li a {
+    font-size: 16px;   /* increase readability */
+    line-height: 1.6;
+}
+
+/* Footer bottom copyright text */
+.ud-footer-bottom-right {
+    font-size: 16px;   /* slightly larger than default */
+    font-weight: 500;
+    color: #333;       /* adjust color for better contrast */
+}

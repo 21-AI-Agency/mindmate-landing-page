@@ -134,9 +134,15 @@ h1, h2, h3, h4 {
     color: #000 !important;
 }
 
-.ud-header.sticky .navbar-nav .nav-item a:hover,
-.ud-header.sticky .navbar-nav .nav-item a.active {
-    color: #000 !important;       /* Keep black on hover/active too */
+/* Active link state */
+.ud-header .navbar-nav .nav-item a.active {
+    color: var(--bs-primary) !important; /* dark tone from logo */
+    font-weight: 700; /* bolder weight */
+}
+
+/* Keep hover separate */
+.ud-header .navbar-nav .nav-item a:hover {
+    color: #38dcdc !important;
 }
 
 

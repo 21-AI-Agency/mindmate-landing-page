@@ -508,6 +508,14 @@ h1, h2, h3, h4 {
     .ud-footer .ud-widget-socials {
         justify-content: center !important;
     }
+
+    /* Ensure footer logo is centered */
+    .ud-footer .ud-footer-logo img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
 
 

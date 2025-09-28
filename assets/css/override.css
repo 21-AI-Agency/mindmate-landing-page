@@ -50,21 +50,27 @@
 .navbar-brand img {
     max-height: 115px;  /* was 70px → +65% */
     width: auto;
+    max-width: 100%;
 }
 
 /* Tablet */
 @media (max-width: 991px) {
     .navbar-brand img {
-        max-height: 90px; /* was 55px → +65% */
+        max-height: 100px; /* was 55px → +65% */
     }
 }
 
 /* Mobile */
 @media (max-width: 575px) {
     .navbar-brand img {
-        max-height: 74px; /* was 45px → +65% */
+        max-height: 84px; /* was 45px → +65% */
     }
 }
+/* Padding for breathing space */
+.navbar-brand {
+    padding: 8px 0;   /* top bottom space */
+}
+
 
 
 

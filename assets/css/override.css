@@ -1,0 +1,410 @@
+/* overrides.css - Mindmate brand overrides */
+
+/* Brand color palette */
+:root {
+    --bs-primary: #82CDE0;   /* Light Blue */
+    --bs-secondary: #FFDDBF; /* Light Peach */
+    --bs-primary-rgb: 130, 205, 224;
+    --bs-secondary-rgb: 255, 221, 191;
+}
+
+/* ============================= */
+/* Hero Section (ud-hero)        */
+/* ============================= */
+
+.ud-hero {
+    /* background: linear-gradient(
+            135deg,
+            var(--bs-primary) 0%,
+            var(--bs-secondary) 100%
+    ) !important; */
+    background: #fff !important; /* flat white */
+    color: #1a1a1a;
+    padding: 150px 0;
+}
+
+
+/* ============================= */
+/* Buttons (ud-main-btn, ud-white-btn) */
+/* ============================= */
+.ud-main-btn {
+    background-color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+    color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+.ud-main-btn:hover,
+.ud-main-btn:focus {
+    background-color: #6cb9cf !important;
+    border-color: #6cb9cf !important;
+    color: #fff !important;
+}
+
+.ud-white-btn {
+    background-color: #fff !important;
+    color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+.ud-white-btn:hover,
+.ud-white-btn:focus {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* ============================= */
+/* Navbar links                  */
+/* ============================= */
+
+.ud-header a:hover {
+    color: #6cb9cf !important;
+}
+
+/* ============================= */
+/* FAQ accordion (ud-faq-btn)    */
+/* ============================= */
+.ud-faq-btn:not(.collapsed) {
+    background-color: var(--bs-secondary) !important;
+    color: #000 !important;
+    border-color: var(--bs-secondary) !important;
+}
+
+/* ============================= */
+/* Headings                      */
+/* ============================= */
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+/* Default navbar links (before scroll) */
+.ud-header .navbar-nav .nav-item a {
+    color: #000 !important;       /* White on hero */
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+/* When navbar is sticky (after scroll), make all links black */
+.ud-header.sticky .navbar-nav .nav-item a {
+    color: #000 !important;
+}
+
+.ud-header.sticky .navbar-nav .nav-item a:hover,
+.ud-header.sticky .navbar-nav .nav-item a.active {
+    color: #000 !important;       /* Keep black on hover/active too */
+}
+
+
+/* ============================= */
+/* Store Badges (App Store / Google Play ) */
+/* ============================= */
+.store-badge img {
+    height: 40px;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 0.2s ease;
+}
+
+.store-badge img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ============================= */
+/* Store Badges adjustments      */
+/* ============================= */
+.store-badge img {
+    height: 40px;              /* smaller size */
+    border-radius: 12px;       /* soft rounded corners */
+    background: transparent;   /* no background box */
+    box-shadow: none;
+}
+
+.store-badge img:hover {
+    transform: scale(1.03);    /* subtle hover effect */
+    transition: transform 0.2s ease;
+}
+
+/* Make the badges centered and spaced */
+.ud-hero-buttons {
+    display: flex;
+    gap: 12px;                 /* space between badges */
+    justify-content: center;   /* center them horizontally */
+    flex-wrap: wrap;           /* wrap if screen is small */
+}
+
+/* ============================= */
+/* Hero Heading & Description    */
+/* ============================= */
+.ud-hero-content .ud-hero-title {
+    font-family: 'MidasSans-Semi-Bold', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 55px;
+    line-height: 70px;
+    margin-bottom: 20px;
+    color: #000; /* Black text */
+}
+
+.ud-hero-content .ud-hero-desc {
+    color: #000 !important;   /* Black description */
+    font-size: 20px;
+    line-height: 32px;
+    opacity: 1;               /* Prevent faded look */
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+@media screen and (max-width: 991px) { /* Title and description on smaller screens */
+    .ud-hero-content .ud-hero-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .ud-hero-content .ud-hero-desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* ============================= */
+/* Signup Button  */
+/* ============================= */
+.ud-header .navbar-btn .signup-btn {
+    border-radius: 999px !important;   /* fully oval shape */
+    padding: 10px 28px;               /* balanced size */
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;                 /* prevents shrinking on mobile */
+    background-color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+    color: #fff !important;           /* always white text */
+    transition: all 0.3s ease;
+}
+
+.ud-header .navbar-btn .signup-btn:hover,
+.ud-header .navbar-btn .signup-btn:focus {
+    background-color: #6abac5 !important; /* slightly darker blue on hover */
+    border-color: #6bd8d4 !important;
+    color: #fff !important;               /* keep white text on hover */
+}
+
+
+
+/* ============================= */
+/* Global Button Responsive Fix  */
+/* ============================= */
+@media (max-width: 576px) {
+    .ud-main-btn,
+    .ud-white-btn,
+    .signup-btn {
+        padding: 8px 24px;
+        font-size: 0.95rem;
+        min-width: 100px;
+    }
+}
+
+/* === FAQ Section Custom Overrides === */
+
+/* Faster and smoother accordion animation */
+.accordion-collapse {
+    transition: height 0.18s ease-out !important;
+    background: #f9f9f9;          /* prevents orange background bleed */
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+/* Answer box styling */
+.ud-faq-body {
+    background: #f9f9f9;
+    padding: 14px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* FAQ button hover state */
+.ud-faq-btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* Highlight active FAQ question */
+.ud-faq-btn:not(.collapsed) {
+    background-color: #f2fdf9;
+    font-weight: 600;
+}
+
+/* Rotate chevron icon when open */
+.ud-faq-btn .lni-chevron-down {
+    transition: transform 0.2s ease;
+}
+.ud-faq-btn:not(.collapsed) .lni-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* ============================= */
+/* Global Button Colour Fix */
+/* ============================= */
+
+/* Override feature icons */
+.ud-feature-icon {
+    background: var(--bs-primary) !important; /* senin seçtiğin açık mavi */
+    color: #fff !important;
+}
+
+/* Override section small titles */
+.ud-section-title span {
+    color: var(--bs-primary) !important;
+}
+
+/* ============================= */
+/* Social Account Image Size */
+/* ============================= */
+
+
+/* Default: Desktop (>=1200px) */
+.ud-widget-socials i {
+    font-size: 28px;  /* büyük ekranlarda daha belirgin */
+    transition: transform 0.2s ease;
+}
+
+.ud-widget-socials i:hover {
+    transform: scale(1.2);
+}
+
+/* Tablet (>=768px ve <1200px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .ud-widget-socials i {
+        font-size: 24px;  /* orta ekranlarda biraz küçült */
+    }
+}
+
+/* Mobile (<=767px) */
+@media (max-width: 767px) {
+    .ud-widget-socials i {
+        font-size: 20px;  /* küçük ekranlarda daha kompakt */
+    }
+}
+
+
+
+/* ============================= */
+/* === Testimonial Card Styling === */
+/* ============================= */
+
+/* === Testimonial Card Styling (real card look) === */
+.ud-single-testimonial {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    min-height: 280px; /* fixed default height for all cards */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+
+    /* deeper shadow for card effect */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* subtle border for definition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect (like lifting the card) */
+.ud-single-testimonial:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* Equal height across all testimonials */
+.swiper-slide {
+    display: flex;
+    height: auto;
+}
+
+/* Testimonial text */
+.ud-testimonial-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+/* Author info section */
+.ud-testimonial-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+
+/* ============================= */
+/* Social Media Follow Section */
+/* ============================= */
+
+/* === Social Follow Section (Bigger Icons, Perfect Alignment) === */
+.ud-social-follow {
+    padding: 200px 0;
+    text-align: center;
+}
+
+.ud-social-follow .ud-section-title h2 {
+    margin-bottom: 70px; !important;/* title and icons gap */
+}
+
+/* Container for social icons */
+.ud-social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;   /* center align horizontally */
+    align-items: center;       /* center vertically */
+    gap: 40px;                 /* balanced spacing */
+    flex-wrap: wrap;           /* wrap icons if small screen */
+}
+
+/* Each social link style */
+.ud-social-icons li a {
+    width: 80px;               /* bigger icons */
+    height: 80px;
+    font-size: 36px;           /* larger icon font size */
+    background: #1a1a1a;       /* black circle background */
+    border-radius: 50%;        /* circle shape */
+    color: #fff;               /* white icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* stronger shadow */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.ud-social-icons li a:hover {
+    background: var(--bs-primary); /* brand blue */
+    transform: translateY(-6px);   /* lift effect */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .ud-social-icons li a {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    .ud-social-follow h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* === Fix Contact Section Bottom Spacing === */
+#contact {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px !important; /* reduce bottom space */
+}

@@ -491,6 +491,7 @@ h1, h2, h3, h4 {
 /* ============================= */
 /* === Footer Mobile Center Alignment === */
 /* ============================= */
+
 @media (max-width: 767px) {
     .ud-footer .ud-widget,
     .ud-footer .ud-widget-title,
@@ -516,6 +517,36 @@ h1, h2, h3, h4 {
         margin-right: auto;
     }
 }
+
+/* ============================= */
+/* === Pricing Card Base === */
+/* ============================= */
+
+.ud-single-pricing {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for all cards */
+.ud-single-pricing:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* Center card (the one with .active) */
+.ud-single-pricing.active {
+    transform: scale(1.08); /* Bigger by default */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    z-index: 1; /* keeps it above others slightly */
+}
+
+/* On hover, center card grows even more */
+.ud-single-pricing.active:hover {
+    transform: scale(1.12);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    z-index: 3;
+}
+
 
 
 

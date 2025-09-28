@@ -497,7 +497,8 @@ h1, h2, h3, h4 {
     .ud-footer .ud-widget-links,
     .ud-footer .ud-widget-links li,
     .ud-footer .ud-widget-desc,
-    .ud-footer-bottom p {
+    .ud-footer-bottom p,
+    .ud-footer .ud-footer-logo {
         text-align: center !important;
         margin-left: auto;
         margin-right: auto;

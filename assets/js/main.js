@@ -91,30 +91,71 @@
     scrollTo(document.documentElement);
   };
 
-    // ====== Testimonials Swiper ======
-    var testimonialSwiper = new Swiper(".ud-testimonials-swiper", {
-        loop: true, // infinite loop
-        autoplay: {
-            delay: 0, // no waiting time
-            disableOnInteraction: false, // keep autoplay even if user interacts
-            pauseOnMouseEnter: true, // pause when mouse hovers over
+// ====== Load Testimonials from JSON and init Swiper ======
+    async function loadTestimonials() {
+        try {
+            const res = await fetch("assets/data/testimonials.json");
+            const all = await res.json();
 
-        },
-        speed: 4000, // slide transition speed (ms) -> 4000 = 4 seconds per slide
-        slidesPerView: 1,
-        spaceBetween: 30,
-        allowTouchMove: true, // allow user to swipe manually
-        breakpoints: {
-            768: {
-                slidesPerView: 2, // tablet view
-            },
-            1200: {
-                slidesPerView: 3, // desktop view
-            },
-        },
-        pagination: false, // dots hidden, can enable if needed
-        navigation: false, // arrows hidden
-    });
+            // Shuffle and select 10
+            const selected = all.sort(() => 0.5 - Math.random()).slice(0, 10);
 
+            const wrapper = document.querySelector("#testimonials .swiper-wrapper");
+            wrapper.innerHTML = "";
+
+            selected.forEach(t => {
+                const slide = document.createElement("div");
+                slide.className = "swiper-slide";
+                slide.innerHTML = `
+        <div class="ud-single-testimonial">
+          <div class="ud-testimonial-ratings">
+            <i class="lni lni-star-filled"></i>
+            <i class="lni lni-star-filled"></i>
+            <i class="lni lni-star-filled"></i>
+            <i class="lni lni-star-filled"></i>
+            <i class="lni lni-star-filled"></i>
+          </div>
+          <div class="ud-testimonial-content">
+            <p>“${t.text}”</p>
+          </div>
+          <div class="ud-testimonial-info">
+            <div class="ud-testimonial-image">
+              <img src="${t.image}" alt="${t.name}" />
+            </div>
+            <div class="ud-testimonial-meta">
+              <h4>${t.name}</h4>
+              <p>${t.role}</p>
+            </div>
+          </div>
+        </div>`;
+                wrapper.appendChild(slide);
+            });
+
+            // ✅ Init Swiper AFTER adding slides
+            new Swiper(".ud-testimonials-swiper", {
+                loop: true,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                speed: 4000,
+                slidesPerView: 1,
+                spaceBetween: 30,
+                allowTouchMove: true,
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1200: { slidesPerView: 3 },
+                },
+                pagination: false,
+                navigation: false,
+            });
+        } catch (err) {
+            console.error("Testimonials yüklenemedi:", err);
+        }
+    }
+
+    loadTestimonials();
 })();
+
 

@@ -547,6 +547,21 @@ h1, h2, h3, h4 {
     z-index: 3;
 }
 
+/* ============================= */
+/* Team profile images with subtle shadow */
+/* ============================= */
+
+.ud-team-image img {
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22); /* stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.ud-team-image img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* deeper shadow on hover */
+}
 
 
 

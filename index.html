@@ -778,6 +778,7 @@
 
                             <!-- Redirect From "formsubmit.co" we will add exact path to here for redirecting -->
                             <input type="hidden" name="_next" value="https://sohbetterapi.netlify.app/thanks.html">
+                            <input type="hidden" name="_error" value="https://sohbetterapi.netlify.app/error.html">
                             <input type="hidden" name="_subject" value="Yeni mesaj - Sohbet Terapi">
 
                             <!-- Full Name -->
@@ -789,7 +790,8 @@
                             <!-- Email -->
                             <div class="ud-form-group">
                                 <label for="email">E-posta*</label>
-                                <input type="email" name="email" placeholder="ornek@mail.com" required />
+                                <!-- Make this field "user_email" from "email" for avoiding formsubmit to send email to your email regardless email verification user can send invalid email our priority is feedback --> -->
+                                <input type="email" name="user_email" placeholder="ornek@mail.com" required>
                             </div>
 
                             <!-- Message -->

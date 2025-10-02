@@ -770,15 +770,20 @@
                     <div class="ud-contact-form-wrapper wow fadeInUp" data-wow-delay=".2s">
                         <h3 class="ud-contact-form-title">Mesaj Gönderin</h3>
 
-                        <!-- Netlify-enabled contact form -->
-                        <form name="contact" method="POST" data-netlify="true" class="ud-contact-form">
-                            <!-- Required hidden input for Netlify -->
-                            <input type="hidden" name="form-name" value="contact" />
+                        <!-- FormSubmit.co Contact Form -->
+                        <form action="https://formsubmit.co/sefu_40@hotmail.com" method="POST" class="ud-contact-form">
+
+                            <!-- Optional Settings -->
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <!-- Redirect From "formsubmit.co" we will add exact path to here for redirecting -->
+                            <input type="hidden" name="_next" value="https://sohbetterapi.netlify.app/thanks.html">
+                            <input type="hidden" name="_subject" value="Yeni mesaj - Sohbet Terapi">
 
                             <!-- Full Name -->
                             <div class="ud-form-group">
-                                <label for="fullName">Ad Soyad*</label>
-                                <input type="text" name="fullName" placeholder="Adınızı giriniz" required />
+                                <label for="name">Ad Soyad*</label>
+                                <input type="text" name="name" placeholder="Adınızı giriniz" required />
                             </div>
 
                             <!-- Email -->
@@ -800,6 +805,7 @@
                         </form>
                     </div>
                 </div>
+
 
             </div>
         </div>

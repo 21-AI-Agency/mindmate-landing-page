@@ -131,25 +131,29 @@
                 wrapper.appendChild(slide);
             });
 
-            // ✅ Init Swiper AFTER adding slides
             new Swiper(".ud-testimonials-swiper", {
                 loop: true,
+                // loopedSlides must be bigger than cart number of slides
+                loopedSlides:11,
+                speed: 4000,
                 autoplay: {
                     delay: 0,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 },
-                speed: 4000,
                 slidesPerView: 1,
-                spaceBetween: 30,
-                allowTouchMove: true,
+                spaceBetween: 20,
+                grabCursor: true,
+                centeredSlides: false,
                 breakpoints: {
-                    768: { slidesPerView: 2 },
-                    1200: { slidesPerView: 3 },
+                    768: { slidesPerView: 2, spaceBetween: 24 },
+                    1200: { slidesPerView: 3, spaceBetween: 30 },
                 },
                 pagination: false,
                 navigation: false,
             });
+
+
         } catch (err) {
             console.error("Testimonials yüklenemedi:", err);
         }

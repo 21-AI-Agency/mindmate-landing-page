@@ -12,17 +12,17 @@
 /* Hero Section (ud-hero)        */
 /* ============================= */
 
-.ud-hero {
-    /* background: linear-gradient(
-            135deg,
-            var(--bs-primary) 0%,
-            var(--bs-secondary) 100%
-    ) !important; */
-    /*background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%) !important;*/
-    background: #FAFAFA !important;
-    color: #1a1a1a;
-    padding: 150px 0;
-}
+/*.ud-hero {*/
+/*    !* background: linear-gradient(*/
+/*            135deg,*/
+/*            var(--bs-primary) 0%,*/
+/*            var(--bs-secondary) 100%*/
+/*    ) !important; *!*/
+/*    !*background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%) !important;*!*/
+/*    background: #b81111 !important;*/
+/*    color: #1a1a1a;*/
+/*    padding: 150px 0;*/
+/*}*/
 
 /*.ud-features,*/
 /*.ud-testimonials,*/
@@ -34,6 +34,9 @@
 /*            #E0F7FA 100%*/
 /*    );*/
 /*}*/
+.ud-app-preview,
+.ud-social-follow,
+.ud-hero,
 .ud-features,
 .ud-contact,
 .ud-testimonials,

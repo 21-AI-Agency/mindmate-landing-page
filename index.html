@@ -285,22 +285,35 @@
     <!-- ====== Screenshots Start ====== -->
     <section id="app-preview" class="ud-app-preview text-center my-5">
         <div class="container">
-            <!-- Ana Görsel (Buton gibi davranır) -->
-            <img
-                    src="assets/images/hero/sohbetTerapiScreens.png"
-                    alt="App Screens"
-                    id="preview-trigger"
-                    class="img-fluid preview-main"
-                    style="cursor: pointer;"
-            />
+            <div class="preview-wrapper">
+                <img
+                        src="assets/images/hero/sohbetTerapiScreens.png"
+                        alt="App Screens"
+                        id="preview-trigger"
+                        class="img-fluid preview-main"
+                />
+            </div>
         </div>
 
-        <!-- Pop-up -->
+        <!-- Pop-up (Swiper içinde) -->
         <div id="screen-popup" class="popup-overlay">
             <div class="popup-content">
                 <span id="close-popup" class="popup-close">&times;</span>
-                <img src="assets/images/hero/screen1.png" alt="Screen 1" class="popup-img" />
-                <img src="assets/images/hero/screen2.png" alt="Screen 2" class="popup-img" />
+
+                <div class="swiper popup-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="assets/images/hero/screen1.png" alt="Screen 1" class="popup-img" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="assets/images/hero/screen2.png" alt="Screen 2" class="popup-img" />
+                        </div>
+                        <!-- İstersen daha fazla ekran ekle -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
     </section>

@@ -389,9 +389,9 @@ h1, h2, h3, h4 {
 }
 
 /* Swiper slide spacing (uniform, reduced gap) */
-.swiper-wrapper {
-    gap: 20px !important; /* daha sıkı ama dengeli boşluk */
-}
+.ud-testimonials-swiper .swiper-wrapper { gap: 20px; }
+.ud-testimonials-swiper .swiper-slide { display: flex; height: auto; }
+
 .swiper-slide {
     display: flex;
     height: auto;
@@ -882,7 +882,7 @@ body {
     }
 }
 
-/* --- Ana Görsel (sadece kendisi hover olacak) --- */
+/* Ana görsel hover efekti */
 .preview-wrapper {
     display: inline-block;
     position: relative;
@@ -897,46 +897,28 @@ body {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* --- Pop-up Arka Plan --- */
+/* Pop-up görünümü */
 .popup-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
 
-/* --- Pop-up İçerik --- */
 .popup-content {
     background: #fff;
     border-radius: 20px;
     padding: 20px;
-    max-width: 800px;
+    max-width: 420px;
     width: 90%;
     text-align: center;
     position: relative;
     animation: fadeIn 0.3s ease;
 }
 
-/* --- Pop-up Görseller --- */
-.popup-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.popup-img {
-    width: 45%;
-    border-radius: 16px;
-    transition: transform 0.3s ease;
-}
-.popup-img:hover {
-    transform: scale(1.05);
-}
-
-/* --- Kapat Butonu --- */
 .popup-close {
     position: absolute;
     top: 10px;
@@ -950,5 +932,30 @@ body {
     color: #000;
 }
 
-/* --- Fade Animasyonu --*
+/* Swiper içi görseller */
+.popup-img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* Swiper navigasyon renkleri */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #5cbdb9;
+}
+.swiper-pagination-bullet-active {
+    background: #5cbdb9;
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    .popup-content {
+        max-width: 340px;
+    }
+}
 

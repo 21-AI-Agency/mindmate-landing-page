@@ -172,30 +172,45 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 6400); // 6.4 seconds after final scene come up
 });
 
-// === App Preview Popup ===
-document.addEventListener("DOMContentLoaded", function () {
+// === App Preview Popup with Swiper ===
+document.addEventListener("DOMContentLoaded", () => {
     const trigger = document.getElementById("preview-trigger");
     const popup = document.getElementById("screen-popup");
     const closeBtn = document.getElementById("close-popup");
+    let swiperInstance = null;
 
-    if (!trigger || !popup || !closeBtn) {
-        console.warn("Popup elements not found");
-        return;
-    }
+    if (!trigger || !popup || !closeBtn) return;
 
-    // Görsele tıklanınca pop-up aç
     trigger.addEventListener("click", () => {
         popup.style.display = "flex";
-        document.body.style.overflow = "hidden"; // arka kaydırmayı durdur
+        document.body.style.overflow = "hidden";
+
+        // Swiper yalnızca bir kez oluşturulsun
+        if (!swiperInstance) {
+            swiperInstance = new Swiper(".popup-swiper", {
+                loop: true,
+                slidesPerView: 1,
+                centeredSlides: true,   // centeralize image
+                spaceBetween: 0,        // prevent space bias
+                speed: 400,
+                watchSlidesProgress: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }
     });
 
-    // Çarpıya tıklanınca kapat
     closeBtn.addEventListener("click", () => {
         popup.style.display = "none";
         document.body.style.overflow = "auto";
     });
 
-    // Pop-up dışına tıklanınca da kapat
     popup.addEventListener("click", (e) => {
         if (e.target === popup) {
             popup.style.display = "none";

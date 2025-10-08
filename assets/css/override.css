@@ -881,3 +881,74 @@ body {
         filter: blur(0);
     }
 }
+
+/* --- Ana Görsel (sadece kendisi hover olacak) --- */
+.preview-wrapper {
+    display: inline-block;
+    position: relative;
+}
+.preview-main {
+    border-radius: 20px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+.preview-main:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Pop-up Arka Plan --- */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* --- Pop-up İçerik --- */
+.popup-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+/* --- Pop-up Görseller --- */
+.popup-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.popup-img {
+    width: 45%;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+.popup-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Kapat Butonu --- */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+.popup-close:hover {
+    color: #000;
+}
+
+/* --- Fade Animasyonu --*
+

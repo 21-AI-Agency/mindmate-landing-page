@@ -282,15 +282,29 @@
     </section>
     <!-- ====== Features End ====== -->
 
-    <!-- ====== screenshots Start ====== -->
-    <section id="app-preview" class="ud-app-preview">
-        <div class="container text-center my-5">
-            <img src="assets/images/hero/screens.png"
-                 alt="App Screens"
-                 class="img-fluid wow fadeInUp"
-                 data-wow-delay=".2s" />
+    <!-- ====== Screenshots Start ====== -->
+    <section id="app-preview" class="ud-app-preview text-center my-5">
+        <div class="container">
+            <!-- Ana Görsel (Buton gibi davranır) -->
+            <img
+                    src="assets/images/hero/sohbetTerapiScreens.png"
+                    alt="App Screens"
+                    id="preview-trigger"
+                    class="img-fluid preview-main"
+                    style="cursor: pointer;"
+            />
+        </div>
+
+        <!-- Pop-up -->
+        <div id="screen-popup" class="popup-overlay">
+            <div class="popup-content">
+                <span id="close-popup" class="popup-close">&times;</span>
+                <img src="assets/images/hero/screen1.png" alt="Screen 1" class="popup-img" />
+                <img src="assets/images/hero/screen2.png" alt="Screen 2" class="popup-img" />
+            </div>
         </div>
     </section>
+
     <!-- ====== Screenshots End ====== -->
 
 

@@ -169,7 +169,39 @@ window.addEventListener("DOMContentLoaded", () => {
         if (heroContent) {
             heroContent.classList.add("show-all");
         }
-    }, 6400); // 6.4 saniye sonra final sahne aktifleşir
+    }, 6400); // 6.4 seconds after final scene come up
+});
+
+// === App Preview Popup ===
+document.addEventListener("DOMContentLoaded", function () {
+    const trigger = document.getElementById("preview-trigger");
+    const popup = document.getElementById("screen-popup");
+    const closeBtn = document.getElementById("close-popup");
+
+    if (!trigger || !popup || !closeBtn) {
+        console.warn("Popup elements not found");
+        return;
+    }
+
+    // Görsele tıklanınca pop-up aç
+    trigger.addEventListener("click", () => {
+        popup.style.display = "flex";
+        document.body.style.overflow = "hidden"; // arka kaydırmayı durdur
+    });
+
+    // Çarpıya tıklanınca kapat
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+        document.body.style.overflow = "auto";
+    });
+
+    // Pop-up dışına tıklanınca da kapat
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    });
 });
 
 

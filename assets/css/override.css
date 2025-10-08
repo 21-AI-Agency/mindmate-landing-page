@@ -739,3 +739,145 @@ p, li, a, span {
     }
 }
 
+
+/* ============================= */
+/* === Social Icons Hover Colors === */
+/* ============================= */
+
+/* Başlangıçta ikonlar beyaz */
+.ud-widget-socials i {
+    color: #fff !important;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* YouTube hover */
+.ud-widget-socials a:hover .lni-youtube {
+    color: #FF0000 !important;
+    transform: scale(1.2);
+}
+
+/* === Instagram Gradyan Hover === */
+.ud-widget-socials a:hover .lni-instagram-filled {
+    background: linear-gradient(45deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.25);
+    transition: all 0.3s ease;
+}
+
+
+/* === TikTok Gradyan Hover === */
+.ud-widget-socials a:hover .lni-tiktok {
+    background: linear-gradient(135deg, #25F4EE, #FE2C55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.25);
+    transition: all 0.3s ease;
+}
+
+
+/* Facebook hover */
+.ud-widget-socials a:hover .lni-facebook-filled {
+    color: #1877F2 !important;
+    transform: scale(1.2);
+}
+
+
+/* === Global Font Setup === */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* === Hero Text Customization === */
+.ud-hero-desc {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    color: #334155; /* Slate Blue Grey: sakin ve güven verici */
+    letter-spacing: 0.3px;
+}
+
+/* Son paragraf (açıklama) daha yumuşak ton */
+.ud-hero-desc:last-of-type {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* === Refined Hook + Group Return Animation === */
+
+.ud-hero-content .ud-hero-desc {
+    color: #334155;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(2px);
+}
+
+/* İlk üç cümle sahneye tek tek çıkar */
+.ud-hero-content .ud-hero-desc:nth-of-type(1),
+.ud-hero-content .ud-hero-desc:nth-of-type(2),
+.ud-hero-content .ud-hero-desc:nth-of-type(3) {
+    animation: hookStep 2s ease-in-out forwards;
+}
+
+/* Gecikmeler (sıralama) */
+.ud-hero-content .ud-hero-desc:nth-of-type(1) { animation-delay: 0s; }
+.ud-hero-content .ud-hero-desc:nth-of-type(2) { animation-delay: 2s; }
+.ud-hero-content .ud-hero-desc:nth-of-type(3) { animation-delay: 4s; }
+
+/* Alt metin: başta tamamen gizli kalır */
+.ud-hero-content .ud-hero-desc:nth-of-type(4) {
+    opacity: 0;
+}
+
+/* === Grup dönüşü (3 soru + alt metin birlikte) === */
+.ud-hero-content.show-all .ud-hero-desc {
+    animation: groupReturn 1.6s ease-out forwards;
+    animation-delay: 0s;
+}
+
+/* --- Animasyon tanımları --- */
+
+@keyframes hookStep {
+    0% {
+        opacity: 0;
+        transform: translateY(25px) scale(1.02);
+        filter: blur(2px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0) scale(1.01);
+        filter: blur(0.3px);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.0);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+        filter: blur(1px);
+    }
+}
+
+/* Grup halinde geri dönme (tüm satırlar + alt metin) */
+@keyframes groupReturn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(2px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0.3px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}

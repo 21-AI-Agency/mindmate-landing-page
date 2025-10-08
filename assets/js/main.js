@@ -162,4 +162,15 @@
     loadTestimonials();
 })();
 
+// === Hero Section Animation Trigger ===
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        const heroContent = document.querySelector(".ud-hero-content");
+        if (heroContent) {
+            heroContent.classList.add("show-all");
+        }
+    }, 6400); // 6.4 saniye sonra final sahne aktifleşir
+});
+
+
 

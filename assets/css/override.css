@@ -959,68 +959,140 @@ body {
     }
 }
 
-/* ============================= */
-/* === Instagram Gallery Section === */
-/* ============================= */
+/*!* ============================= *!*/
+/*!* === Instagram Gallery Section === *!*/
+/*!* ============================= *!*/
 
-.ud-instagram-gallery {
+/*.ud-instagram-gallery {*/
+/*    background: linear-gradient(180deg, #ffffff 0%, #E3F9F0 50%, #D6F0FF 100%);*/
+/*    padding: 100px 0;*/
+/*    !* border-top: 1px solid rgba(0, 0, 0, 0.05);  <-- kaldırıldı *!*/
+/*}*/
+
+/*.ud-instagram-gallery h2 {*/
+/*    font-weight: 700;*/
+/*    color: #1a1a1a;*/
+/*    margin-bottom: 16px;*/
+/*}*/
+
+/*.ud-instagram-gallery .gallery-desc {*/
+/*    font-size: 1.1rem;*/
+/*    color: #334155;*/
+/*    max-width: 720px;*/
+/*    margin: 0 auto 40px;*/
+/*}*/
+
+/*!* 3-column responsive grid *!*/
+/*.instagram-grid {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 1fr);*/
+/*    gap: 28px;*/
+/*    justify-items: center;*/
+/*    align-items: start;*/
+/*}*/
+
+/*!* Instagram embeds styling *!*/
+/*.instagram-grid .instagram-media {*/
+/*    max-width: 350px;*/
+/*    width: 100%;*/
+/*    border-radius: 16px !important;*/
+/*    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);*/
+/*    background: #fff;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.instagram-grid .instagram-media:hover {*/
+/*    transform: translateY(-6px) scale(1.02);*/
+/*    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);*/
+/*}*/
+
+/*!* Responsive tweaks *!*/
+/*@media (max-width: 992px) {*/
+/*    .instagram-grid {*/
+/*        grid-template-columns: repeat(2, 1fr);*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 600px) {*/
+/*    .instagram-grid {*/
+/*        grid-template-columns: 1fr;*/
+/*    }*/
+/*    .ud-instagram-gallery {*/
+/*        padding: 70px 0;*/
+/*    }*/
+/*}*/
+
+/* ====== Social Media Gallery Styling ====== */
+
+.ud-social-gallery {
     background: linear-gradient(180deg, #ffffff 0%, #E3F9F0 50%, #D6F0FF 100%);
     padding: 100px 0;
-    /* border-top: 1px solid rgba(0, 0, 0, 0.05);  <-- kaldırıldı */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.ud-instagram-gallery h2 {
+.ud-social-gallery h2 {
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 16px;
 }
 
-.ud-instagram-gallery .gallery-desc {
+.ud-social-gallery .gallery-desc {
     font-size: 1.1rem;
     color: #334155;
     max-width: 720px;
     margin: 0 auto 40px;
 }
 
-/* 3-column responsive grid */
-.instagram-grid {
+/* Grid Layout */
+.social-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 28px;
     justify-items: center;
     align-items: start;
 }
 
-/* Instagram embeds styling */
-.instagram-grid .instagram-media {
+/* Common blockquote look */
+.youtube-embed,
+.tiktok-embed,
+.facebook-embed {
     max-width: 350px;
     width: 100%;
     border-radius: 16px !important;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-    background: #fff;
-    transition: all 0.3s ease;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.instagram-grid .instagram-media:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+.instagram-media:hover,
+.youtube-embed:hover,
+.tiktok-embed:hover,
+.facebook-embed:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Responsive tweaks */
+/* Responsive behavior */
 @media (max-width: 992px) {
-    .instagram-grid {
+    .social-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
-    .instagram-grid {
+@media (max-width: 576px) {
+    .social-grid {
         grid-template-columns: 1fr;
     }
-    .ud-instagram-gallery {
-        padding: 70px 0;
-    }
 }
+
+.youtube-embed,
+.tiktok-embed,
+.facebook-embed {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    max-width: 350px;
+}
+
 
 /* ============================= */
 /* === Contact title made bigger === */

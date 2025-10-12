@@ -959,3 +959,66 @@ body {
     }
 }
 
+/* ============================= */
+/* === Instagram Gallery Section === */
+/* ============================= */
+
+.ud-instagram-gallery {
+    background: linear-gradient(180deg, #ffffff 0%, #E3F9F0 50%, #D6F0FF 100%);
+    padding: 100px 0;
+    /* border-top: 1px solid rgba(0, 0, 0, 0.05);  <-- kaldırıldı */
+}
+
+.ud-instagram-gallery h2 {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+}
+
+.ud-instagram-gallery .gallery-desc {
+    font-size: 1.1rem;
+    color: #334155;
+    max-width: 720px;
+    margin: 0 auto 40px;
+}
+
+/* 3-column responsive grid */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    justify-items: center;
+    align-items: start;
+}
+
+/* Instagram embeds styling */
+.instagram-grid .instagram-media {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.instagram-grid .instagram-media:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+    .ud-instagram-gallery {
+        padding: 70px 0;
+    }
+}
+

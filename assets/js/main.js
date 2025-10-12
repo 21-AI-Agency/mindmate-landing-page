@@ -219,5 +219,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// === Lazy Load for Promo Video ===
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("promoVideo");
+    if (!video) return; // Video elementi yoksa çık
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.load();
+                    observer.unobserve(video);
+                }
+            });
+        });
+        observer.observe(video);
+    } else {
+        video.load();
+    }
+});
+
+
 
 

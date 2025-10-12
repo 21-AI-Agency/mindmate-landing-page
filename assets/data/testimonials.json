@@ -37,6 +37,6 @@
   { "name": "İrem Y.",    "role": "Serbest Çalışan",          "text": "Kendimi güvende hissediyorum; o yüzden içten yazabiliyorum.", "image": "assets/images/testimonials/author-03.png" },
   { "name": "Caner Z.",   "role": "Kurye",                    "text": "Yolda kısa molalarda bile içimi dökebiliyorum, bu rahatlatıcı.", "image": "assets/images/testimonials/author-04.png" },
   { "name": "Sibel A.",   "role": "Ev Hanımı",                "text": "Gündelik yoğunlukta yazmak içimi hafifletiyor.", "image": "assets/images/testimonials/author-02.png" },
-  { "name": "Özgür M.",   "role": "Müzisyen",                 "text": "Sahne sonrası inişlerde yazmak duygularımı dengelememe yardımcı oluyor.", "image": "assets/images/testimonials/author-03.png" },
+  { "name": "Özgür M.",   "role": "Müzisyen",                 "text": "Sahne sonrası inişlerde yazmak duygularımı dengelememe , kontrolü tekrar almama yardımcı oluyor.", "image": "assets/images/testimonials/author-03.png" },
   { "name": "Naz K.",     "role": "Öğrenci",                  "text": "Sınav dönemlerinde kaygımı kontrol etmek artık daha kolay.", "image": "assets/images/testimonials/author-04.png" }
 ]

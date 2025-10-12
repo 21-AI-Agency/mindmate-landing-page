@@ -1022,3 +1022,23 @@ body {
     }
 }
 
+/* ============================= */
+/* === Contact title made bigger === */
+/* ============================= */
+.ud-contact-title span {
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    color: #1a1a1a;
+}
+
+/* ============================= */
+/* === Contact Info Text Enlargement (2x Size) === */
+/* ============================= */
+
+/* Increases only the address and email text sizes */
+.ud-info-meta p {
+    font-size: 1.05rem !important;   /* doubled from typical ~1rem */
+    line-height: 1.6;
+    font-weight: 400;             /* slightly bold for readability */
+}

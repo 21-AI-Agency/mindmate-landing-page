@@ -1,0 +1,1134 @@
+/* overrides.css - Mindmate brand overrides */
+
+/* Brand color palette */
+:root {
+    --bs-primary: #82CDE0;   /* Light Blue */
+    --bs-secondary: #FFDDBF; /* Light Peach */
+    --bs-primary-rgb: 130, 205, 224;
+    --bs-secondary-rgb: 255, 221, 191;
+}
+
+/* ============================= */
+/* Global Font Scaling           */
+/* ============================= */
+html {
+    font-size: 115%;  /* increases all rem/em-based text by ~10% */
+}
+
+/* Optional: for mobile responsiveness */
+@media (max-width: 768px) {
+    html {
+        font-size: 115%;
+    }
+}
+
+/* ============================= */
+/* Hero Section (ud-hero)        */
+/* ============================= */
+
+/*.ud-hero {*/
+/*    !* background: linear-gradient(*/
+/*            135deg,*/
+/*            var(--bs-primary) 0%,*/
+/*            var(--bs-secondary) 100%*/
+/*    ) !important; *!*/
+/*    !*background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-secondary) 100%) !important;*!*/
+/*    background: #b81111 !important;*/
+/*    color: #1a1a1a;*/
+/*    padding: 150px 0;*/
+/*}*/
+
+/*.ud-features,*/
+/*.ud-testimonials,*/
+/*.ud-pricing {*/
+/*    background: linear-gradient(*/
+/*            180deg,*/
+/*            #ffffff 0%,*/
+/*            #FFF4E6 50%,*/
+/*            #E0F7FA 100%*/
+/*    );*/
+/*}*/
+.ud-app-preview,
+.ud-social-follow,
+.ud-hero,
+.ud-features,
+.ud-contact,
+.ud-testimonials,
+.ud-pricing {
+    background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #E3F9F0 50%,
+            #D6F0FF 100%
+    );
+}
+
+/* Default logo (desktop) */
+.navbar-brand img {
+    max-height: 135px;  /* was 70px → +65% */
+    width: auto;
+    max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .navbar-brand img {
+        max-height: 120px; /* was 55px → +65% */
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .navbar-brand img {
+        max-height: 100px; /* was 45px → +65% */
+    }
+}
+/* Padding for breathing space */
+.navbar-brand {
+    padding: 10px 0;   /* top bottom space */
+}
+
+
+
+
+/* ============================= */
+/* Buttons (ud-main-btn, ud-white-btn) */
+/* ============================= */
+.ud-main-btn {
+    background-color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+    color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+.ud-main-btn:hover,
+.ud-main-btn:focus {
+    background-color: #6cb9cf !important;
+    border-color: #6cb9cf !important;
+    color: #fff !important;
+}
+
+.ud-white-btn {
+    background-color: #fff !important;
+    color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-primary) !important;
+}
+
+.ud-white-btn:hover,
+.ud-white-btn:focus {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+/* ============================= */
+/* Navbar links                  */
+/* ============================= */
+
+.ud-header a:hover {
+    color: #6cb9cf !important;
+}
+
+/* ============================= */
+/* FAQ accordion (ud-faq-btn)    */
+/* ============================= */
+.ud-faq-btn:not(.collapsed) {
+    background-color: var(--bs-secondary) !important;
+    color: #000 !important;
+    border-color: var(--bs-secondary) !important;
+}
+
+/* ============================= */
+/* Headings                      */
+/* ============================= */
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+/* Default navbar links (before scroll) */
+.ud-header .navbar-nav .nav-item a {
+    color: #000 !important;       /* White on hero */
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+/* When navbar is sticky (after scroll), make all links black */
+.ud-header.sticky .navbar-nav .nav-item a {
+    color: #000 !important;
+}
+
+/* Active link state */
+.ud-header .navbar-nav .nav-item a.active {
+    color: var(--bs-primary) !important; /* dark tone from logo */
+    font-weight: 700; /* bolder weight */
+}
+
+/* Keep hover separate */
+.ud-header .navbar-nav .nav-item a:hover {
+    color: #38dcdc !important;
+}
+
+
+/* ============================= */
+/* Store Badges (App Store / Google Play ) */
+/* ============================= */
+.store-badge img {
+    height: 40px;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 0.2s ease;
+}
+
+.store-badge img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ============================= */
+/* Store Badges adjustments      */
+/* ============================= */
+.store-badge img {
+    height: 40px;              /* smaller size */
+    border-radius: 12px;       /* soft rounded corners */
+    background: transparent;   /* no background box */
+    box-shadow: none;
+}
+
+.store-badge img:hover {
+    transform: scale(1.03);    /* subtle hover effect */
+    transition: transform 0.2s ease;
+}
+
+/* Make the badges centered and spaced */
+.ud-hero-buttons {
+    display: flex;
+    gap: 12px;                 /* space between badges */
+    justify-content: center;   /* center them horizontally */
+    flex-wrap: wrap;           /* wrap if screen is small */
+}
+
+/* ============================= */
+/* Hero Heading & Description    */
+/* ============================= */
+.ud-hero-content .ud-hero-title {  /*previous setts*/
+    /*font-family: 'MidasSans-Semi-Bold', Arial, sans-serif;*/
+    /*font-style: normal;*/
+    /*font-weight: 550;*/
+    /*font-size: 55px;*/
+    /*line-height: 70px;*/
+    /*margin-bottom: 20px;*/
+    color: #000; /* Black text */
+}
+
+.ud-hero-content .ud-hero-desc {
+    color: #000 !important;   /* Black description */
+    font-size: 20px;
+    line-height: 32px;
+    opacity: 1;               /* Prevent faded look */
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+@media screen and (max-width: 991px) { /* Title and description on smaller screens */
+    .ud-hero-content .ud-hero-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .ud-hero-content .ud-hero-desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* ============================= */
+/* Signup Button  */
+/* ============================= */
+/*.ud-header .navbar-btn .signup-btn { removed sign up button */
+/*    border-radius: 999px !important;   !* fully oval shape *!*/
+/*    padding: 10px 28px;               !* balanced size *!*/
+/*    font-weight: 600;*/
+/*    font-size: 1rem;*/
+/*    display: inline-block;*/
+/*    text-align: center;*/
+/*    min-width: 120px;                 !* prevents shrinking on mobile *!*/
+/*    background-color: var(--bs-primary) !important;*/
+/*    border: 1px solid var(--bs-primary) !important;*/
+/*    color: #fff !important;           !* always white text *!*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+.ud-header .navbar-btn .signup-btn:hover,
+.ud-header .navbar-btn .signup-btn:focus {
+    background-color: #6abac5 !important; /* slightly darker blue on hover */
+    border-color: #6bd8d4 !important;
+    color: #fff !important;               /* keep white text on hover */
+}
+
+
+
+/* ============================= */
+/* Global Button Responsive Fix  */
+/* ============================= */
+@media (max-width: 576px) {
+    .ud-main-btn,
+    .ud-white-btn,
+    .signup-btn {
+        padding: 8px 24px;
+        font-size: 0.95rem;
+        min-width: 100px;
+    }
+}
+
+/* === FAQ Section Custom Overrides === */
+
+/* Faster and smoother accordion animation */
+.accordion-collapse {
+    transition: height 0.18s ease-out !important;
+    background: #f9f9f9;          /* prevents orange background bleed */
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+/* Answer box styling */
+.ud-faq-body {
+    background: #f9f9f9;
+    padding: 14px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* FAQ button hover state */
+.ud-faq-btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* Highlight active FAQ question */
+.ud-faq-btn:not(.collapsed) {
+    background-color: #f2fdf9;
+    font-weight: 600;
+}
+
+/* Rotate chevron icon when open */
+.ud-faq-btn .lni-chevron-down {
+    transition: transform 0.2s ease;
+}
+.ud-faq-btn:not(.collapsed) .lni-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* ============================= */
+/* Global Button Colour Fix */
+/* ============================= */
+
+/* Override feature icons */
+.ud-feature-icon {
+    background: var(--bs-primary) !important; /* senin seçtiğin açık mavi */
+    color: #fff !important;
+}
+
+/* Override section small titles */
+.ud-section-title span {
+    color: var(--bs-primary) !important;
+}
+
+/* ============================= */
+/* Social Account Image Size */
+/* ============================= */
+
+
+/* Default: Desktop (>=1200px) */
+.ud-widget-socials i {
+    font-size: 28px;  /* büyük ekranlarda daha belirgin */
+    transition: transform 0.2s ease;
+}
+
+.ud-widget-socials i:hover {
+    transform: scale(1.2);
+}
+
+/* Tablet (>=768px ve <1200px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .ud-widget-socials i {
+        font-size: 24px;  /* orta ekranlarda biraz küçült */
+    }
+}
+
+/* Mobile (<=767px) */
+@media (max-width: 767px) {
+    .ud-widget-socials i {
+        font-size: 20px;  /* küçük ekranlarda daha kompakt */
+    }
+}
+
+
+
+/* ============================= */
+/* === Testimonial Card Styling === */
+/* ============================= */
+
+/* === Testimonial Card Styling (real card look) === */
+/* === Testimonial Card Styling (adjusted spacing & font size) === */
+.ud-single-testimonial {
+    background: #fff;
+    border-radius: 16px;
+    padding: 26px; /* iç boşluğu azıcık artırdım, içerik nefes alır */
+    min-height: 280px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect */
+.ud-single-testimonial:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* Swiper slide spacing (uniform, reduced gap) */
+.ud-testimonials-swiper .swiper-wrapper { gap: 20px; }
+.ud-testimonials-swiper .swiper-slide { display: flex; height: auto; }
+
+.swiper-slide {
+    display: flex;
+    height: auto;
+}
+
+/* Testimonial text (slightly larger font) */
+.ud-testimonial-content p {
+    font-size: 1.15rem; /* 1rem → 1.15rem (yaklaşık +2px artış) */
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+/* Author info section */
+.ud-testimonial-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+
+/* ============================= */
+/* Social Media Follow Section */
+/* ============================= */
+
+/* === Social Follow Section (Bigger Icons, Perfect Alignment) === */
+.ud-social-follow {
+    padding: 200px 0;
+    text-align: center;
+}
+
+.ud-social-follow .ud-section-title h2 {
+    margin-bottom: 70px; !important;/* title and icons gap */
+}
+
+/* Container for social icons */
+.ud-social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;   /* center align horizontally */
+    align-items: center;       /* center vertically */
+    gap: 40px;                 /* balanced spacing */
+    flex-wrap: wrap;           /* wrap icons if small screen */
+}
+
+/* Each social link style */
+.ud-social-icons li a {
+    width: 80px;               /* bigger icons */
+    height: 80px;
+    font-size: 36px;           /* larger icon font size */
+    background: #1a1a1a;       /* black circle background */
+    border-radius: 50%;        /* circle shape */
+    color: #fff;               /* white icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25); /* stronger shadow */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.ud-social-icons li a:hover {
+    background: var(--bs-primary); /* brand blue */
+    transform: translateY(-6px);   /* lift effect */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .ud-social-icons li a {
+        width: 65px;
+        height: 65px;
+        font-size: 28px;
+    }
+
+    .ud-social-follow h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* === Fix Contact Section Bottom Spacing === */
+#contact {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px !important; /* reduce bottom space */
+}
+
+
+/* ============================= */
+/* Footer Styling Overrides      */
+/* ============================= */
+
+/* === Footer Font Size Enhancements === */
+.ud-footer .ud-widget-title {
+    font-size: 20px;  /* was 16px → +25% */
+    font-weight: 700;
+}
+
+.ud-footer .ud-widget-links li a,
+.ud-footer .ud-widget-desc,
+.ud-footer .ud-widget-socials a {
+    font-size: 18px;  /* was 14px → now larger */
+    line-height: 1.7;
+}
+
+.ud-footer-bottom p {
+    font-size: 17px;  /* was 13–14px */
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* === Footer Mobile Center Alignment === */
+/* ============================= */
+
+@media (max-width: 767px) {
+    .ud-footer .ud-widget,
+    .ud-footer .ud-widget-title,
+    .ud-footer .ud-widget-links,
+    .ud-footer .ud-widget-links li,
+    .ud-footer .ud-widget-desc,
+    .ud-footer-bottom p,
+    .ud-footer .ud-footer-logo {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Social icons alignment */
+    .ud-footer .ud-widget-socials {
+        justify-content: center !important;
+    }
+
+    /* Ensure footer logo is centered */
+    .ud-footer .ud-footer-logo img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ============================= */
+/* === Pricing Card Base === */
+/* ============================= */
+
+.ud-single-pricing {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for all cards */
+.ud-single-pricing:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* Center card (the one with .active) */
+.ud-single-pricing.active {
+    transform: scale(1.08); /* Bigger by default */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    z-index: 1; /* keeps it above others slightly */
+}
+
+/* On hover, center card grows even more */
+.ud-single-pricing.active:hover {
+    transform: scale(1.12);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    z-index: 3;
+}
+
+/* ============================= */
+/* Team profile images with subtle shadow */
+/* ============================= */
+
+.ud-testimonials-swiper .swiper-slide {
+    margin-right: 0 !important;
+}
+
+
+/* ============================= */
+/* Added decsription at below of Application download button*/
+/* ============================= */
+.ud-hero-powerwords {
+    background: linear-gradient(90deg, #E1FAF1, #D8F6FF, #FFF4E6);
+    border-radius: 12px;
+
+    position: relative;
+    width: 100vw;                 /* Full screen width */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;           /* Force edge-to-edge layout */
+    margin-right: -50vw;
+    padding: 18px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ============================= */
+/* === Unified Font Harmony & Scaling (Final Refined Version) === */
+/* ============================= */
+
+/* === 1. Features Section (Özellikler) === */
+.ud-feature-title {
+    font-size: 1.3rem !important;   /* slightly smaller for better balance */
+    font-weight: 700;
+}
+
+.ud-feature-desc {
+    font-size: 1.05rem !important;
+    line-height: 1.75;
+}
+
+/* === 2. Pricing Section (Fiyatlarımız) === */
+.ud-pricing-header h3 {
+    font-size: 1.4rem !important;   /* plan name */
+    font-weight: 700;
+}
+
+.ud-pricing-header h4 {
+    font-size: 1.6rem !important;   /* price */
+    color: var(--bs-primary);
+    font-weight: 700;
+}
+
+.ud-pricing-body ul li {
+    font-size: 1.02rem !important;
+    line-height: 1.7;
+}
+
+.ud-single-pricing .ud-main-btn {
+    font-size: 1rem !important;
+    padding: 10px 28px !important;
+}
+
+/* === 3. FAQ Section (S.S.S.) === */
+.ud-faq-btn {
+    font-size: 1.08rem !important;  /* question text */
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.ud-faq-body {
+    font-size: 1rem !important;    /* answer text */
+    line-height: 1.75;
+}
+
+/* === 4. Team Section (Takım) === */
+.ud-team-info h5 {
+    font-size: 1.15rem !important;  /* member name */
+    font-weight: 700;
+}
+
+.ud-team-info h6 {
+    font-size: 1rem !important;     /* role */
+    color: #555;
+}
+
+/* LinkedIn icon inside each team member */
+.ud-team-socials i {
+    font-size: 24px !important;  /* slightly smaller, proportional to text */
+    transition: transform 0.2s ease;
+}
+
+.ud-team-socials i:hover {
+    transform: scale(1.2);
+}
+
+/* === 5. Testimonials (Gerçek Deneyimler) === */
+.ud-testimonial-content p {
+    font-size: 1.1rem !important;  /* user quote */
+    line-height: 1.75;
+}
+
+.ud-testimonial-info h4,
+.ud-testimonial-info h5 {
+    font-size: 1rem !important;
+}
+
+/* === 6. Section Headings General Boost === */
+.ud-section-title h2 {
+    font-size: 2.2rem !important;  /* consistent main section titles */
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.ud-section-title span {
+    font-size: 1rem !important;   /* small label above title */
+    font-weight: 600;
+}
+
+.ud-section-title p {
+    font-size: 1.05rem !important;
+    line-height: 1.75;
+}
+
+/* === 7. Global Text & Links Consistency === */
+p, li, a, span {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* === 8. Responsive Balance (Mobile) === */
+@media (max-width: 768px) {
+    .ud-section-title h2 {
+        font-size: 1.8rem !important;
+    }
+    .ud-feature-title,
+    .ud-pricing-header h3 {
+        font-size: 1.15rem !important;
+    }
+    .ud-pricing-header h4 {
+        font-size: 1.4rem !important;
+    }
+    .ud-faq-btn {
+        font-size: 1rem !important;
+    }
+    .ud-team-info h5 {
+        font-size: 1.05rem !important;
+    }
+    .ud-team-info h6 {
+        font-size: 0.95rem !important;
+    }
+    .ud-testimonial-content p {
+        font-size: 1.05rem !important;
+    }
+    .ud-team-socials i {
+        font-size: 22px !important;
+    }
+}
+
+
+/* ============================= */
+/* === Social Icons Hover Colors === */
+/* ============================= */
+
+/* Başlangıçta ikonlar beyaz */
+.ud-widget-socials i {
+    color: #fff !important;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* YouTube hover */
+.ud-widget-socials a:hover .lni-youtube {
+    color: #FF0000 !important;
+    transform: scale(1.2);
+}
+
+/* === Instagram Gradyan Hover === */
+.ud-widget-socials a:hover .lni-instagram-filled {
+    background: linear-gradient(45deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.25);
+    transition: all 0.3s ease;
+}
+
+
+/* === TikTok Gradyan Hover === */
+.ud-widget-socials a:hover .lni-tiktok {
+    background: linear-gradient(135deg, #25F4EE, #FE2C55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.25);
+    transition: all 0.3s ease;
+}
+
+
+/* Facebook hover */
+.ud-widget-socials a:hover .lni-facebook-filled {
+    color: #1877F2 !important;
+    transform: scale(1.2);
+}
+
+
+/* === Global Font Setup === */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* === Hero Text Customization === */
+.ud-hero-desc {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600;
+    color: #334155; /* Slate Blue Grey: sakin ve güven verici */
+    letter-spacing: 0.3px;
+}
+
+/* Son paragraf (açıklama) daha yumuşak ton */
+.ud-hero-desc:last-of-type {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* === Refined Hook + Group Return Animation === */
+
+.ud-hero-content .ud-hero-desc {
+    color: #334155;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(2px);
+}
+
+/* İlk üç cümle sahneye tek tek çıkar */
+.ud-hero-content .ud-hero-desc:nth-of-type(1),
+.ud-hero-content .ud-hero-desc:nth-of-type(2),
+.ud-hero-content .ud-hero-desc:nth-of-type(3) {
+    animation: hookStep 2s ease-in-out forwards;
+}
+
+/* Gecikmeler (sıralama) */
+.ud-hero-content .ud-hero-desc:nth-of-type(1) { animation-delay: 0s; }
+.ud-hero-content .ud-hero-desc:nth-of-type(2) { animation-delay: 2s; }
+.ud-hero-content .ud-hero-desc:nth-of-type(3) { animation-delay: 4s; }
+
+/* Alt metin: başta tamamen gizli kalır */
+.ud-hero-content .ud-hero-desc:nth-of-type(4) {
+    opacity: 0;
+}
+
+/* === Grup dönüşü (3 soru + alt metin birlikte) === */
+.ud-hero-content.show-all .ud-hero-desc {
+    animation: groupReturn 1.6s ease-out forwards;
+    animation-delay: 0s;
+}
+
+/* --- Animasyon tanımları --- */
+
+@keyframes hookStep {
+    0% {
+        opacity: 0;
+        transform: translateY(25px) scale(1.02);
+        filter: blur(2px);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0) scale(1.01);
+        filter: blur(0.3px);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.0);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+        filter: blur(1px);
+    }
+}
+
+/* Grup halinde geri dönme (tüm satırlar + alt metin) */
+@keyframes groupReturn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(2px);
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0.3px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Ana görsel hover efekti */
+.preview-wrapper {
+    display: inline-block;
+    position: relative;
+}
+.preview-main {
+    border-radius: 20px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+.preview-main:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Pop-up görünümü */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+.popup-close:hover {
+    color: #000;
+}
+
+/* Swiper içi görseller */
+.popup-img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* Swiper navigasyon renkleri */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #5cbdb9;
+}
+.swiper-pagination-bullet-active {
+    background: #5cbdb9;
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    .popup-content {
+        max-width: 340px;
+    }
+}
+
+/*!* ============================= *!*/
+/*!* === Instagram Gallery Section === *!*/
+/*!* ============================= *!*/
+
+/*.ud-instagram-gallery {*/
+/*    background: linear-gradient(180deg, #ffffff 0%, #E3F9F0 50%, #D6F0FF 100%);*/
+/*    padding: 100px 0;*/
+/*    !* border-top: 1px solid rgba(0, 0, 0, 0.05);  <-- kaldırıldı *!*/
+/*}*/
+
+/*.ud-instagram-gallery h2 {*/
+/*    font-weight: 700;*/
+/*    color: #1a1a1a;*/
+/*    margin-bottom: 16px;*/
+/*}*/
+
+/*.ud-instagram-gallery .gallery-desc {*/
+/*    font-size: 1.1rem;*/
+/*    color: #334155;*/
+/*    max-width: 720px;*/
+/*    margin: 0 auto 40px;*/
+/*}*/
+
+/*!* 3-column responsive grid *!*/
+/*.instagram-grid {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 1fr);*/
+/*    gap: 28px;*/
+/*    justify-items: center;*/
+/*    align-items: start;*/
+/*}*/
+
+/*!* Instagram embeds styling *!*/
+/*.instagram-grid .instagram-media {*/
+/*    max-width: 350px;*/
+/*    width: 100%;*/
+/*    border-radius: 16px !important;*/
+/*    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);*/
+/*    background: #fff;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.instagram-grid .instagram-media:hover {*/
+/*    transform: translateY(-6px) scale(1.02);*/
+/*    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);*/
+/*}*/
+
+/*!* Responsive tweaks *!*/
+/*@media (max-width: 992px) {*/
+/*    .instagram-grid {*/
+/*        grid-template-columns: repeat(2, 1fr);*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 600px) {*/
+/*    .instagram-grid {*/
+/*        grid-template-columns: 1fr;*/
+/*    }*/
+/*    .ud-instagram-gallery {*/
+/*        padding: 70px 0;*/
+/*    }*/
+/*}*/
+
+/* ====== Social Media Gallery Styling ====== */
+
+/* ====== Social Media Gallery (Unified Version) ====== */
+.ud-social-gallery {
+    background: linear-gradient(180deg, #ffffff 0%, #E3F9F0 50%, #D6F0FF 100%);
+    padding: 100px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ud-social-gallery h2 {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.ud-social-gallery .gallery-desc {
+    font-size: 1.1rem;
+    color: #334155;
+    max-width: 720px;
+    margin: 0 auto 40px;
+}
+
+/* === GRID LAYOUT === */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 340 → 300 */
+    gap: 24px; /* 36 → 24, daha sıkı aralık */
+    justify-items: center;
+    align-items: start;
+}
+
+/* === UNIFIED ITEM BOXES === */
+.social-item {
+    width: 100%;
+    max-width: 360px;  /* 400 → 360 */
+    height: 560px;     /* 600 → 560 */
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* === INNER EMBEDS (normalize heights) === */
+.social-item iframe,
+.social-item blockquote,
+.social-item .fb-post {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* === MOBILE GRID ADAPTATION === */
+@media (max-width: 992px) {
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === LEGACY SUPPORT (optional) === */
+/* Eğer .youtube-embed, .tiktok-embed, .facebook-embed gibi eski stiller varsa bozulmasın diye */
+.youtube-embed,
+.tiktok-embed,
+.facebook-embed,
+.instagram-media {
+    max-width: 100%;
+    border-radius: 0 !important;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
+    transition: none;
+}
+
+
+/* ============================= */
+/* === Contact title made bigger === */
+/* ============================= */
+.ud-contact-title span {
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-block;
+    color: #1a1a1a;
+}
+
+/* ============================= */
+/* === Contact Info Text Enlargement (2x Size) === */
+/* ============================= */
+
+/* Increases only the address and email text sizes */
+.ud-info-meta p {
+    font-size: 1.05rem !important;   /* doubled from typical ~1rem */
+    line-height: 1.6;
+    font-weight: 400;             /* slightly bold for readability */
+}

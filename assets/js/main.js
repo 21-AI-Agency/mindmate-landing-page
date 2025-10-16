@@ -240,6 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // === TikTok scroll fix ===
+// Tiktok embed iframe scroll problem fix we must do that else tiktok will see like scrolling bar
 window.addEventListener("load", () => {
     // 1. Embed script'in yüklenmesini bekle
     const fixTikTokScroll = () => {

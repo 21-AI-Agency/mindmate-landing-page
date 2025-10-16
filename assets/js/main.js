@@ -239,6 +239,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// === TikTok scroll fix ===
+window.addEventListener("load", () => {
+    // 1. Embed script'in yüklenmesini bekle
+    const fixTikTokScroll = () => {
+        const tiktokFrame = document.querySelector(".tiktok-embed iframe");
+        if (tiktokFrame) {
+            tiktokFrame.setAttribute("scrolling", "no"); // ✅ Scroll tamamen kapatılır
+            tiktokFrame.style.overflow = "hidden";
+            tiktokFrame.style.height = "100%";
+            tiktokFrame.style.maxHeight = "100%";
+            tiktokFrame.style.border = "none";
+        } else {
+            // If not iframe exist yet
+            setTimeout(fixTikTokScroll, 500);
+        }
+    };
 
+    // Try Again
+    setTimeout(fixTikTokScroll, 1200);
+    setTimeout(fixTikTokScroll, 2500);
+    setTimeout(fixTikTokScroll, 4000);
+});
+
+// Instagram loading problem solver
+window.addEventListener("load", () => {
+    // Render it
+    if (window.instgrm && window.instgrm.Embeds) {
+        setTimeout(() => {
+            window.instgrm.Embeds.process();
+        }, 1000);
+    }
+});
 
 

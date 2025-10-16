@@ -330,43 +330,45 @@
 
             <div class="social-grid">
                 <!-- Instagram -->
-                <blockquote
-                        class="instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/p/DL7nkNatuVp/"
-                        data-instgrm-version="14"
-                ></blockquote>
+                <div class="social-item">
+                    <blockquote
+                            class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/p/DL7nkNatuVp/"
+                            data-instgrm-version="14"
+                    ></blockquote>
+                </div>
 
                 <!-- YouTube Shorts -->
-                <blockquote class="youtube-embed">
+                <div class="social-item">
                     <iframe
                             width="100%"
                             height="500"
                             src="https://www.youtube.com/embed/9Me9KvEz7L4"
                             title="Sohbet Terapi YouTube Shorts"
-                            frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
                     ></iframe>
-                </blockquote>
+                </div>
 
                 <!-- TikTok -->
-                <blockquote
-                        class="tiktok-embed"
-                        cite="https://www.tiktok.com/@sohbet_terapi_app/video/7558508455229705489"
-                        data-video-id="7558508455229705489"
-                        style="max-width: 350px; min-width: 300px;"
-                >
-                    <section></section>
-                </blockquote>
+                <div class="social-item">
+                    <blockquote
+                            class="tiktok-embed"
+                            cite="https://www.tiktok.com/@sohbet_terapi_app/video/7558508455229705489"
+                            data-video-id="7558508455229705489"
+                    >
+                        <section></section>
+                    </blockquote>
+                </div>
 
                 <!-- Facebook -->
-                <blockquote class="facebook-embed">
+                <div class="social-item">
                     <div
                             class="fb-post"
                             data-href="https://www.facebook.com/reel/1150872453572160"
                             data-width="350"
                     ></div>
-                </blockquote>
+                </div>
             </div>
         </div>
 
@@ -379,8 +381,19 @@
                 crossorigin="anonymous"
                 src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"
         ></script>
+
+        <!-- Stabilization Script -->
+        <script>
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    window.instgrm?.Embeds?.process();
+                    window.FB?.XFBML?.parse();
+                }, 1000);
+            });
+        </script>
     </section>
     <!-- ====== Social Media Gallery End ====== -->
+
 
     <!-- ====== Testimonials Start ====== -->
     <section id="testimonials" class="ud-testimonials">

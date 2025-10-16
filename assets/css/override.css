@@ -1024,6 +1024,7 @@ body {
 
 /* ====== Social Media Gallery Styling ====== */
 
+/* ====== Social Media Gallery (Unified Version) ====== */
 .ud-social-gallery {
     background: linear-gradient(180deg, #ffffff 0%, #E3F9F0 50%, #D6F0FF 100%);
     padding: 100px 0;
@@ -1042,37 +1043,48 @@ body {
     margin: 0 auto 40px;
 }
 
-/* Grid Layout */
+/* === GRID LAYOUT === */
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 340 → 300 */
+    gap: 24px; /* 36 → 24, daha sıkı aralık */
     justify-items: center;
     align-items: start;
 }
 
-/* Common blockquote look */
-.youtube-embed,
-.tiktok-embed,
-.facebook-embed {
-    max-width: 350px;
+/* === UNIFIED ITEM BOXES === */
+.social-item {
     width: 100%;
-    border-radius: 16px !important;
+    max-width: 360px;  /* 400 → 360 */
+    height: 560px;     /* 600 → 560 */
+    border-radius: 16px;
+    background: #fff;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    background-color: #fff;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.instagram-media:hover,
-.youtube-embed:hover,
-.tiktok-embed:hover,
-.facebook-embed:hover {
+.social-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Responsive behavior */
+/* === INNER EMBEDS (normalize heights) === */
+.social-item iframe,
+.social-item blockquote,
+.social-item .fb-post {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* === MOBILE GRID ADAPTATION === */
 @media (max-width: 992px) {
     .social-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1085,12 +1097,18 @@ body {
     }
 }
 
+/* === LEGACY SUPPORT (optional) === */
+/* Eğer .youtube-embed, .tiktok-embed, .facebook-embed gibi eski stiller varsa bozulmasın diye */
 .youtube-embed,
 .tiktok-embed,
-.facebook-embed {
-    aspect-ratio: 9 / 16;
-    width: 100%;
-    max-width: 350px;
+.facebook-embed,
+.instagram-media {
+    max-width: 100%;
+    border-radius: 0 !important;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
+    transition: none;
 }
 
 

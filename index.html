@@ -192,7 +192,7 @@
         <div class="row">
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="#home">
                 <img src="assets/images/logo/CompanyLogo.png" alt="Solarity AI" width="180" height="60" loading="eager" data-site="brand-logo" />
               </a>
               <button class="navbar-toggler">
@@ -456,8 +456,6 @@
                         alt="Mobile app preview"
                         id="preview-trigger"
                         class="img-fluid preview-main"
-                        width="800"
-                        height="600"
                         loading="lazy"
                         decoding="async"
                         data-site="app-preview-image"
@@ -494,73 +492,10 @@
     <section id="social-gallery" class="ud-social-gallery text-center my-5">
         <div class="container">
             <h2 class="mb-4" data-site="social-gallery-title">Social Highlights</h2>
-            <p class="gallery-desc mb-5" data-site="social-gallery-desc">
-                Replace with your social media embeds. Add Instagram, YouTube, TikTok, or Facebook posts.
-            </p>
+            <p class="gallery-desc mb-5" data-site="social-gallery-desc">Follow for more content.</p>
 
-            <div class="social-grid" data-site-list="social-gallery-items">
-                <!-- Instagram -->
-                <div class="social-item">
-                    <blockquote
-                            class="instagram-media"
-                            data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE/"
-                            data-instgrm-version="14"
-                    ></blockquote>
-                </div>
-
-                <!-- YouTube Shorts -->
-                <div class="social-item">
-                    <iframe
-                            width="100%"
-                            height="500"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                            title="Your Video Title"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                    ></iframe>
-                </div>
-
-                <!-- TikTok -->
-                <div class="social-item">
-                    <blockquote
-                            class="tiktok-embed"
-                            cite="https://www.tiktok.com/@yourhandle/video/EXAMPLE"
-                            data-video-id="EXAMPLE"
-                    >
-                        <section></section>
-                    </blockquote>
-                </div>
-
-                <!-- Facebook -->
-                <div class="social-item">
-                    <div
-                            class="fb-post"
-                            data-href="https://www.facebook.com/reel/EXAMPLE"
-                            data-width="350"
-                    ></div>
-                </div>
-            </div>
+            <div class="social-grid social-grid--links" data-site-list="social-gallery-items"></div>
         </div>
-
-        <!-- Platform embed scripts -->
-        <script async src="//www.instagram.com/embed.js"></script>
-        <script async src="https://www.tiktok.com/embed.js"></script>
-        <script
-                async
-                defer
-                crossorigin="anonymous"
-                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"
-        ></script>
-
-        <!-- Stabilization Script -->
-        <script>
-            window.addEventListener("load", () => {
-                setTimeout(() => {
-                    window.instgrm?.Embeds?.process();
-                    window.FB?.XFBML?.parse();
-                }, 1000);
-            });
-        </script>
     </section>
     <!-- ====== Social Media Gallery End ====== -->
 
@@ -1062,7 +997,7 @@
                     <!-- Logo and short description -->
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="ud-widget">
-                            <a href="index.html" class="ud-footer-logo">
+                            <a href="#home" class="ud-footer-logo">
                                 <img src="assets/images/logo/CompanyLogo.png" alt="Solarity AI" width="180" height="60" loading="lazy" data-site="brand-logo" />
                             </a>
                             <p class="ud-widget-desc" data-site="footer-desc">
@@ -1156,12 +1091,14 @@
     <script>
       // ==== for menu scroll + in-page anchors (e.g. Watch Demo) - same alignment as nav
       document.addEventListener("DOMContentLoaded", function() {
-        var SCROLL_OFFSET_TOP = 100; // Preview (nav) ile aynı hizalama
+        var SCROLL_OFFSET_TOP = (typeof window.SCROLL_OFFSET_TOP !== "undefined" ? window.SCROLL_OFFSET_TOP : 80);
         function smoothScrollToSection(href) {
           if (!href || !href.startsWith("#")) return;
           var target = document.querySelector(href);
           if (!target) return;
-          var top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - SCROLL_OFFSET_TOP;
+          var hash = href.indexOf("#") >= 0 ? href.slice(href.indexOf("#") + 1).toLowerCase() : "";
+          var off = (hash === "app-preview" && typeof window.SCROLL_OFFSET_PREVIEW !== "undefined") ? window.SCROLL_OFFSET_PREVIEW : (hash === "testimonials" && typeof window.SCROLL_OFFSET_TESTIMONIALS !== "undefined") ? window.SCROLL_OFFSET_TESTIMONIALS : (hash === "pricing" && typeof window.SCROLL_OFFSET_PRICING !== "undefined") ? window.SCROLL_OFFSET_PRICING : SCROLL_OFFSET_TOP;
+          var top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - off;
           window.scrollTo({ top: top, behavior: "smooth" });
         }
 
@@ -1212,7 +1149,8 @@
                 window.pageYOffset ||
                 document.documentElement.scrollTop ||
                 document.body.scrollTop;
-              const scrollTopMinus = scrollPos + 2;
+              var offset = (typeof window.SCROLL_OFFSET_TOP !== "undefined" ? window.SCROLL_OFFSET_TOP : 80);
+              var scrollForActive = scrollPos + offset;
 
               let activeLink = null;
               for (let i = 0; i < sectionMap.length; i++) {
@@ -1220,7 +1158,7 @@
                 const next = sectionMap[i + 1];
                 const start = current.top;
                 const end = next ? next.top : Number.POSITIVE_INFINITY;
-                if (scrollTopMinus >= start && scrollTopMinus < end) {
+                if (scrollForActive >= start && scrollForActive < end) {
                   activeLink = current.link;
                   break;
                 }

@@ -1,6 +1,20 @@
+// === Quick link scroll: tek değişken – başlığın görünmesi için (px)
+const SCROLL_OFFSET_TOP = 90;
+const SCROLL_OFFSET_PREVIEW = 80; // Sadece Preview (#app-preview) için
+const SCROLL_OFFSET_TESTIMONIALS = 20; // Sadece Testimonials (#testimonials) için
+const SCROLL_OFFSET_PRICING = 20; // Sadece Pricing (#pricing) için
+window.SCROLL_OFFSET_TOP = SCROLL_OFFSET_TOP;
+window.SCROLL_OFFSET_PREVIEW = SCROLL_OFFSET_PREVIEW;
+window.SCROLL_OFFSET_TESTIMONIALS = SCROLL_OFFSET_TESTIMONIALS;
+window.SCROLL_OFFSET_PRICING = SCROLL_OFFSET_PRICING;
+document.documentElement.style.setProperty("--scroll-margin-top", SCROLL_OFFSET_TOP + "px");
+document.documentElement.style.setProperty("--scroll-margin-top-preview", SCROLL_OFFSET_PREVIEW + "px");
+document.documentElement.style.setProperty("--scroll-margin-top-testimonials", SCROLL_OFFSET_TESTIMONIALS + "px");
+document.documentElement.style.setProperty("--scroll-margin-top-pricing", SCROLL_OFFSET_PRICING + "px");
+
 document.addEventListener("DOMContentLoaded", () => {
   bindLanguageToggle();
-  fetch("assets/data/site.json", { cache: "no-store" })
+  fetch("assets/data/site.json?v=" + Date.now(), { cache: "no-store" })
     .then((res) => {
       if (!res.ok) {
         throw new Error(`Site data load failed: ${res.status}`);
@@ -25,7 +39,7 @@ function applySiteData(data) {
   applyStats(data.stats || {});
   applyBrandStrip(data.brandStrip || {});
   applyAppPreview(data.appPreview || {});
-  applySocialGallery(data.socialGallery || {});
+  applySocialGallery(data.socialGallery || {}, data.footer || {});
   applyTestimonials(data.testimonials || {});
   applyPricing(data.pricing || {});
   applyFaq(data.faq || {});
@@ -182,7 +196,7 @@ function renderBadgeAction(action) {
 function bindNavHandlers() {
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
-  const SCROLL_OFFSET_TOP = 100; // Preview / Watch Demo ile aynı hizalama
+  const offset = window.SCROLL_OFFSET_TOP;
   document.querySelectorAll(".ud-menu-scroll").forEach((link) => {
     link.addEventListener("click", (event) => {
       const href = link.getAttribute("href");
@@ -190,7 +204,16 @@ function bindNavHandlers() {
         event.preventDefault();
         const target = document.querySelector(href);
         if (target) {
-          const top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - SCROLL_OFFSET_TOP;
+          const sectionOffset = (h) => {
+            if (!h || !h.startsWith("#")) return offset;
+            const id = h.slice(1).toLowerCase();
+            if (id === "app-preview") return window.SCROLL_OFFSET_PREVIEW ?? 40;
+            if (id === "testimonials") return window.SCROLL_OFFSET_TESTIMONIALS ?? 60;
+            if (id === "pricing") return window.SCROLL_OFFSET_PRICING ?? 20;
+            return offset;
+          };
+          const useOffset = sectionOffset(href);
+          const top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - useOffset;
           window.scrollTo({ top: top, behavior: "smooth" });
         }
       }
@@ -297,68 +320,39 @@ function applyAppPreview(appPreview) {
   }
 }
 
-function applySocialGallery(gallery) {
+function platformNameFromIcon(icon) {
+  if (!icon) return "Social";
+  const s = String(icon).toLowerCase();
+  if (s.includes("youtube")) return "YouTube";
+  if (s.includes("instagram")) return "Instagram";
+  if (s.includes("tiktok")) return "TikTok";
+  if (s.includes("facebook")) return "Facebook";
+  if (s.includes("twitter")) return "Twitter";
+  return "Social";
+}
+
+function applySocialGallery(gallery, footer) {
   setText('[data-site="social-gallery-title"]', gallery.title);
-  setText('[data-site="social-gallery-desc"]', gallery.description);
+  setText('[data-site="social-gallery-desc"]', gallery.description || "Follow for more content.");
   const container = document.querySelector(
     '[data-site-list="social-gallery-items"]'
   );
-  if (!container || !Array.isArray(gallery.items)) return;
+  if (!container) return;
 
-  container.innerHTML = gallery.items
-    .map((item) => {
-      if (item.type === "instagram") {
+  const links = Array.isArray(footer.socialLinks) ? footer.socialLinks : [];
+  container.innerHTML = links
+    .map(
+      (item) => {
+        const name = platformNameFromIcon(item.icon);
+        const href = item.href || "#";
         return `
-          <div class="social-item">
-            <blockquote
-              class="instagram-media"
-              data-instgrm-permalink="${item.permalink || ""}"
-              data-instgrm-version="14"
-            ></blockquote>
+          <div class="social-item social-item--link">
+            <span class="social-item-platform">${name}</span>
+            <a href="${href}" target="_blank" rel="noopener noreferrer" class="social-item-follow">Follow for more content</a>
           </div>
         `;
       }
-      if (item.type === "youtube") {
-        return `
-          <div class="social-item">
-            <iframe
-              width="100%"
-              height="500"
-              src="https://www.youtube.com/embed/${item.videoId || ""}"
-              title="${item.title || "YouTube video"}"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        `;
-      }
-      if (item.type === "tiktok") {
-        return `
-          <div class="social-item">
-            <blockquote
-              class="tiktok-embed"
-              cite="${item.cite || ""}"
-              data-video-id="${item.videoId || ""}"
-            >
-              <section></section>
-            </blockquote>
-          </div>
-        `;
-      }
-      if (item.type === "facebook") {
-        return `
-          <div class="social-item">
-            <div class="fb-post" data-href="${item.href || ""}" data-width="${
-          item.width || 350
-        }"></div>
-          </div>
-        `;
-      }
-      if (item.html) {
-        return `<div class="social-item">${item.html}</div>`;
-      }
-      return "";
-    })
+    )
     .join("");
 }
 

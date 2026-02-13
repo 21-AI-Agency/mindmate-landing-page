@@ -173,7 +173,7 @@
 
     async function loadTestimonials() {
         try {
-            const res = await fetch("assets/data/testimonials.json");
+            const res = await fetch("assets/data/testimonials.json?v=" + Date.now(), { cache: "no-store" });
             const all = await res.json();
 
             const selected = all.sort(() => 0.5 - Math.random()).slice(0, 10);

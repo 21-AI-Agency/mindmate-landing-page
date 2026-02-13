@@ -168,6 +168,9 @@ img, video, iframe {
 .ud-hero-media img {
     max-width: 520px;
     width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
     border-radius: 18px;
     box-shadow: var(--shadow-strong);
 }
@@ -330,14 +333,25 @@ img, video, iframe {
 #features,
 #stats,
 #brand-strip,
-#app-preview,
 #social-gallery,
 #testimonials,
 #pricing,
 #faq,
 #contact,
 #download {
-    scroll-margin-top: 100px;
+    scroll-margin-top: var(--scroll-margin-top, 80px);
+}
+
+#app-preview {
+    scroll-margin-top: var(--scroll-margin-top-preview, 40px);
+}
+
+#testimonials {
+    scroll-margin-top: var(--scroll-margin-top-testimonials, 60px);
+}
+
+#pricing {
+    scroll-margin-top: var(--scroll-margin-top-pricing, 20px);
 }
 
 .ud-brand-strip-inner {
@@ -509,18 +523,26 @@ img, video, iframe {
     }
 }
 
-/* Sadece mobilde: logo, hamburger, dil butonu yatay hizalı; hamburger 3 çizgi dikey kalsın */
+/* Sadece mobilde: logo, hamburger, dil butonu aynı hizada */
 @media (max-width: 991px) {
     .ud-header .navbar {
         display: flex !important;
         align-items: center !important;
         flex-wrap: nowrap;
+        min-height: 50px;
     }
     .ud-header .navbar-brand {
         display: flex !important;
         align-items: center !important;
         order: 1;
         align-self: center;
+        min-height: 50px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .ud-header .navbar-brand img {
+        display: block;
+        object-fit: contain;
     }
     .ud-header .navbar-toggler {
         display: flex !important;
@@ -530,6 +552,8 @@ img, video, iframe {
         order: 2;
         margin-left: auto;
         align-self: center;
+        min-height: 50px;
+        padding: 8px 10px;
     }
     .ud-header .ud-nav-right {
         display: flex !important;
@@ -537,6 +561,11 @@ img, video, iframe {
         order: 3;
         margin-left: 8px;
         align-self: center;
+        min-height: 50px;
+    }
+    .ud-header .ud-nav-right .ud-lang-switch {
+        display: inline-flex;
+        align-items: center;
     }
     .ud-header .navbar-collapse {
         order: 4;
@@ -752,7 +781,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: 0;
     }
     .ud-lang-switch {
-        margin-top: 12px;
+        margin-top: 0;
     }
 }
 
@@ -1182,7 +1211,7 @@ h1, h2, h3, h4, h5, h6 {
 .ud-footer .ud-footer-widgets .row {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
 }
 .ud-footer .ud-footer-widgets .row > div {
     display: flex;
@@ -1190,10 +1219,22 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 0;
     max-width: none;
 }
-/* Legal: sol ve sağ boşluk eşit */
+/* Legal: sol/sağ ile ortada, içerik ortalanmış */
 .ud-footer .ud-footer-widgets .row > div:nth-child(3) {
     padding-left: 20px !important;
     padding-right: 20px !important;
+    justify-content: center;
+}
+.ud-footer .ud-footer-widgets .row > div:nth-child(3) .ud-widget {
+    align-items: center !important;
+    text-align: center !important;
+}
+.ud-footer .ud-footer-widgets .row > div:nth-child(3) .ud-widget-links {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Tüm widget'lar column; sosyal hariç (sosyal ud-styles ve aşağıdaki .ud-widget--social ile) */
@@ -1911,21 +1952,82 @@ body {
     }
 }
 
-/* Ana görsel hover efekti */
+/* ===== Preview bölümü – tüm boyutlarda responsive, ortada, taşma yok ===== */
 .preview-wrapper {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    margin-top: -32px;
+    margin-top: -20px;
     margin-bottom: 32px;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .preview-main {
     border-radius: 20px;
     transition: all 0.35s ease;
     cursor: pointer;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    object-position: top center;
+    box-sizing: border-box;
 }
 .preview-main:hover {
     transform: scale(1.03);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Küçük ekranlar: görsel container'a tam sığar */
+@media (max-width: 575px) {
+    .preview-wrapper {
+        margin-top: -12px;
+        margin-bottom: 24px;
+    }
+    .preview-main {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Orta ekranlar: taşma yok, ortada */
+@media (min-width: 576px) and (max-width: 991px) {
+    .preview-wrapper {
+        margin-top: -16px;
+        margin-bottom: 28px;
+    }
+    .preview-main {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Büyük ekranlar: görsel max 1000px, ortada */
+@media (min-width: 992px) {
+    .preview-main {
+        max-width: 1000px;
+        width: auto;
+    }
+}
+
+/* 1200–1600px: görsel yukarı alınır ama üstteki yazılarla üst üste binmesin */
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .preview-wrapper {
+        margin-top: -24px;
+        margin-bottom: 40px;
+    }
+}
+
+/* 1600px üzeri: geniş ekran */
+@media (min-width: 1601px) {
+    .preview-wrapper {
+        margin-top: -24px;
+    }
 }
 
 /* Pop-up görünümü */
@@ -1945,15 +2047,16 @@ body {
 
 .ud-app-preview {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    padding-top: 0.5rem;
 }
 
 .popup-content {
     background: #fff;
     border-radius: 20px;
     padding: 20px;
-    max-width: 420px;
-    width: 90%;
+    max-width: min(900px, 95vw);
+    width: 95%;
     text-align: center;
     position: relative;
     animation: fadeIn 0.3s ease;
@@ -1972,10 +2075,16 @@ body {
     color: var(--text-primary) !important;
 }
 
-/* Swiper içi görseller */
+/* Swiper içi görseller – açıldığında büyük görünsün */
 .popup-img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    max-height: 85vh;
+    height: auto;
+    object-fit: contain;
     border-radius: 16px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Swiper navigasyon renkleri */
@@ -1995,7 +2104,8 @@ body {
 
 @media (max-width: 600px) {
     .popup-content {
-        max-width: 340px;
+        max-width: 95vw;
+        padding: 12px;
     }
 }
 
@@ -2112,6 +2222,43 @@ body {
 .social-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* === Social link cards (platform name + Follow for more content) === */
+.social-grid--links {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.social-item.social-item--link {
+    height: auto;
+    min-height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 20px;
+    text-align: center;
+}
+.social-item.social-item--link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+.social-item-platform {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.social-item-follow {
+    font-size: 0.95rem;
+    color: var(--bs-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+.social-item-follow:hover {
+    color: var(--bs-secondary);
+    text-decoration: underline;
 }
 
 /* === INNER EMBEDS (normalize heights) === */

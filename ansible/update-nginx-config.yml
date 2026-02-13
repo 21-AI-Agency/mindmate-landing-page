@@ -1,0 +1,55 @@
+---
+- name: Update Nginx Configuration with Optimized Gzip
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Configure Nginx (Amazon Linux / RedHat)
+      template:
+        src: templates/nginx.conf.j2
+        dest: /etc/nginx/conf.d/landing-page.conf
+        mode: '0644'
+        backup: yes
+      when: ansible_os_family == "RedHat"
+      notify: reload nginx
+
+    - name: Configure Nginx (Ubuntu / Debian)
+      template:
+        src: templates/nginx.conf.j2
+        dest: /etc/nginx/sites-available/landing-page
+        mode: '0644'
+        backup: yes
+      when: ansible_os_family == "Debian"
+      notify: reload nginx
+
+    - name: Enable Nginx site (Ubuntu / Debian)
+      file:
+        src: /etc/nginx/sites-available/landing-page
+        dest: /etc/nginx/sites-enabled/landing-page
+        state: link
+      when: ansible_os_family == "Debian"
+
+    - name: Test Nginx configuration
+      command: nginx -t
+      register: nginx_test
+      changed_when: false
+
+    - name: Display Nginx test result
+      debug:
+        msg: "{{ nginx_test.stderr }}"
+      when: nginx_test.rc != 0
+
+  handlers:
+    - name: reload nginx
+      systemd:
+        name: nginx
+        state: reloaded
+      when: nginx_test.rc == 0
+
+    - name: restart nginx
+      systemd:
+        name: nginx
+        state: restarted
+      when: nginx_test.rc != 0
+

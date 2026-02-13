@@ -1,0 +1,20 @@
+---
+# Ansible Inventory for Landing Page Deployment
+# Auto-synced from Terraform outputs - DO NOT EDIT MANUALLY
+# Run: ./sync-terraform-outputs.sh to update
+
+all:
+  hosts:
+    landing-page:
+      ansible_host: 34.231.236.197
+      ansible_user: ec2-user
+      ansible_ssh_private_key_file: ~/.ssh/mindmate-ec2-fe
+      ansible_python_interpreter: /usr/bin/python3
+
+  vars:
+    ansible_connection: ssh
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+    ansible_become: true
+    ansible_become_method: sudo
+    ansible_become_user: root
+

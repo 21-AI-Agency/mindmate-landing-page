@@ -1,0 +1,81 @@
+---
+- name: Deploy Landing Page to EC2
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Update yum cache
+      yum:
+        update_cache: yes
+      when: ansible_os_family == "RedHat"
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+      when: ansible_os_family == "Debian"
+
+    - name: Install Nginx (yum)
+      yum:
+        name: nginx
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Install Nginx (apt)
+      apt:
+        name: nginx
+        state: present
+      when: ansible_os_family == "Debian"
+
+    # Include landing page deployment tasks
+    - name: Include landing page deployment tasks
+      include_role:
+        name: landing_page
+        tasks_from: main
+
+    # Configure Nginx for landing page
+    - name: Configure Nginx (Amazon Linux / RedHat)
+      template:
+        src: templates/nginx.conf.j2
+        dest: /etc/nginx/conf.d/landing-page.conf
+        mode: '0644'
+      when: ansible_os_family == "RedHat"
+
+    - name: Configure Nginx (Ubuntu / Debian)
+      template:
+        src: templates/nginx.conf.j2
+        dest: /etc/nginx/sites-available/landing-page
+        mode: '0644'
+      when: ansible_os_family == "Debian"
+
+    - name: Enable Nginx site (Ubuntu / Debian)
+      file:
+        src: /etc/nginx/sites-available/landing-page
+        dest: /etc/nginx/sites-enabled/landing-page
+        state: link
+      when: ansible_os_family == "Debian"
+
+    - name: Remove default Nginx site (Ubuntu / Debian)
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+      when: ansible_os_family == "Debian"
+
+    - name: Test Nginx configuration
+      command: nginx -t
+      changed_when: false
+      register: nginx_test
+
+    - name: Display Nginx test result
+      debug:
+        msg: "{{ nginx_test.stderr }}"
+      when: nginx_test.rc != 0
+
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
+        enabled: yes
+      when: nginx_test.rc == 0
+

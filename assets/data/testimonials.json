@@ -1,0 +1,14 @@
+[
+  { "name": "Alex M.", "role": "Customer", "text": "Replace with a testimonial quote. Great experience that exceeded my expectations.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Jordan T.", "role": "Power User", "text": "Replace with another testimonial. Easy to use and saves me time every day.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Sam R.", "role": "Early Adopter", "text": "Replace with a third testimonial. The support team was incredibly helpful.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Casey K.", "role": "Customer", "text": "Replace with a fourth testimonial. Would recommend to anyone looking for a solution.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Morgan L.", "role": "Business User", "text": "Replace with a fifth testimonial. Perfect for our team's workflow.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Taylor P.", "role": "Customer", "text": "Replace with a sixth testimonial. Clean interface and great value.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Riley H.", "role": "Pro User", "text": "Replace with a seventh testimonial. Exactly what I needed to get started.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Avery D.", "role": "Customer", "text": "Replace with an eighth testimonial. Reliable and feature-rich.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Quinn S.", "role": "Customer", "text": "Replace with a ninth testimonial. Made onboarding simple and fast.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Jordan V.", "role": "Enterprise", "text": "Replace with a tenth testimonial. Scalable for our growing needs.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Morgan N.", "role": "Customer", "text": "Replace with an eleventh testimonial. Great customer support.", "image": "assets/images/placeholder/avatar.svg" },
+  { "name": "Casey B.", "role": "Customer", "text": "Replace with a twelfth testimonial. Highly recommend for anyone.", "image": "assets/images/placeholder/avatar.svg" }
+]

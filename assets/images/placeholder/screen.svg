@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="800" viewBox="0 0 400 800">
+  <rect width="400" height="800" fill="#f3f4f6"/>
+  <rect x="40" y="40" width="320" height="720" rx="8" fill="#e5e7eb"/>
+  <text x="200" y="420" font-family="system-ui,sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">Screen Preview</text>
+  <text x="200" y="445" font-family="system-ui,sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">400 � 800</text>
+</svg>

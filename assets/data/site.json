@@ -1,0 +1,196 @@
+{
+  "brand": {
+    "name": "Your Brand",
+    "logo": "assets/images/logo/CompanyLogo.png",
+    "logoAlt": "Solarity AI"
+  },
+  "seo": {
+    "title": "Your Brand | Your Tagline Here",
+    "description": "Replace this with your description. A brief summary that appears in search results.",
+    "keywords": "your, keywords, comma, separated",
+    "author": "Your Company Name",
+    "ogTitle": "Your Brand | Your Tagline",
+    "ogDescription": "Replace with your Open Graph description for social sharing.",
+    "ogImage": "assets/images/placeholder/hero.svg",
+    "ogUrl": "https://your-domain.example.com/",
+    "twitterTitle": "Your Brand | Your Tagline",
+    "twitterDescription": "Replace with your Twitter card description.",
+    "twitterImage": "assets/images/placeholder/hero.svg",
+    "canonical": "https://your-domain.example.com/",
+    "themeColor": "#3b82f6"
+  },
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "Features", "href": "#features" },
+    { "label": "Preview", "href": "#brand-strip" },
+    { "label": "Social", "href": "#social-gallery" },
+    { "label": "Testimonials", "href": "#testimonials" },
+    { "label": "Pricing", "href": "#pricing" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Contact", "href": "#contact" },
+    { "label": "Download", "href": "#download" }
+  ],
+  "hero": {
+    "kicker": "Your Eyebrow / Kicker Text",
+    "headline": "Your Main Headline Here",
+    "subhead": "Replace with your value proposition. Describe what you offer and why it matters.",
+    "media": {
+      "image": "assets/images/placeholder/hero.svg",
+      "alt": "Mobile app preview"
+    },
+    "mediaCards": [
+      { "label": "Metric 1", "value": "10K+" },
+      { "label": "Metric 2", "value": "99%" }
+    ],
+    "actions": [
+      { "type": "primary", "label": "Get Started", "href": "#pricing", "className": "ud-main-btn ud-white-btn" },
+      { "type": "secondary", "label": "Watch Demo", "href": "#brand-strip", "className": "ud-main-btn ud-border-btn" }
+    ],
+    "badges": [
+      { "image": "assets/images/badge/appstore-badge.png", "alt": "Download on the App Store", "href": "#" },
+      { "image": "assets/images/badge/googleplay-badge.png", "alt": "Get it on Google Play", "href": "#" }
+    ],
+    "powerwords": ["Feature 1", "Feature 2", "Feature 3"]
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "Everything You Need",
+    "description": "Replace with a brief overview of your features.",
+    "items": [
+      { "icon": "lni lni-heart", "title": "Feature One", "text": "Describe your first key feature and its benefit to users." },
+      { "icon": "lni lni-lock", "title": "Feature Two", "text": "Describe your second key feature and its benefit to users." },
+      { "icon": "lni lni-timer", "title": "Feature Three", "text": "Describe your third key feature and its benefit to users." }
+    ]
+  },
+  "stats": {
+    "eyebrow": "By the Numbers",
+    "title": "Trusted by Users Everywhere",
+    "description": "Replace with a short intro to your key metrics.",
+    "note": "Join thousands of satisfied users.",
+    "items": [
+      { "value": "99%", "label": "Satisfaction rate" },
+      { "value": "5,000+", "label": "Active users" },
+      { "value": "10K+", "label": "Downloads" }
+    ]
+  },
+  "brandStrip": {
+    "label": "Trusted by leading companies",
+    "logos": [
+      { "src": "assets/images/brands/uideck.svg", "alt": "Partner 1" },
+      { "src": "assets/images/brands/lineicons.svg", "alt": "Partner 2" },
+      { "src": "assets/images/brands/graygrids.svg", "alt": "Partner 3" },
+      { "src": "assets/images/brands/ayroui.svg", "alt": "Partner 4" },
+      { "src": "assets/images/brands/ecommerce-html.svg", "alt": "Partner 5" }
+    ]
+  },
+  "appPreview": {
+    "mainImage": "assets/images/placeholder/hero.svg",
+    "mainAlt": "Mobile app preview",
+    "slides": [
+      { "src": "assets/images/placeholder/screen.svg", "alt": "Mobile app preview screen 1" },
+      { "src": "assets/images/placeholder/screen.svg", "alt": "Mobile app preview screen 2" }
+    ]
+  },
+  "socialGallery": {
+    "title": "Social Highlights",
+    "description": "Replace with your social media embeds. Add Instagram, YouTube, TikTok, or Facebook posts.",
+    "items": [
+      { "type": "instagram", "permalink": "https://www.instagram.com/p/EXAMPLE/" },
+      { "type": "youtube", "videoId": "dQw4w9WgXcQ", "title": "Your Video Title" },
+      { "type": "tiktok", "videoId": "EXAMPLE", "cite": "https://www.tiktok.com/@yourhandle/video/EXAMPLE" },
+      { "type": "facebook", "href": "https://www.facebook.com/reel/EXAMPLE", "width": 350 }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Users Say",
+    "description": "Replace with a short intro to your testimonials section.",
+    "featured": {
+      "text": "Replace with a featured testimonial quote. Highlight your best customer feedback.",
+      "name": "Customer Name",
+      "role": "Role or Company"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Plans That Fit Your Needs",
+    "description": "Choose the plan that works best for you.",
+    "plans": [
+      { "name": "Starter", "price": "$9 / month", "features": ["Feature A", "Feature B", "Feature C"], "cta": { "label": "Get Started", "href": "#contact" } },
+      { "name": "Standard", "price": "$19 / month", "popular": true, "features": ["All Starter features", "Feature D", "Feature E"], "cta": { "label": "Start Free Trial", "href": "#contact" } },
+      { "name": "Premium", "price": "$29 / month", "features": ["All Standard features", "Feature F", "Feature G"], "cta": { "label": "Talk to Sales", "href": "#contact" } }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "Quick answers to common questions.",
+    "items": [
+      { "question": "Who is this for?", "answer": "Replace with your answer. Describe your target audience." },
+      { "question": "How do I get started?", "answer": "Replace with your onboarding steps or signup process." },
+      { "question": "Do you offer team or enterprise plans?", "answer": "Replace with information about group or business plans." },
+      { "question": "Is there a free trial?", "answer": "Replace with your trial policy." },
+      { "question": "How is my data protected?", "answer": "Replace with your security and privacy practices." },
+      { "question": "Who can I contact for help?", "answer": "Replace with your support contact information." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in Touch",
+    "description": "Questions, partnerships, or feedback? We would love to hear from you.",
+    "addressLabel": "Address",
+    "address": "Dallas, Texas, USA",
+    "emailLabel": "Email",
+    "emails": ["hello@mobileapp.ai", "support@mobileapp.ai"],
+    "form": {
+      "action": "https://formsubmit.co/your-email@example.com",
+      "next": "https://your-domain.example.com/thanks.html",
+      "error": "https://your-domain.example.com/error.html",
+      "subject": "New message - Your Brand",
+      "submitLabel": "Send Message"
+    }
+  },
+  "downloadCta": {
+    "eyebrow": "Download",
+    "title": "Ready to get started?",
+    "description": "Get the mobile app to access all features on the go.",
+    "badges": [
+      { "image": "assets/images/badge/appstore-badge.png", "alt": "Download on the App Store", "href": "#" },
+      { "image": "assets/images/badge/googleplay-badge.png", "alt": "Get it on Google Play", "href": "#" }
+    ],
+    "trustItems": [
+      { "value": "4.9★", "label": "App Store" },
+      { "value": "4.8★", "label": "Google Play" },
+      { "value": "100K+", "label": "Downloads" }
+    ]
+  },
+  "footer": {
+    "description": "Replace with a short description of your app or company for the footer.",
+    "quickTitle": "Quick Links",
+    "quickLinks": [
+      { "label": "Home", "href": "#home" },
+      { "label": "Features", "href": "#features" },
+      { "label": "Testimonials", "href": "#testimonials" },
+      { "label": "Pricing", "href": "#pricing" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "socialTitle": "Follow [App Name]",
+    "socialLinks": [
+      { "icon": "lni lni-youtube", "href": "https://www.youtube.com/@yourhandle" },
+      { "icon": "lni lni-instagram-filled", "href": "https://www.instagram.com/yourhandle" },
+      { "icon": "lni lni-tiktok", "href": "https://www.tiktok.com/@yourhandle" },
+      { "icon": "lni lni-facebook-filled", "href": "https://www.facebook.com/yourpage" }
+    ],
+    "legalTitle": "Legal",
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "/privacy-policy.html" },
+      { "label": "Data Deletion", "href": "/data-deletion.html" },
+      { "label": "Terms of Service", "href": "/footer-pages/terms.html" },
+      { "label": "Cookies Policy", "href": "/footer-pages/cookies.html" }
+    ],
+    "emergencyTitle": "Support",
+    "emergencyText": "For urgent help, contact local services. This service is not an emergency support provider.",
+    "bottomText": "© 2026 App Name. All rights reserved."
+  }
+}

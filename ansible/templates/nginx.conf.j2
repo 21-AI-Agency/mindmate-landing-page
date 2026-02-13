@@ -1,0 +1,84 @@
+# ============================================================================
+# Nginx Configuration - Landing Page Only
+# ============================================================================
+# Host-based routing for static landing page
+# Domain: yourdomain.com, www.yourdomain.com
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# Landing Page Server Block (Root Domain & WWW)
+# ----------------------------------------------------------------------------
+# Serves static landing page files
+# Domain: yourdomain.com, www.yourdomain.com
+# ----------------------------------------------------------------------------
+server {
+    listen 80;
+    server_name {% if landing_domain_names and landing_domain_names | length > 0 %}{{ landing_domain_names | join(' ') }}{% else %}_{% endif %};
+
+    # Document root for landing page
+    root {{ landing_page_root }};
+    index index.html;
+    
+    # Disable directory listing
+    autoindex off;
+
+    # Logging
+    access_log /var/log/nginx/landing_access.log;
+    error_log /var/log/nginx/landing_error.log;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Gzip compression for faster transfer
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_min_length 256;
+    gzip_disable "msie6";
+    gzip_types
+        text/plain
+        text/css
+        text/xml
+        text/javascript
+        text/html
+        application/json
+        application/javascript
+        application/x-javascript
+        application/xml
+        application/xml+rss
+        application/x-font-ttf
+        application/vnd.ms-fontobject
+        font/opentype
+        image/svg+xml
+        image/x-icon;
+
+    # HTML files - compress and cache
+    location ~* \.html$ {
+        expires 1h;
+        add_header Cache-Control "public, must-revalidate";
+    }
+
+    # Static assets caching (CSS, JS, images, fonts)
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        access_log off;
+    }
+
+    # Main location - serve static files
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Health check endpoint (optional)
+    location /health {
+        access_log off;
+        return 200 "healthy\n";
+        add_header Content-Type text/plain;
+    }
+}
+

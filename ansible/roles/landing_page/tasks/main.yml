@@ -1,0 +1,53 @@
+---
+# Landing Page Deployment Tasks
+# Deploys static landing page files to Nginx document root
+
+- name: Ensure landing page directory exists
+  file:
+    path: "{{ landing_page_root }}"
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Ensure landing page subdirectories exist
+  file:
+    path: "{{ landing_page_root }}/{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+  loop:
+    - css
+    - js
+    - images
+    - assets
+  when: landing_page_enabled
+
+# Note: Landing page files should be uploaded manually or via deploy-landing-page.sh
+# This task is intentionally skipped - use the deployment script instead
+- name: Landing page file upload (skipped - use deploy-landing-page.sh)
+  debug:
+    msg: "Landing page files should be uploaded via deploy-landing-page.sh script"
+  when: landing_page_enabled
+
+- name: Set landing page directory permissions
+  file:
+    path: "{{ landing_page_root }}"
+    owner: root
+    group: nginx
+    mode: '0755'
+    recurse: yes
+  when: landing_page_enabled
+
+- name: Verify landing page index.html exists
+  stat:
+    path: "{{ landing_page_root }}/index.html"
+  register: landing_index
+  when: landing_page_enabled
+
+- name: Warn if landing page index.html is missing
+  debug:
+    msg: "⚠️  Warning: landing page index.html not found at {{ landing_page_root }}/index.html. Please upload your landing page files."
+  when: landing_page_enabled and not landing_index.stat.exists
+

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sohbetterapi.solarityai.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /ansible/
+Disallow: /.git/
+Disallow: /404.html
+Disallow: /error.html
+

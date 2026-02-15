@@ -1211,7 +1211,7 @@ h1, h2, h3, h4, h5, h6 {
 .ud-footer .ud-footer-widgets .row {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
 }
 .ud-footer .ud-footer-widgets .row > div {
     display: flex;
@@ -1219,17 +1219,49 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 0;
     max-width: none;
 }
-/* Legal: sol/sağ ile ortada, içerik ortalanmış */
-.ud-footer .ud-footer-widgets .row > div:nth-child(3) {
+/* Logo + 3 başlık (Follow, Legal, Support) hepsi aynı yatay çizgide */
+.ud-footer .footer-widgets-row {
+    align-items: flex-start !important;
+}
+.ud-footer .footer-col {
+    align-items: flex-start !important;
+}
+/* Logo: başlıklarla aynı hizada */
+.ud-footer .footer-widgets-row > .footer-col:first-child .ud-widget {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+.ud-footer .footer-widgets-row > .footer-col:first-child .ud-footer-logo {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+.ud-footer .footer-col--with-title .ud-widget-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 1.5em !important;
+    line-height: 1.5 !important;
+    display: block !important;
+}
+.ud-footer .footer-col--with-title .ud-widget {
+    align-items: flex-start !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+.ud-footer .footer-col--with-title .ud-widget.ud-widget--social {
+    align-items: flex-start !important;
+}
+/* Legal: sol/sağ ile ortada, içerik ortalanmış; başlık yine üstte hizalı */
+.ud-footer .footer-widgets-row > .footer-col--with-title:nth-child(3) {
     padding-left: 20px !important;
     padding-right: 20px !important;
     justify-content: center;
 }
-.ud-footer .ud-footer-widgets .row > div:nth-child(3) .ud-widget {
-    align-items: center !important;
+.ud-footer .footer-widgets-row > .footer-col--with-title:nth-child(3) .ud-widget {
+    align-items: flex-start !important;
     text-align: center !important;
 }
-.ud-footer .ud-footer-widgets .row > div:nth-child(3) .ud-widget-links {
+.ud-footer .footer-widgets-row > .footer-col--with-title:nth-child(3) .ud-widget-links {
     padding-left: 0;
     list-style: none;
     display: flex;
@@ -1288,8 +1320,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1 !important;
 }
 
-.ud-footer .ud-widget-title,
-.ud-footer .ud-footer-logo {
+/* Başlık/logo üst boşluk (footer row’daki logo ve 3 başlık override’da ayrı hizalanıyor) */
+.ud-footer .ud-widget-title {
     margin-top: 4px;
 }
 

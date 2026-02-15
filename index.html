@@ -913,8 +913,8 @@
                             <input type="hidden" name="_captcha" value="false">
 
                             <!-- Redirect From "formsubmit.co" we will add exact path to here for redirecting -->
-                            <input type="hidden" name="_next" value="https://your-domain.example.com/thanks.html" data-site="contact-form-next">
-                            <input type="hidden" name="_error" value="https://your-domain.example.com/error.html" data-site="contact-form-error">
+                            <input type="hidden" name="_next" value="https://your-domain.example.com/form-pages/thanks.html" data-site="contact-form-next">
+                            <input type="hidden" name="_error" value="https://your-domain.example.com/form-pages/error.html" data-site="contact-form-error">
                             <input type="hidden" name="_subject" value="New message - Your Brand" data-site="contact-form-subject">
 
                             <!-- Full Name -->
@@ -992,10 +992,10 @@
     <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
         <div class="ud-footer-widgets">
             <div class="container">
-                <div class="row">
+                <div class="row footer-widgets-row align-items-start">
 
                     <!-- Logo and short description -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 footer-col">
                         <div class="ud-widget">
                             <a href="#home" class="ud-footer-logo">
                                 <img src="assets/images/logo/CompanyLogo.png" alt="Solarity AI" width="180" height="60" loading="lazy" data-site="brand-logo" />
@@ -1007,7 +1007,7 @@
                     </div>
 
                     <!-- Social Media -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer-col footer-col--with-title">
                         <div class="ud-widget ud-widget--social">
                             <h5 class="ud-widget-title" data-site="footer-social-title">Follow [App Name]</h5>
                             <ul class="ud-widget-socials" data-site-list="footer-social-links">
@@ -1036,24 +1036,25 @@
                     </div>
 
                     <!-- Legal Links -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer-col footer-col--with-title">
                         <div class="ud-widget">
                             <h5 class="ud-widget-title" data-site="footer-legal-title">Legal</h5>
                             <ul class="ud-widget-links" data-site-list="footer-legal-links">
-                                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="/data-deletion.html">Data Deletion</a></li>
-                                <li><a href="/footer-pages/terms.html">Terms of Service</a></li>
-                                <li><a href="/footer-pages/kvkk.html">Privacy Notice</a></li>
-                                <li><a href="/footer-pages/cookies.html">Cookies Policy</a></li>
+                                <li><a href="footer-pages/privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="footer-pages/data-deletion.html">Data Deletion</a></li>
+                                <li><a href="footer-pages/terms.html">Terms of Service</a></li>
+                                <li><a href="footer-pages/privacy-policy.html">Privacy Notice</a></li>
+                                <li><a href="footer-pages/cookies.html">Cookies Policy</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Support -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer-col footer-col--with-title">
                         <div class="ud-widget">
                             <h5 class="ud-widget-title" data-site="footer-emergency-title">Support</h5>
-                            <p data-site="footer-emergency-text">For urgent help, contact local services. This service is not an emergency support provider.</p>
+                            <p data-site="footer-emergency-text">For general help and legal/data requests: <a href="footer-pages/contact.html">Contact &amp; Support</a>.</p>
+                            <p class="mb-0 mt-2 small" data-site="footer-emergency-disclaimer">For urgent help, contact local services. This service is not an emergency support provider.</p>
                         </div>
                     </div>
 
@@ -1066,7 +1067,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="ud-footer-bottom-right" data-site="footer-bottom-text">
-                            © 2026 App Name. All rights reserved.
+                            © 2026 Chat Therapy. All rights reserved. Registered in the USA.
                         </p>
                     </div>
                 </div>

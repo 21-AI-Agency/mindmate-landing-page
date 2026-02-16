@@ -6,7 +6,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://sohbetterapi.solarityai.com/</loc>
+    <loc>https://your-domain.example.com/</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,35 +14,35 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://sohbetterapi.solarityai.com/about.html</loc>
+    <loc>https://your-domain.example.com/about.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/pricing.html</loc>
+    <loc>https://your-domain.example.com/pricing.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/contact.html</loc>
+    <loc>https://your-domain.example.com/contact.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/blog.html</loc>
+    <loc>https://your-domain.example.com/blog.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/login.html</loc>
+    <loc>https://your-domain.example.com/login.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -50,35 +50,35 @@
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://sohbetterapi.solarityai.com/privacy-policy.html</loc>
+    <loc>https://your-domain.example.com/privacy-policy.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/data-deletion.html</loc>
+    <loc>https://your-domain.example.com/data-deletion.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/footer-pages/terms.html</loc>
+    <loc>https://your-domain.example.com/footer-pages/terms.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/footer-pages/kvkk.html</loc>
+    <loc>https://your-domain.example.com/footer-pages/kvkk.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   
   <url>
-    <loc>https://sohbetterapi.solarityai.com/footer-pages/cookies.html</loc>
+    <loc>https://your-domain.example.com/footer-pages/cookies.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

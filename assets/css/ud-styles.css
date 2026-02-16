@@ -1538,6 +1538,35 @@ p {
   color: var(--white);
 }
 
+/* Footer: başlık 4 ikonun üstünde ve ortalarında */
+.ud-footer .ud-widget.ud-widget--social {
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px;
+  text-align: center;
+}
+.ud-footer .ud-widget.ud-widget--social .ud-widget-title {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  text-align: center !important;
+}
+.ud-footer .ud-widget.ud-widget--social .ud-widget-socials {
+  margin: 0 !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 0;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: auto !important;
+}
+
+/* Footer: sağ/sol boşluk */
+.ud-footer .ud-footer-widgets .container {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
 .ud-widget .ud-widget-links a {
   display: inline-block;
   margin-bottom: 12px;

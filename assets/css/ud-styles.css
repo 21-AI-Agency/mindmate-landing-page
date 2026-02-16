@@ -1464,7 +1464,7 @@ p {
 /* ===== Footer CSS ===== */
 .ud-footer {
   background: var(--heading-color);
-  padding-top: 100px;
+  padding-top: 60px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -1492,12 +1492,15 @@ p {
 
 .ud-widget {
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .ud-widget .ud-footer-logo {
   max-width: 160px;
   display: block;
-  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .ud-widget .ud-footer-logo img {
@@ -1510,6 +1513,8 @@ p {
   color: #f3f4fe;
   margin-bottom: 30px;
   max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ud-widget .ud-widget-socials {
@@ -1519,12 +1524,17 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .ud-widget .ud-widget-socials a {
   font-size: 16px;
   color: #dddddd;
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .ud-widget .ud-widget-socials a:hover {
@@ -1534,8 +1544,31 @@ p {
 .ud-widget .ud-widget-title {
   font-weight: 600;
   font-size: 18px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   color: var(--white);
+}
+
+.ud-widget p {
+  text-align: center;
+}
+
+.ud-widget .ud-widget-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.ud-widget .ud-widget-links li {
+  text-align: center;
+}
+
+/* 4 eşit sütun: Logo + 3 başlık, aralarında eşit boşluk */
+@media (min-width: 992px) {
+  .ud-footer-widgets .footer-widgets-row--four-cols .footer-col {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+  }
 }
 
 /* Footer: başlık 4 ikonun üstünde ve ortalarında */
@@ -1577,7 +1610,6 @@ p {
 
 .ud-widget .ud-widget-links a:hover {
   color: var(--primary-color);
-  padding-left: 10px;
 }
 
 .ud-widget .ud-widget-brands {

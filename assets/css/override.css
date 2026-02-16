@@ -1231,8 +1231,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0 !important;
     margin-top: 0 !important;
 }
+/* Logo ile altındaki içerik arası = başlık–içerik ile aynı (20px) */
 .ud-footer .footer-widgets-row > .footer-col:first-child .ud-footer-logo {
     margin: 0 !important;
+    margin-bottom: 20px !important;
     padding: 0 !important;
     display: block !important;
 }
@@ -1269,13 +1271,21 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-/* Tüm widget'lar column; sosyal hariç (sosyal ud-styles ve aşağıdaki .ud-widget--social ile) */
+/* Tüm widget'lar column; başlık altındaki içerik ortada */
 .ud-footer .ud-widget:not(.ud-widget--social) {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left !important;
+    align-items: center;
+    text-align: center !important;
+}
+/* Legal vb. link listeleri ortada */
+.ud-footer .ud-widget-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
 }
 /* Footer sosyal: başlık 4 ikonun üstünde ve ortalarında */
 .ud-footer .ud-widget.ud-widget--social {
@@ -1283,7 +1293,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 14px;
+    gap: 20px;
     text-align: center !important;
 }
 .ud-footer .ud-widget.ud-widget--social .ud-widget-title {
@@ -1294,7 +1304,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .ud-footer .ud-widget.ud-widget--social .ud-widget-socials {
     margin: 0 !important;
-    margin-top: 12px !important;
+    margin-top: 0 !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
     display: flex !important;
@@ -1323,11 +1333,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Başlık/logo üst boşluk (footer row’daki logo ve 3 başlık override’da ayrı hizalanıyor) */
 .ud-footer .ud-widget-title {
     margin-top: 4px;
+    margin-bottom: 20px !important;
 }
 
-/* Sosyal ikon listesi: başlık altında ortada; genel footer'da sola hizalı (--social kendi kuralında center ile ezer) */
+/* Sosyal ikon listesi: başlık altında ortada */
 .ud-footer .ud-widget-socials {
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .ud-footer .ud-widget-socials li {
@@ -1374,9 +1385,9 @@ h1, h2, h3, h4, h5, h6 {
     .ud-footer .ud-widget-desc,
     .ud-footer-bottom p,
     .ud-footer .ud-footer-logo {
-        text-align: left !important;
-        margin-left: 0;
-        margin-right: 0;
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* Mobilde footer içerikleri taşmasın */
@@ -1415,7 +1426,7 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Social icons alignment */
     .ud-footer .ud-widget-socials {
-        justify-content: flex-start !important;
+        justify-content: center !important;
     }
 
     /* Ensure footer logo is centered */
@@ -1451,10 +1462,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
     .ud-footer .ud-widget {
-        text-align: left !important;
+        text-align: center !important;
     }
     .ud-footer .ud-widget-socials {
-        justify-content: flex-start !important;
+        justify-content: center !important;
     }
 }
 

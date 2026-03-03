@@ -1098,7 +1098,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ud-social-follow .ud-section-title h2 {
-    margin-bottom: 70px; !important;/* title and icons gap */
+    margin-bottom: 70px !important; /* title and icons gap */
 }
 
 /* Container for social icons */
@@ -2576,4 +2576,38 @@ body {
         align-items: center !important;
         box-sizing: border-box !important;
     }
+}
+
+/* === Accessibility & Heading hierarchy fixes === */
+/* Replaced h4 → p.ud-testimonial-name for heading sequence */
+.ud-single-testimonial .ud-testimonial-info .ud-testimonial-meta .ud-testimonial-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 0 2px;
+    color: inherit;
+}
+/* Replaced h5 → p.ud-info-label for heading sequence */
+.ud-contact-info-wrapper .ud-info-meta .ud-info-label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: inherit;
+}
+
+/* === Contrast fix: social follow links must meet WCAG AA 4.5:1 === */
+/* #1d4ed8 on white = 6.7:1 contrast ratio */
+.social-item-follow {
+    color: #1d4ed8 !important;
+}
+.social-item-follow:hover {
+    color: #1e40af !important;
+}
+
+/* === Composited animations: promote animated elements to GPU layer === */
+.wow,
+.animated {
+    will-change: transform, opacity;
+}
+.wow.animated {
+    will-change: auto;
 }

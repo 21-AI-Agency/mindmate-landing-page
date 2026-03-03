@@ -12,77 +12,40 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Main Pages -->
-  <url>
-    <loc>https://your-domain.example.com/about.html</loc>
-    <lastmod>2025-11-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://your-domain.example.com/pricing.html</loc>
-    <lastmod>2025-11-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://your-domain.example.com/contact.html</loc>
-    <lastmod>2025-11-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://your-domain.example.com/blog.html</loc>
-    <lastmod>2025-11-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://your-domain.example.com/login.html</loc>
-    <lastmod>2025-11-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
   <!-- Legal Pages -->
   <url>
-    <loc>https://your-domain.example.com/privacy-policy.html</loc>
+    <loc>https://your-domain.example.com/footer-pages/privacy-policy.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  
+
   <url>
-    <loc>https://your-domain.example.com/data-deletion.html</loc>
+    <loc>https://your-domain.example.com/footer-pages/data-deletion.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  
+
   <url>
     <loc>https://your-domain.example.com/footer-pages/terms.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
-  
-  <url>
-    <loc>https://your-domain.example.com/footer-pages/kvkk.html</loc>
-    <lastmod>2025-11-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  
+
   <url>
     <loc>https://your-domain.example.com/footer-pages/cookies.html</loc>
     <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
-  
-</urlset>
 
+  <url>
+    <loc>https://your-domain.example.com/footer-pages/contact.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

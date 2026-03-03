@@ -76,9 +76,9 @@
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/CompanyLogo.png";
+      logo.src = "assets/images/logo/logo.webp";
     } else {
-      logo.src = "assets/images/logo/CompanyLogo.png";
+      logo.src = "assets/images/logo/logo.webp";
     }
 
     // show or hide the back-top-top button
@@ -106,6 +106,8 @@
   navbarToggler.addEventListener("click", function () {
     navbarToggler.classList.toggle("active");
     navbarCollapse.classList.toggle("show");
+    const expanded = navbarCollapse.classList.contains("show");
+    navbarToggler.setAttribute("aria-expanded", String(expanded));
   });
 
   // ===== submenu
@@ -116,8 +118,30 @@
     });
   });
 
-  // ===== wow js
-  new WOW().init();
+  // ===== Scroll reveal via IntersectionObserver (replaces WOW.js — no forced reflow)
+  (function () {
+    var els = document.querySelectorAll(".wow");
+    if (!els.length) return;
+    els.forEach(function (el) { el.style.visibility = "hidden"; });
+    if (!("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.style.visibility = "visible"; el.classList.add("animated"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var delay = el.getAttribute("data-wow-delay") || "0s";
+        var duration = el.getAttribute("data-wow-duration");
+        el.style.animationDelay = delay;
+        if (duration) el.style.animationDuration = duration;
+        el.style.visibility = "visible";
+        el.classList.add("animated");
+        io.unobserve(el);
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  })();
 
   // ====== scroll top js
   function scrollTo(element, to = 0, duration = 500) {
@@ -201,7 +225,7 @@
               <img src="${t.image}" alt="${t.name}" loading="lazy" width="60" height="60" />
             </div>
             <div class="ud-testimonial-meta">
-              <h4>${t.name}</h4>
+              <p class="ud-testimonial-name">${t.name}</p>
               <p>${t.role}</p>
             </div>
           </div>

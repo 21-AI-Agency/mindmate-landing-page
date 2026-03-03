@@ -9,7 +9,7 @@
 ========== -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -149,42 +149,26 @@
           }
           </script>
 
+          <!-- Critical CSS -->
+          <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="assets/css/ud-styles.css" />
+          <link rel="stylesheet" href="assets/css/override.min.css" />
+
+          <!-- Deferred non-critical CSS -->
+          <link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'" />
+          <noscript><link rel="stylesheet" href="assets/css/animate.css" /></noscript>
+          <link rel="stylesheet" href="assets/css/lineicons.css" media="print" onload="this.media='all'" />
+          <noscript><link rel="stylesheet" href="assets/css/lineicons.css" /></noscript>
+
           <!-- Swiper CSS -->
-          <link
-                  rel="stylesheet"
-                  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-                  media="print"
-                  onload="this.media='all'"
-          />
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
           <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
 
-          <!-- Google Fonts: Poppins - Optimized -->
-          <link
-                  rel="preload"
-                  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-                  as="style"
-                  onload="this.onload=null;this.rel='stylesheet'"
-          />
-          <noscript>
-            <link
-                    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-                    rel="stylesheet"
-            />
-          </noscript>
+          <!-- Google Fonts: Poppins -->
+          <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+          <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
 
   </head>
-
-
-    <!-- ===== All CSS files ===== -->
-      <link rel="preload" href="assets/css/bootstrap.min.css" as="style" />
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-      <link rel="preload" href="assets/css/ud-styles.css" as="style" />
-      <link rel="stylesheet" href="assets/css/ud-styles.css" />
-      <link rel="preload" href="assets/css/override.css" as="style" />
-      <link rel="stylesheet" href="assets/css/override.css" />
-      <link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'" />
-      <noscript><link rel="stylesheet" href="assets/css/animate.css" /></noscript>
-      <link rel="stylesheet" href="assets/css/lineicons.css" />
   <body>
     <!-- ====== Header Start ====== -->
     <header class="ud-header">
@@ -193,15 +177,15 @@
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg">
               <a class="navbar-brand" href="#home">
-                <img src="assets/images/logo/CompanyLogo.png" alt="Solarity AI" width="180" height="60" loading="eager" data-site="brand-logo" />
+                <img src="assets/images/logo/logo.webp" alt="Chat Therapy" width="180" height="60" loading="eager" fetchpriority="high" data-site="brand-logo" />
               </a>
-              <button class="navbar-toggler">
+              <button class="navbar-toggler" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarCollapse">
                 <span class="toggler-icon"> </span>
                 <span class="toggler-icon"> </span>
                 <span class="toggler-icon"> </span>
               </button>
 
-              <div class="navbar-collapse">
+              <div class="navbar-collapse" id="navbarCollapse">
                   <ul id="nav" class="navbar-nav mx-auto">
                       <li class="nav-item"><a class="ud-menu-scroll" href="#home">Home</a></li>
                       <li class="nav-item"><a class="ud-menu-scroll" href="#features">Features</a></li>
@@ -224,6 +208,8 @@
       </div>
     </header>
     <!-- ====== Header End ====== -->
+
+    <main id="main-content">
 
     <!-- ====== Hero Start ====== -->
     <section class="ud-hero" id="home">
@@ -260,10 +246,15 @@
           <div class="col-lg-6">
               <div class="ud-hero-media wow fadeInUp" data-wow-delay=".25s" data-site="hero-media">
                   <img
-                          src="assets/images/placeholder/hero.svg"
-                          alt="Mobile app preview"
+                          src="assets/images/hero/app-preview.webp"
+                          srcset="assets/images/hero/app-preview-sm.webp 776w, assets/images/hero/app-preview.webp 1552w"
+                          sizes="(max-width: 768px) 776px, 1552px"
+                          alt="Chat Therapy app preview"
                           class="img-fluid"
-                          loading="lazy"
+                          width="1552"
+                          height="812"
+                          loading="eager"
+                          fetchpriority="high"
                           decoding="async"
                           data-site="hero-media-image"
                   />
@@ -391,11 +382,11 @@
             <div class="ud-brand-strip-inner">
                 <span class="ud-brand-strip-label" data-site="brand-strip-label">Trusted by leading companies</span>
                 <div class="ud-brand-strip-logos" data-site-list="brand-logos">
-                    <img src="assets/images/brands/uideck.svg" alt="UIdeck" loading="lazy" />
-                    <img src="assets/images/brands/lineicons.svg" alt="Lineicons" loading="lazy" />
-                    <img src="assets/images/brands/graygrids.svg" alt="GrayGrids" loading="lazy" />
-                    <img src="assets/images/brands/ayroui.svg" alt="AyroUI" loading="lazy" />
-                    <img src="assets/images/brands/ecommerce-html.svg" alt="Ecommerce HTML" loading="lazy" />
+                    <img src="assets/images/brands/uideck.svg" alt="UIdeck" loading="lazy" width="120" height="28" />
+                    <img src="assets/images/brands/lineicons.svg" alt="Lineicons" loading="lazy" width="120" height="28" />
+                    <img src="assets/images/brands/graygrids.svg" alt="GrayGrids" loading="lazy" width="120" height="28" />
+                    <img src="assets/images/brands/ayroui.svg" alt="AyroUI" loading="lazy" width="120" height="28" />
+                    <img src="assets/images/brands/ecommerce-html.svg" alt="Ecommerce HTML" loading="lazy" width="120" height="28" />
                 </div>
             </div>
         </div>
@@ -499,7 +490,7 @@
                                     <img src="assets/images/placeholder/avatar.svg" alt="Alex M." loading="lazy" width="60" height="60" />
                                 </div>
                                 <div class="ud-testimonial-meta">
-                                    <h4>Alex M.</h4>
+                                    <p class="ud-testimonial-name">Alex M.</p>
                                     <p>Customer</p>
                                 </div>
                             </div>
@@ -522,7 +513,7 @@
                                     <img src="assets/images/placeholder/avatar.svg" alt="Jordan T." loading="lazy" width="60" height="60" />
                                 </div>
                                 <div class="ud-testimonial-meta">
-                                    <h4>Jordan T.</h4>
+                                    <p class="ud-testimonial-name">Jordan T.</p>
                                     <p>Power User</p>
                                 </div>
                             </div>
@@ -545,7 +536,7 @@
                                     <img src="assets/images/placeholder/avatar.svg" alt="Sam R." loading="lazy" width="60" height="60" />
                                 </div>
                                 <div class="ud-testimonial-meta">
-                                    <h4>Sam R.</h4>
+                                    <p class="ud-testimonial-name">Sam R.</p>
                                     <p>Early Adopter</p>
                                 </div>
                             </div>
@@ -563,7 +554,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center p-4">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title w-100" id="comingSoonModalLabel">Coming Soon!</h5>
+                    <h3 class="modal-title w-100" id="comingSoonModalLabel">Coming Soon!</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
                 </div>
                 <div class="modal-body">
@@ -832,7 +823,7 @@
                                     <i class="lni lni-map-marker"></i>
                                 </div>
                                 <div class="ud-info-meta">
-                                    <h5 data-site="contact-address-label">Address</h5>
+                                    <p class="ud-info-label" data-site="contact-address-label">Address</p>
                                     <p data-site="contact-address">Dallas, Texas, USA</p>
                                 </div>
                             </div>
@@ -843,7 +834,7 @@
                                     <i class="lni lni-envelope"></i>
                                 </div>
                                 <div class="ud-info-meta">
-                                    <h5 data-site="contact-email-label">Email</h5>
+                                    <p class="ud-info-label" data-site="contact-email-label">Email</p>
                                     <div data-site="contact-emails">
                                         <p>hello@mobileapp.ai</p>
                                         <p>support@mobileapp.ai</p>
@@ -941,7 +932,7 @@
     </section>
     <!-- ====== Download CTA End ====== -->
 
-
+    </main>
     <!-- ====== Footer Start ====== -->
     <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
         <div class="ud-footer-widgets">
@@ -952,7 +943,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer-col">
                         <div class="ud-widget">
                             <a href="#home" class="ud-footer-logo">
-                                <img src="assets/images/logo/CompanyLogo.png" alt="Solarity AI" width="180" height="60" loading="lazy" data-site="brand-logo" />
+                                <img src="assets/images/logo/logo.webp" alt="Chat Therapy" width="180" height="60" loading="lazy" data-site="brand-logo" />
                             </a>
                             <p class="ud-widget-desc" data-site="footer-desc">
                                 Replace with a short description of your app or company for the footer.
@@ -963,7 +954,7 @@
                     <!-- 2. Social -->
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer-col">
                         <div class="ud-widget ud-widget--social">
-                            <h5 class="ud-widget-title" data-site="footer-social-title">Follow [App Name]</h5>
+                            <h3 class="ud-widget-title" data-site="footer-social-title">Follow [App Name]</h3>
                             <ul class="ud-widget-socials" data-site-list="footer-social-links">
                                 <li>
                                     <a href="https://www.youtube.com/@yourhandle" target="_blank" rel="noopener">
@@ -992,7 +983,7 @@
                     <!-- 3. Legal -->
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer-col">
                         <div class="ud-widget">
-                            <h5 class="ud-widget-title" data-site="footer-legal-title">Legal</h5>
+                            <h3 class="ud-widget-title" data-site="footer-legal-title">Legal</h3>
                             <ul class="ud-widget-links" data-site-list="footer-legal-links">
                                 <li><a href="footer-pages/privacy-policy.html">Privacy Policy</a></li>
                                 <li><a href="footer-pages/data-deletion.html">Data Deletion</a></li>
@@ -1006,7 +997,7 @@
                     <!-- 4. Support -->
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 footer-col">
                         <div class="ud-widget">
-                            <h5 class="ud-widget-title" data-site="footer-emergency-title">Support</h5>
+                            <h3 class="ud-widget-title" data-site="footer-emergency-title">Support</h3>
                             <p data-site="footer-emergency-text">For general help and legal/data requests: <a href="footer-pages/contact.html">Contact &amp; Support</a>.</p>
                             <p class="mb-0 mt-2 small" data-site="footer-emergency-disclaimer">For urgent help, contact local services. This service is not an emergency support provider.</p>
                         </div>
@@ -1032,15 +1023,14 @@
 
 
     <!-- ====== Back To Top Start ====== -->
-    <a href="javascript:void(0)" class="back-to-top">
-      <i class="lni lni-chevron-up"> </i>
+    <a href="#top" class="back-to-top" aria-label="Back to top">
+      <i class="lni lni-chevron-up" aria-hidden="true"></i>
     </a>
     <!-- ====== Back To Top End ====== -->
 
     <!-- ====== All Javascript Files ====== -->
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/wow.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="assets/js/sections.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script>

@@ -153,6 +153,12 @@ function applyHero(hero) {
     if (hero.media.image) {
       heroMedia.setAttribute("src", hero.media.image);
     }
+    if (hero.media.srcset) {
+      heroMedia.setAttribute("srcset", hero.media.srcset);
+    }
+    if (hero.media.sizes) {
+      heroMedia.setAttribute("sizes", hero.media.sizes);
+    }
     if (hero.media.alt) {
       heroMedia.setAttribute("alt", hero.media.alt);
     }

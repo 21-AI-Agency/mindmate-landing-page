@@ -2,7 +2,7 @@
 
 .ud-footer {
   background: var(--heading-color);
-  padding-top: 100px;
+  padding-top: 60px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -28,13 +28,27 @@
   }
 }
 
+/* 4 eşit sütun: Logo + 3 başlık, aralarında eşit boşluk */
+.ud-footer-widgets .footer-widgets-row--four-cols {
+  @media (min-width: 992px) {
+    .footer-col {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: none;
+    }
+  }
+}
+
 .ud-widget {
   margin-bottom: 50px;
+  text-align: center;
 
   .ud-footer-logo {
     max-width: 160px;
     display: block;
-    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; /* logo ↔ içerik arası (başlık–içerik ile aynı) */
 
     img {
       width: 100%;
@@ -47,16 +61,21 @@
     color: #f3f4fe;
     margin-bottom: 30px;
     max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .ud-widget-socials {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
 
     a {
       font-size: 16px;
       color: #dddddd;
-      margin-right: 20px;
+      margin-right: 0;
 
       &:hover {
         color: var(--primary-color);
@@ -67,11 +86,19 @@
   .ud-widget-title {
     font-weight: 600;
     font-size: 18px;
-    margin-bottom: 35px;
+    margin-bottom: 20px; /* başlık ↔ içerik (logo–içerik ile aynı standart) */
     color: var(--white);
   }
 
   .ud-widget-links {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      text-align: center;
+    }
+
     a {
       display: inline-block;
       margin-bottom: 12px;
@@ -81,9 +108,13 @@
 
       &:hover {
         color: var(--primary-color);
-        padding-left: 10px;
+        padding-left: 0;
       }
     }
+  }
+
+  .ud-widget p {
+    text-align: center;
   }
 
   .ud-widget-brands {

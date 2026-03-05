@@ -88,7 +88,7 @@
               <img src="${testimonial.image}" alt="${testimonial.name}" loading="lazy" decoding="async" width="50" height="50" />
             </div>
             <div class="ud-testimonial-meta">
-              <h4>${testimonial.name}</h4>
+              <p class="ud-testimonial-name">${testimonial.name}</p>
               <p>${testimonial.role}</p>
             </div>
           </div>

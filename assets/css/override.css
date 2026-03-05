@@ -838,12 +838,12 @@ p, li {
 }
 
 a {
-    color: var(--bs-primary) !important;
+    color: #0f4f73 !important;
     transition: color 0.2s ease !important;
 }
 
 a:hover {
-    color: var(--bs-secondary) !important;
+    color: #0b3f5c !important;
 }
 
 /* === 8. Responsive Balance (Mobile) === */
@@ -1340,6 +1340,55 @@ body {
 .social-link-card a {
     margin-top: auto;
     font-weight: 600;
-    color: #145c84;
+    color: #0f4f73 !important;
     text-decoration: underline;
+}
+
+.ud-main-btn {
+    background-color: #0f4f73 !important;
+    border-color: #0f4f73 !important;
+    color: #ffffff !important;
+}
+
+.ud-main-btn:hover,
+.ud-main-btn:focus {
+    background-color: #0b3f5c !important;
+    border-color: #0b3f5c !important;
+    color: #ffffff !important;
+}
+
+.ud-white-btn {
+    background-color: #ffffff !important;
+    border-color: #0f4f73 !important;
+    color: #0f4f73 !important;
+}
+
+.ud-white-btn:hover,
+.ud-white-btn:focus {
+    background-color: #0f4f73 !important;
+    border-color: #0f4f73 !important;
+    color: #ffffff !important;
+}
+
+.ud-footer {
+    background: #f1f5f9 !important;
+}
+
+.ud-footer .ud-widget-title,
+.ud-footer .ud-widget-desc,
+.ud-footer .ud-widget-links li a,
+.ud-footer .ud-widget-socials a,
+.ud-footer .ud-widget p,
+.ud-footer .ud-footer-bottom-right {
+    color: #1f2937 !important;
+}
+
+.ud-footer .ud-widget-links li a:hover {
+    color: #0f4f73 !important;
+}
+
+.ud-testimonial-name {
+    font-weight: 600 !important;
+    margin-bottom: 2px !important;
+    color: var(--text-primary) !important;
 }

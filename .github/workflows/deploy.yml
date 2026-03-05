@@ -26,7 +26,7 @@ jobs:
           role-to-assume: ${{ env.AWS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Sync to S3
+      - name: Sync project files to S3
         run: |
           aws s3 sync . s3://$S3_BUCKET/ \
             --delete \
@@ -43,6 +43,49 @@ jobs:
             --exclude "TestCommit" \
             --exclude "firebase-debug.log" \
             --exclude ".claude/*"
+
+      - name: Apply long-lived cache headers to static assets
+        run: |
+          aws s3 cp . s3://$S3_BUCKET/ --recursive \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "ansible/*" \
+            --exclude "*.bak" \
+            --exclude "README.md" \
+            --exclude "LICENCE" \
+            --exclude ".gitignore" \
+            --exclude ".idea/*" \
+            --exclude "CLAUDE.md" \
+            --exclude "SEO_SETUP.md" \
+            --exclude "TestCommit" \
+            --exclude "firebase-debug.log" \
+            --exclude ".claude/*" \
+            --exclude "*.html" \
+            --exclude "*.xml" \
+            --exclude "robots.txt" \
+            --cache-control "public,max-age=31536000,immutable"
+
+      - name: Apply no-cache headers to HTML and crawl files
+        run: |
+          aws s3 cp . s3://$S3_BUCKET/ --recursive \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "ansible/*" \
+            --exclude "*.bak" \
+            --exclude "README.md" \
+            --exclude "LICENCE" \
+            --exclude ".gitignore" \
+            --exclude ".idea/*" \
+            --exclude "CLAUDE.md" \
+            --exclude "SEO_SETUP.md" \
+            --exclude "TestCommit" \
+            --exclude "firebase-debug.log" \
+            --exclude ".claude/*" \
+            --exclude "*" \
+            --include "*.html" \
+            --include "*.xml" \
+            --include "robots.txt" \
+            --cache-control "no-cache,no-store,must-revalidate,max-age=0"
 
       - name: Invalidate CloudFront cache
         run: |

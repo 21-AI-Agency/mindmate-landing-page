@@ -16,7 +16,7 @@
 /* ============================= */
 html, body {
     font-size: 100%;
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-secondary);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -1231,4 +1231,115 @@ body {
 .ud-contact-form input::placeholder,
 .ud-contact-form textarea::placeholder {
     color: var(--text-tertiary) !important;
+}
+
+/* PSI remediation overrides */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 12px;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 10000;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+.ud-faq .ud-section-title span {
+    color: #1f5f83 !important;
+}
+
+.ud-contact-info-wrapper .ud-info-meta h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+#preview-trigger {
+    cursor: pointer;
+}
+
+#preview-trigger:focus-visible {
+    outline: 3px solid #1f5f83;
+    outline-offset: 4px;
+    border-radius: 12px;
+}
+
+.ud-social-follow .ud-section-title h2 {
+    margin-bottom: 70px !important;
+}
+
+.ud-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1199px) {
+    .ud-testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .ud-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ud-testimonial-image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    display: block;
+}
+
+.popup-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+@media (max-width: 640px) {
+    .popup-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.popup-close {
+    border: 0;
+    background: transparent;
+    line-height: 1;
+}
+
+.social-item {
+    min-height: 260px;
+    height: auto;
+    padding: 28px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.social-link-card h3 {
+    margin-bottom: 10px;
+}
+
+.social-link-card p {
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+}
+
+.social-link-card a {
+    margin-top: auto;
+    font-weight: 600;
+    color: #145c84;
+    text-decoration: underline;
 }

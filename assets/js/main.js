@@ -1,36 +1,10 @@
 (function () {
   "use strict";
 
-  const udHeader = document.querySelector(".ud-header");
   const backToTop = document.querySelector(".back-to-top");
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
   const menuLinks = document.querySelectorAll(".ud-menu-scroll");
-  let scrollTicking = false;
-
-  function syncScrollState() {
-    const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-
-    if (udHeader) {
-      udHeader.classList.toggle("sticky", scrollY > 8);
-    }
-
-    if (backToTop) {
-      backToTop.style.display = scrollY > 50 ? "flex" : "none";
-    }
-  }
-
-  function onScroll() {
-    if (scrollTicking) return;
-    scrollTicking = true;
-    window.requestAnimationFrame(() => {
-      syncScrollState();
-      scrollTicking = false;
-    });
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  syncScrollState();
 
   menuLinks.forEach((element) => {
     element.addEventListener("click", (event) => {

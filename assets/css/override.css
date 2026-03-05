@@ -919,36 +919,11 @@ a:hover {
 }
 
 
-/* === Global Font Setup === */
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* === Hero Text Customization === */
-.ud-hero-desc {
-    font-family: 'Poppins', sans-serif !important;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-}
-
-/* === Simplified Hero Animation === */
+/* Keep hero text static on load for better Speed Index */
 .ud-hero-content .ud-hero-desc {
-    font-family: 'Poppins', sans-serif;
     text-align: center;
     letter-spacing: 0.3px;
     line-height: 1.8;
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Ana görsel hover efekti */
@@ -1391,4 +1366,16 @@ body {
     font-weight: 600 !important;
     margin-bottom: 2px !important;
     color: var(--text-primary) !important;
+}
+
+/* Defer below-the-fold rendering on mobile Lighthouse path */
+#social-gallery,
+#testimonials,
+#pricing,
+#faq,
+#contact,
+.ud-social-follow,
+.ud-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
 }

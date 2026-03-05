@@ -5,40 +5,50 @@
   const backToTop = document.querySelector(".back-to-top");
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
+  const menuLinks = document.querySelectorAll(".ud-menu-scroll");
+  let scrollTicking = false;
 
-  function handleScroll() {
-    if (!udHeader) return;
-    const stickyPoint = udHeader.offsetTop;
+  function syncScrollState() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
 
-    if (window.pageYOffset > stickyPoint) {
-      udHeader.classList.add("sticky");
-    } else {
-      udHeader.classList.remove("sticky");
+    if (udHeader) {
+      udHeader.classList.toggle("sticky", scrollY > 8);
     }
 
-    if (!backToTop) return;
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
+    if (backToTop) {
+      backToTop.style.display = scrollY > 50 ? "flex" : "none";
     }
   }
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  handleScroll();
+  function onScroll() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(() => {
+      syncScrollState();
+      scrollTicking = false;
+    });
+  }
 
-  if (navbarToggler && navbarCollapse) {
-    document.querySelectorAll(".ud-menu-scroll").forEach((element) =>
-      element.addEventListener("click", () => {
+  window.addEventListener("scroll", onScroll, { passive: true });
+  syncScrollState();
+
+  menuLinks.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+      const target = document.querySelector(element.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      if (navbarToggler && navbarCollapse) {
         navbarToggler.classList.remove("active");
         navbarCollapse.classList.remove("show");
         navbarToggler.setAttribute("aria-expanded", "false");
-      })
-    );
+      }
+    });
+  });
 
+  if (navbarToggler && navbarCollapse) {
     navbarToggler.addEventListener("click", () => {
       const isActive = navbarToggler.classList.toggle("active");
       navbarCollapse.classList.toggle("show", isActive);
@@ -102,7 +112,29 @@
     }
   }
 
-  loadTestimonials();
+  function initTestimonialsLazyLoad() {
+    const testimonialsSection = document.getElementById("testimonials");
+    if (!testimonialsSection) return;
+
+    if (!("IntersectionObserver" in window)) {
+      loadTestimonials();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const isVisible = entries.some((entry) => entry.isIntersecting);
+        if (!isVisible) return;
+        observer.disconnect();
+        loadTestimonials();
+      },
+      { rootMargin: "300px 0px" }
+    );
+
+    observer.observe(testimonialsSection);
+  }
+
+  initTestimonialsLazyLoad();
 })();
 
 document.addEventListener("DOMContentLoaded", () => {

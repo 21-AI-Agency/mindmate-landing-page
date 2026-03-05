@@ -987,65 +987,13 @@
           gtag("config", "G-3SE53Z2S2Z");
         }
 
-        ["pointerdown", "keydown", "touchstart", "scroll"].forEach(function (eventName) {
+        ["pointerdown", "keydown", "touchstart"].forEach(function (eventName) {
           window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
         });
         window.addEventListener("load", function () {
-          window.setTimeout(loadAnalytics, 6000);
+          window.setTimeout(loadAnalytics, 12000);
         }, { once: true });
       })();
-    </script>
-    <script>
-      // ==== for menu scroll - optimized
-      document.addEventListener("DOMContentLoaded", function() {
-        const pageLink = document.querySelectorAll(".ud-menu-scroll");
-
-        pageLink.forEach((elem) => {
-          elem.addEventListener("click", (e) => {
-            e.preventDefault();
-            const target = document.querySelector(elem.getAttribute("href"));
-            if (target) {
-              target.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          });
-        });
-
-        // section menu active - throttled for performance
-        let ticking = false;
-        function onScroll() {
-          if (!ticking) {
-            window.requestAnimationFrame(() => {
-              const sections = document.querySelectorAll(".ud-menu-scroll");
-              const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-              for (let i = 0; i < sections.length; i++) {
-                const currLink = sections[i];
-                const val = currLink.getAttribute("href");
-                const refElement = document.querySelector(val);
-                if (refElement) {
-                  const scrollTopMinus = scrollPos + 73;
-                  if (
-                    refElement.offsetTop <= scrollTopMinus &&
-                    refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-                  ) {
-                    document.querySelectorAll(".ud-menu-scroll").forEach(link => link.classList.remove("active"));
-                    currLink.classList.add("active");
-                  } else {
-                    currLink.classList.remove("active");
-                  }
-                }
-              }
-              ticking = false;
-            });
-            ticking = true;
-          }
-        }
-
-        window.addEventListener("scroll", onScroll, { passive: true });
-      });
     </script>
   </body>
 </html>

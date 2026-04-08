@@ -1623,3 +1623,123 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
     flex-direction: column;
   }
 }
+
+/* ============================================
+   LEGAL / UTILITY PAGE LAYOUT
+   ============================================ */
+.legal-page {
+  padding: 120px 0 80px;
+  background: var(--color-bg);
+}
+
+.legal-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+  color: var(--color-text);
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.legal-container h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.legal-container .legal-meta {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin: 0 0 40px;
+}
+
+.legal-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 40px 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.legal-container h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 28px 0 10px;
+}
+
+.legal-container p {
+  margin: 0 0 16px;
+  color: var(--color-text-muted);
+}
+
+.legal-container ul,
+.legal-container ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+  color: var(--color-text-muted);
+}
+
+.legal-container li {
+  margin-bottom: 8px;
+}
+
+.legal-container a {
+  color: var(--color-accent-green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-container a:hover {
+  opacity: 0.85;
+}
+
+.legal-container strong {
+  color: var(--color-text);
+}
+
+.legal-container hr {
+  border: 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  margin: 40px 0;
+}
+
+/* Centered utility pages (404, thanks) */
+.utility-page {
+  min-height: calc(100vh - 400px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 80px;
+  text-align: center;
+}
+
+.utility-page .utility-content {
+  max-width: 520px;
+}
+
+.utility-page h1 {
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin: 0 0 8px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.utility-page h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 16px;
+}
+
+.utility-page p {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+

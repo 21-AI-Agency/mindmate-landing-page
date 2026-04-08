@@ -1,0 +1,33 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Documentation / meta (not served by nginx)
+README.md
+LICENCE
+LICENSE
+CLAUDE.md
+CONTRIBUTING.md
+
+# Tooling / planning artifacts
+.claude/
+.planning/
+.idea/
+.vscode/
+*.swp
+
+# Build / node (not used here but defensive)
+node_modules/
+dist/
+.angular/
+.ng/
+
+# OS cruft
+.DS_Store
+**/.DS_Store
+
+# Docker / CI files themselves (not needed inside the image)
+Dockerfile
+.dockerignore
+.woodpecker.yml

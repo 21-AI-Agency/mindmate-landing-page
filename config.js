@@ -81,11 +81,6 @@ const PRODUCT_CONFIG = {
     },
   },
 
-  brands: {
-    label: "Güvenli, anonim ve empatik destek platformu",
-    count: 3,
-  },
-
   numbers: {
     badge: "Etki",
     title: "Sohbet Terapi ile Kendinizi Daha İyi Hissedin",
@@ -308,9 +303,6 @@ const PRODUCT_CONFIG = {
           quote: "Writing on tough days relieves me. Knowing I won't be judged feels great.",
           author: "Elif K.",
         },
-      },
-      brands: {
-        label: "Secure, anonymous, and empathetic support platform",
       },
       numbers: {
         badge: "Impact",

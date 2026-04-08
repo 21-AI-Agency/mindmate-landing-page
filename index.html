@@ -1,999 +1,815 @@
-<!-- =========
-
-	Template Name: Play
-	Author: UIdeck
-	Author URI: https://uideck.com/
-	Support: https://uideck.com/support/
-	Version: 1.1
-
-========== -->
-
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- Primary Title -->
-          <title>Sohbet Terapi | Yapay Zekâ Destekli Duygusal Destek ve Terapi Uygulaması</title>
-          <meta name="title" content="Sohbet Terapi | Yapay Zekâ Destekli Duygusal Destek ve Terapi Uygulaması">
-          <meta name="description" content="Sohbet Terapi, yapay zekâ destekli empatik konuşmalar ve duygusal destek sunarak ruhsal iyi oluşunuza katkı sağlar. Anonim, güvenli ve 7/24 erişilebilir yapay zekâ tabanlı terapi deneyimi.">
-          <meta name="keywords" content="sohbet terapi, yapay zeka terapi, duygusal destek, mental sağlık, psikolojik destek, AI terapi, online terapi, anonim terapi, empati odaklı sohbet, ruhsal iyi oluş, yapay zeka destekli konuşma">
-          <meta name="author" content="Solarity AI LLC">
-          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-          <meta name="language" content="Turkish">
-          <meta name="revisit-after" content="7 days">
+  <!-- Populated by config.js -->
+  <title>Loading...</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Solarity AI LLC">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://chat-therapy.solarityai.com/">
 
-          <!-- Open Graph / Facebook -->
-          <meta property="og:type" content="website">
-          <meta property="og:url" content="https://chat-therapy.solarityai.com/">
-          <meta property="og:title" content="Sohbet Terapi | Yapay Zekâ Destekli Duygusal Destek">
-          <meta property="og:description" content="Sohbet Terapi ile güvenli, her zaman ulaşılabilir yapay zekâ tabanlı terapi deneyimi yaşayın.">
-          <meta property="og:image" content="https://chat-therapy.solarityai.com/assets/images/logo/logo.webp">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
 
-          <!-- Twitter -->
-          <meta property="twitter:card" content="summary_large_image">
-          <meta property="twitter:url" content="https://chat-therapy.solarityai.com/">
-          <meta property="twitter:title" content="Sohbet Terapi | Yapay Zekâ Destekli Duygusal Destek">
-          <meta property="twitter:description" content="Sohbet Terapi, empati odaklı yapay zekâ sohbetleriyle size destek olur ve ruhsal iyi oluşunuzu güçlendirir.">
-          <meta property="twitter:image" content="https://chat-therapy.solarityai.com/assets/images/logo/logo.webp">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
 
-          <!-- Favicons -->
-          <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
-          <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
-          <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
-          <meta name="apple-mobile-web-app-title" content="Sohbet Terapi" />
-          <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="">
+  <meta property="twitter:title" content="">
+  <meta property="twitter:description" content="">
+  <meta property="twitter:image" content="">
 
-          <!-- Theme Color -->
-          <meta name="theme-color" content="#5bbad5" />
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1e3a5f">
 
-          <!-- Canonical URL -->
-          <link rel="canonical" href="https://chat-therapy.solarityai.com/" />
+  <link rel="preload" href="assets/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
 
-          <!-- Sitemap -->
-          <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <!-- Load config BEFORE body renders -->
+  <script src="config.js"></script>
+  <script>
+    // Apply SEO meta from config immediately
+    (function() {
+      var C = window.PRODUCT_CONFIG;
+      if (!C) return;
+      document.title = C.meta.title;
+      document.querySelector('meta[name="description"]').content = C.meta.description;
+      document.querySelector('meta[name="keywords"]').content = C.meta.keywords;
+      document.querySelector('meta[property="og:url"]').content = C.url;
+      document.querySelector('meta[property="og:title"]').content = C.meta.title;
+      document.querySelector('meta[property="og:description"]').content = C.meta.description;
+      document.querySelector('meta[property="og:image"]').content = C.meta.ogImage;
+      document.querySelector('meta[property="twitter:url"]').content = C.url;
+      document.querySelector('meta[property="twitter:title"]').content = C.meta.title;
+      document.querySelector('meta[property="twitter:description"]').content = C.meta.description;
+      document.querySelector('meta[property="twitter:image"]').content = C.meta.ogImage;
+      if (C.theme && C.theme.themeColor) {
+        document.querySelector('meta[name="theme-color"]').content = C.theme.themeColor;
+      }
+      // Apply theme colors as CSS variables
+      if (C.theme) {
+        var r = document.documentElement.style;
+        if (C.theme.accentColor) r.setProperty('--color-accent-green', C.theme.accentColor);
+        if (C.theme.lightBlue) r.setProperty('--color-light-blue', C.theme.lightBlue);
+        if (C.theme.bgColor) r.setProperty('--color-bg', C.theme.bgColor);
+        if (C.theme.textColor) r.setProperty('--color-text', C.theme.textColor);
+        if (C.theme.textMuted) r.setProperty('--color-text-muted', C.theme.textMuted);
+        if (C.theme.secondary) r.setProperty('--color-secondary', C.theme.secondary);
+        if (C.theme.ctaBg) r.setProperty('--color-cta-bg', C.theme.ctaBg);
+      }
+    })();
+  </script>
+</head>
+<body>
 
-          <!-- Structured Data (JSON-LD) -->
-          <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Sohbet Terapi",
-            "url": "https://chat-therapy.solarityai.com",
-            "description": "Sohbet Terapi, yapay zekâ destekli empatik konuşmalar ve duygusal destek sunarak ruhsal iyi oluşunuza katkı sağlar.",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://chat-therapy.solarityai.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          }
-          </script>
-          <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Solarity AI LLC",
-            "legalName": "Solarity AI LLC",
-            "url": "https://chat-therapy.solarityai.com",
-            "logo": "https://chat-therapy.solarityai.com/assets/images/logo/logo.webp",
-            "description": "Sohbet Terapi, yapay zekâ destekli empatik konuşmalar ve duygusal destek sunarak ruhsal iyi oluşunuza katkı sağlar. Anonim, güvenli ve 7/24 erişilebilir yapay zekâ tabanlı terapi deneyimi.",
-            "foundingDate": "2024",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "contactType": "Customer Service",
-              "email": "info@sohbetterapi.com",
-              "availableLanguage": ["Turkish", "English"]
-            },
-            "sameAs": [
-              "https://www.linkedin.com/company/solarity-ai-llc"
-            ],
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Dallas",
-              "addressRegion": "Texas",
-              "addressCountry": "US"
-            }
-          }
-          </script>
-          <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Ana Sayfa",
-                "item": "https://chat-therapy.solarityai.com/"
-              }
-            ]
-          }
-          </script>
-          <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Sohbet Terapi",
-            "applicationCategory": "HealthApplication",
-            "operatingSystem": "iOS, Android",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "TRY"
-            },
-            "description": "Yapay zekâ destekli empatik konuşmalar ve duygusal destek sunan mobil uygulama",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "ratingCount": "100+"
-            }
-          }
-          </script>
-
-          <!-- ===== All CSS files ===== -->
-          <link rel="preload" href="assets/css/bootstrap.min.css" as="style" />
-          <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-          <link rel="preload" href="assets/css/ud-styles.css?v=20260305" as="style" />
-          <link rel="stylesheet" href="assets/css/ud-styles.css?v=20260305" />
-          <link rel="preload" href="assets/css/override.css?v=20260305" as="style" />
-          <link rel="stylesheet" href="assets/css/override.css?v=20260305" />
-          <link rel="stylesheet" href="assets/css/lineicons.css" media="print" onload="this.media='all'" />
-          <noscript><link rel="stylesheet" href="assets/css/lineicons.css" /></noscript>
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Ana içeriğe atla</a>
-    <!-- ====== Header Start ====== -->
-    <header class="ud-header sticky">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo/logo-128.webp" alt="Sohbet Terapi Logo" loading="eager" width="50" height="50" decoding="async" />
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                aria-label="Menüyü aç veya kapat"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-              >
-                <span class="toggler-icon"> </span>
-                <span class="toggler-icon"> </span>
-                <span class="toggler-icon"> </span>
-              </button>
-
-              <div class="navbar-collapse" id="navbarSupportedContent">
-                  <ul id="nav" class="navbar-nav mx-auto">
-                      <li class="nav-item"><a class="ud-menu-scroll" href="#home">Sohbet Terapi</a></li>
-                      <li class="nav-item"><a class="ud-menu-scroll" href="#features">Özellikler</a></li>
-                      <li class="nav-item"><a class="ud-menu-scroll" href="#testimonials">Gerçek Deneyimler</a></li>
-                      <li class="nav-item"><a class="ud-menu-scroll" href="#pricing">Paketlerimiz</a></li>
-                      <li class="nav-item"><a class="ud-menu-scroll" href="#faq">S.S.S.</a></li>
-<!--                      <li class="nav-item"><a href="blog.html">Blog</a></li>-->
-                      <li class="nav-item"><a class="ud-menu-scroll" href="#contact">İletişim</a></li>
-                  </ul>
-                  <!--                  <li class="nav-item">-->
-<!--                    <a class="ud-menu-scroll" href="#team">Team</a>-->
-<!--                  </li>-->
-<!--                  <li class="nav-item nav-item-has-children">-->
-<!--                    <ul class="ud-submenu">-->
-<!--                      <li class="ud-submenu-item">-->
-<!--                        <a href="about.html" class="ud-submenu-link">-->
-<!--                          About Page-->
-<!--                        </a>-->
-<!--                      </li>-->
-<!--                      <li class="ud-submenu-item">-->
-<!--                        <a href="pricing.html" class="ud-submenu-link">-->
-<!--                          Pricing Page-->
-<!--                        </a>-->
-<!--                      </li>-->
-<!--                      <li class="ud-submenu-item">-->
-<!--                        <a href="contact.html" class="ud-submenu-link">-->
-<!--                          Contact Page-->
-<!--                        </a>-->
-<!--                      </li>-->
-<!--                      <li class="ud-submenu-item">-->
-<!--                        <a href="blog.html" class="ud-submenu-link">-->
-<!--                          Blog Grid Page-->
-<!--                        </a>-->
-<!--                      </li>-->
-<!--                      <li class="ud-submenu-item">-->
-<!--                        <a href="blog-details.html" class="ud-submenu-link">-->
-<!--                          Blog Details Page-->
-<!--                        </a>-->
-<!--                      </li>-->
-<!--                      <li class="ud-submenu-item">-->
-<!--                        <a href="login.html" class="ud-submenu-link">-->
-<!--                          Sign In Page-->
-<!--                        </a>-->
-<!--                      </li>-->
-<!--                      <li class="ud-submenu-item">-->
-<!--                        <a href="404.html" class="ud-submenu-link">404 Page</a>-->
-<!--                      </li>-->
-<!--                    </ul>-->
-<!--                  </li>-->
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- ====== Header End ====== -->
-    <main id="main-content">
-
-    <!-- ====== Hero Start ====== -->
-    <section class="ud-hero" id="home">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="ud-hero-content">
-                <h1 class="ud-hero-title">
-                  Sohbet Terapi: Konuş, Paylaş, Rahatla
-              </h1>
-                <p class="ud-hero-desc">
-                    Yapay zekâ destekli empatik sohbetler ile duygusal destek alın. Anonim, güvenli ve 7/24 erişilebilir bir platformda, sizi yargılamadan dinleyen, anlayan ve yanınızda olan bir destek sistemi.
-                </p>
-<!--                    They can Be add engagement sentences-->
-<!--                “Peki ya, seni yargılamadan dinleyecek bir yer olsaydı?”-->
-<!--                “Sadece seni anlamak için tasarlanmış bir dost?”-->
-
-                <ul class="ud-hero-buttons">
-                    <li>
-                        <a href="#comingSoonModal" class="store-badge" data-bs-toggle="modal" data-bs-target="#comingSoonModal">
-                        <img src="assets/images/badge/appstore-badge.svg" alt="App Store'dan İndirin" width="120" height="40" loading="lazy" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#comingSoonModal" class="store-badge" data-bs-toggle="modal" data-bs-target="#comingSoonModal">
-                        <img src="assets/images/badge/googleplay-badge.svg" alt="Google Play'den Edinin" width="120" height="40" loading="lazy" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-              <!-- 3 features at below of App Store and Play Store download buttons-->
-              <div class="ud-hero-powerwords mt-4">
-                  <span class="pw-item pw-1">Empati</span>
-                  <span class="pw-separator">•</span>
-                  <span class="pw-item pw-2">Güven</span>
-                  <span class="pw-separator">•</span>
-                  <span class="pw-item pw-3">Gizlilik</span>
-              </div>
-
-
-              <!--            <div class="ud-hero-image">-->
-<!--              <img src="assets/images/hero/screens.png" alt="hero-image" />-->
-<!--              <img-->
-<!--                src="assets/images/hero/dotted-shape.svg"-->
-<!--                alt="shape"-->
-<!--                class="shape shape-1"-->
-<!--              />-->
-<!--              <img-->
-<!--                src="assets/images/hero/dotted-shape.svg"-->
-<!--                alt="shape"-->
-<!--                class="shape shape-2"-->
-<!--              />-->
-<!--            </div>-->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ====== Hero End ====== -->
-
-    <!-- ====== Features Start ====== -->
-    <section id="features" class="ud-features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ud-section-title mx-auto text-center">
-                    <span>Özellikler</span>
-                        <h2>Sohbet Terapi İle Öne Çıkanlar</h2>
-                        <p>
-                            Size özel tasarlanmış özelliklerle, güvenli ve empati odaklı bir deneyim sunuyoruz.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-sm-6">
-                    <div class="ud-single-feature">
-                        <div class="ud-feature-icon">
-                            <i class="lni lni-heart"></i>
-                        </div>
-                        <div class="ud-feature-content">
-                            <h3 class="ud-feature-title">Empati Odaklı Destek</h3>
-                            <p class="ud-feature-desc">
-                                Yapay zekâ destekli sohbetler ile sizi anlamaya çalışan, empati kuran bir deneyim.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-sm-6">
-                    <div class="ud-single-feature">
-                        <div class="ud-feature-icon">
-                            <i class="lni lni-lock"></i>
-                        </div>
-                        <div class="ud-feature-content">
-                            <h3 class="ud-feature-title">Gizlilik ve Güvenlik</h3>
-                            <p class="ud-feature-desc">
-                                Sohbetleriniz gizlilik ilkelerine uygun şekilde korunur, üçüncü kişilerle paylaşılmaz; kendinizi özgürce ve güvenle ifade edebilirsiniz.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-sm-6">
-                    <div class="ud-single-feature">
-                        <div class="ud-feature-icon">
-                            <i class="lni lni-timer"></i>
-                        </div>
-                        <div class="ud-feature-content">
-                            <h3 class="ud-feature-title">Her Zaman Yanınızda</h3>
-                            <p class="ud-feature-desc">
-                                Günün her saati destek almak için erişebileceğiniz bir sohbet ortamı.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-sm-6">
-                    <div class="ud-single-feature">
-                        <div class="ud-feature-icon">
-                            <i class="lni lni-users"></i>
-                        </div>
-                        <div class="ud-feature-content">
-                            <h3 class="ud-feature-title">Anlaşılmak &amp; Yargılanmamak</h3>
-                            <p class="ud-feature-desc">
-                                Paylaşmak isteyip anlatamadıklarınızı dinleyen, sizi yargılamayan bir ortam sunar — paylaşmak rahatlatır.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ====== Features End ====== -->
-
-    <!-- ====== Screenshots Start ====== -->
-    <section id="app-preview" class="ud-app-preview text-center my-5">
-        <div class="container">
-            <div class="preview-wrapper">
-                <img
-                        src="assets/images/hero/sohbetTerapiScreens-800.webp"
-                        srcset="assets/images/hero/sohbetTerapiScreens-800.webp 800w, assets/images/hero/sohbetTerapiScreens-1200.webp 1200w"
-                        sizes="(max-width: 767px) 92vw, (max-width: 1200px) 70vw, 800px"
-                        alt="App Screens"
-                        id="preview-trigger"
-                        class="img-fluid preview-main"
-                        role="button"
-                        tabindex="0"
-                        aria-label="Uygulama ekran görüntülerini aç"
-                        width="800"
-                        height="600"
-                        loading="lazy"
-                        decoding="async"
-                />
-            </div>
-        </div>
-
-        <!-- Pop-up (Swiper içinde) -->
-        <div id="screen-popup" class="popup-overlay">
-            <div class="popup-content">
-                <button id="close-popup" class="popup-close" type="button" aria-label="Ekran görüntüsü penceresini kapat">&times;</button>
-
-                <div class="popup-gallery">
-                    <img loading="lazy" src="assets/images/hero/screen1.png" alt="Sohbet Terapi ekran görüntüsü 1" class="popup-img" width="400" height="800" decoding="async" />
-                    <img loading="lazy" src="assets/images/hero/screen2.png" alt="Sohbet Terapi ekran görüntüsü 2" class="popup-img" width="400" height="800" decoding="async" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ====== Screenshots End ====== -->
-
-    <!-- ====== Social Media Gallery Start ====== -->
-    <section id="social-gallery" class="ud-social-gallery text-center my-5">
-        <div class="container">
-            <h2 class="mb-4">Sohbet Terapi Sosyal Medyada</h2>
-            <p class="gallery-desc mb-5">
-                Topluluğumuzun farklı platformlardaki paylaşımlarından ilham alın. Duygular, farkındalık ve destek.
-            </p>
-
-            <div class="social-grid">
-                <article class="social-item social-link-card">
-                    <h3>Instagram</h3>
-                    <p>Yeni içerikleri ve topluluk paylaşımlarını Instagram hesabımızda takip edin.</p>
-                    <a href="https://www.instagram.com/sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram sayfamızı yeni sekmede aç">
-                        Instagram profilini aç
-                    </a>
-                </article>
-                <article class="social-item social-link-card">
-                    <h3>YouTube</h3>
-                    <p>Duygusal dayanıklılık ve bilinçli farkındalık odaklı kısa videoları izleyin.</p>
-                    <a href="https://www.youtube.com/@sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube kanalımızı yeni sekmede aç">
-                        YouTube kanalını aç
-                    </a>
-                </article>
-                <article class="social-item social-link-card">
-                    <h3>TikTok</h3>
-                    <p>Günlük iyi oluş önerileri ve pratik destek içerikleri için TikTok hesabımızı ziyaret edin.</p>
-                    <a href="https://www.tiktok.com/@sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="TikTok profilimizi yeni sekmede aç">
-                        TikTok profilini aç
-                    </a>
-                </article>
-                <article class="social-item social-link-card">
-                    <h3>Facebook</h3>
-                    <p>Topluluk güncellemeleri ve kampanya duyuruları için Facebook sayfamızı takip edin.</p>
-                    <a href="https://www.facebook.com/share/1BFGePd8Kc" target="_blank" rel="noopener noreferrer" aria-label="Facebook sayfamızı yeni sekmede aç">
-                        Facebook sayfasını aç
-                    </a>
-                </article>
-            </div>
-        </div>
-    </section>
-    <!-- ====== Social Media Gallery End ====== -->
-
-
-    <!-- ====== Testimonials Start ====== -->
-    <section id="testimonials" class="ud-testimonials">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ud-section-title mx-auto text-center">
-                        <span>Kullanıcı Yorumları</span>
-                        <h2>Gerçek Deneyimler</h2>
-                        <p>
-                            Sohbet Terapi’yi deneyen kullanıcılarımız ne diyor?
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="testimonials-grid" class="ud-testimonials-grid"></div>
-        </div>
-    </section>
-    <!-- ====== Testimonials End ====== -->
-
-
-    <!-- Coming Soon Modal -->
-    <div class="modal fade" id="comingSoonModal" tabindex="-1" aria-labelledby="comingSoonModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content text-center p-4">
-                <div class="modal-header border-0">
-                    <h3 class="modal-title w-100" id="comingSoonModalLabel">Çok Yakında Sizlerle!</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Uygulamamız çok yakında App Store ve Google Play’de yayında olacak.</p>
-                </div>
-                <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tamam</button>
-                </div>
-            </div>
-        </div>
+  <noscript>
+    <div class="noscript-message">
+      <h2>JavaScript Required</h2>
+      <p>This page requires JavaScript to render content. Please enable JavaScript in your browser settings.</p>
     </div>
+  </noscript>
 
+  <!-- ============================================
+       HEADER / NAVBAR
+       ============================================ -->
+  <header class="site-header" id="header">
+    <nav class="nav-container">
+      <a href="#" class="nav-logo" id="navLogo" aria-label="Home"></a>
+      <ul class="nav-links" id="navLinks"></ul>
+      <div class="nav-actions" id="navActions"></div>
+      <button type="button" class="hamburger" aria-label="Open menu" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul id="mobileNavLinks"></ul>
+      <div class="mobile-menu-actions" id="mobileNavActions"></div>
+    </div>
+  </header>
 
-    <!-- ====== Pricing Start ====== -->
-    <section id="pricing" class="ud-pricing">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ud-section-title mx-auto text-center">
-                        <span>Fiyatlandırma</span>
-                        <h2>Paketlerimiz</h2>
-                        <p>
-                            İhtiyacınıza uygun, esnek ve şeffaf fiyatlandırma seçenekleri ile size en uygun paketi seçin.
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <main>
 
-            <div class="row g-0 align-items-center justify-content-center">
-                <!-- Başlangıç Planı -->
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="ud-single-pricing first-item">
-                        <div class="ud-pricing-header">
-                            <h3>Başlangıç</h3>
-                            <h4>₺200/ay</h4>
-                        </div>
-                        <div class="ud-pricing-body">
-                            <ul>
-                                <li>Aylık 50 sohbet hakkı</li>
-                                <li>Temel özelliklere erişim</li>
-                                <li>Mobil ve web kullanım</li>
-                                <li>7/24 destek</li>
-                            </ul>
-                        </div>
-                        <div class="ud-pricing-footer">
-                            <a href="#contact" class="ud-main-btn ud-border-btn">
-                                Hemen Başla
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Standart Plan -->
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="ud-single-pricing active">
-                        <span class="ud-popular-tag">EN POPÜLER</span>
-                        <div class="ud-pricing-header">
-                            <h3>Standart</h3>
-                            <h4>₺500/ay</h4>
-                        </div>
-                        <div class="ud-pricing-body">
-                            <ul>
-                                <li>Aylık 200 sohbet hakkı</li>
-                                <li>Tüm özelliklere tam erişim</li>
-                                <li>Öncelikli müşteri desteği</li>
-                                <li>Uygulama içi özel içerikler</li>
-                            </ul>
-                        </div>
-                        <div class="ud-pricing-footer">
-                            <a href="#contact" class="ud-main-btn ud-white-btn">
-                                Hemen Başla
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Premium Plan -->
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="ud-single-pricing last-item">
-                        <div class="ud-pricing-header">
-                            <h3>Premium</h3>
-                            <h4>₺800/ay</h4>
-                        </div>
-                        <div class="ud-pricing-body">
-                            <ul>
-                                <li>Yüksek limitli sohbet hakkı</li>
-                                <li>Özel premium içerikler</li>
-                                <li>1’e 1 özel destek</li>
-                                <li>Yeni özelliklere erken erişim</li>
-                            </ul>
-                        </div>
-                        <div class="ud-pricing-footer">
-                            <a href="#contact" class="ud-main-btn ud-border-btn">
-                                Hemen Başla
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="hero">
+      <div class="hero-blur hero-blur--green"></div>
+      <div class="hero-blur hero-blur--blue"></div>
+      <div class="container">
+        <div class="hero-content reveal">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span id="heroBadge"></span>
+          </div>
+          <h1 id="heroTitle">&nbsp;</h1>
+          <p class="hero-subtitle" id="heroSubtitle"></p>
+          <div class="hero-ctas" id="heroCtas"></div>
         </div>
+        <div class="hero-visual reveal">
+          <div class="hero-phone">
+            <img id="heroPhoneImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="App screenshot" loading="lazy">
+          </div>
+          <div class="hero-card hero-card--left" id="heroCardLeft"></div>
+          <div class="hero-card hero-card--right" id="heroCardRight"></div>
+        </div>
+      </div>
     </section>
-    <!-- ====== Pricing End ====== -->
 
-    <!-- ====== FAQ Start ====== -->
-    <section id="faq" class="ud-faq">
-        <div class="shape">
-            <img src="assets/images/faq/shape.svg" alt="shape" loading="lazy" aria-hidden="true" />
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ud-section-title text-center mx-auto">
-                        <span>S.S.S.</span>
-                        <h2>Sıkça Sorulan Sorular</h2>
-                        <p>
-                            Sohbet Terapi hakkında merak edilen soruların yanıtlarını burada bulabilirsiniz.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <!-- Soru 1 -->
-                    <div class="ud-single-faq">
-                        <div class="accordion">
-                            <button
-                                    class="ud-faq-btn collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne"
-                            >
-              <span class="icon flex-shrink-0">
-                <i class="lni lni-chevron-down"></i>
-              </span>
-                                <span>Sohbetlerim gizli mi?</span>
-                            </button>
-                            <div id="collapseOne" class="accordion-collapse collapse">
-                                <div class="ud-faq-body">
-                                    Evet. Sohbetleriniz anonimdir, üçüncü kişilerle paylaşılmaz ve KVKK’ya uygun şekilde korunur.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Soru 2 -->
-                    <div class="ud-single-faq">
-                        <div class="accordion">
-                            <button
-                                    class="ud-faq-btn collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo"
-                            >
-              <span class="icon flex-shrink-0">
-                <i class="lni lni-chevron-down"></i>
-              </span>
-                                <span>Uygulama gerçek terapistlerle mi çalışıyor?</span>
-                            </button>
-                            <div id="collapseTwo" class="accordion-collapse collapse">
-                                <div class="ud-faq-body">
-                                    Sohbet Terapi, yapay zekâ destekli bir sistemdir. Profesyonel terapi yerine empati odaklı destek sağlar. Acil durumlar için 112’yi aramanız gerekir.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Soru 3 -->
-                    <div class="ud-single-faq">
-                        <div class="accordion">
-                            <button
-                                    class="ud-faq-btn collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree"
-                            >
-              <span class="icon flex-shrink-0">
-                <i class="lni lni-chevron-down"></i>
-              </span>
-                                <span>Ücretli mi?</span>
-                            </button>
-                            <div id="collapseThree" class="accordion-collapse collapse">
-                                <div class="ud-faq-body">
-                                    Uygulamanın ücretsiz ve ücretli paketleri bulunmaktadır. İhtiyacınıza göre farklı abonelik seçenekleri sunuyoruz.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Soru 4 -->
-                    <div class="ud-single-faq">
-                        <div class="accordion">
-                            <button
-                                    class="ud-faq-btn collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour"
-                            >
-              <span class="icon flex-shrink-0">
-                <i class="lni lni-chevron-down"></i>
-              </span>
-                                <span>Hangi saatlerde kullanılabilir?</span>
-                            </button>
-                            <div id="collapseFour" class="accordion-collapse collapse">
-                                <div class="ud-faq-body">
-                                    Sohbet Terapi 7/24 kullanılabilir. Günün her saati desteğe erişebilirsiniz.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Soru 5 -->
-                    <div class="ud-single-faq">
-                        <div class="accordion">
-                            <button
-                                    class="ud-faq-btn collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive"
-                            >
-              <span class="icon flex-shrink-0">
-                <i class="lni lni-chevron-down"></i>
-              </span>
-                                <span>Sohbetler eğitim için kullanılıyor mu?</span>
-                            </button>
-                            <div id="collapseFive" class="accordion-collapse collapse">
-                                <div class="ud-faq-body">
-                                    Sohbetler model eğitimi için kullanılmaz. Sadece size yanıt üretmek için geçici olarak işlenir.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Soru 6 -->
-                    <div class="ud-single-faq">
-                        <div class="accordion">
-                            <button
-                                    class="ud-faq-btn collapsed"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix"
-                            >
-              <span class="icon flex-shrink-0">
-                <i class="lni lni-chevron-down"></i>
-              </span>
-                                <span>Acil durumlarda ne yapmalıyım?</span>
-                            </button>
-                            <div id="collapseSix" class="accordion-collapse collapse">
-                                <div class="ud-faq-body">
-                                    Sohbet Terapi kriz müdahalesi sağlamaz. Acil bir durumdaysanız lütfen 112’yi arayın veya en yakın sağlık kuruluşuna başvurun.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ============================================
+         BRAND / TRUST SECTION
+         ============================================ -->
+    <section class="brands">
+      <div class="container">
+        <p class="brands-label reveal" id="brandsLabel"></p>
+        <div class="brands-grid reveal" id="brandsGrid"></div>
+      </div>
     </section>
-    <!-- ====== FAQ End ====== -->
 
-    <!-- ====== Contact Start ====== -->
-    <section id="contact" class="ud-contact">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Contact Info (Left Side) -->
-                <div class="col-xl-8 col-lg-7">
-                    <div class="ud-contact-content-wrapper">
-                        <div class="ud-contact-title">
-                            <span>İletişim</span>
-                            <h2>
-                                Bizimle İletişime Geçin
-                            </h2>
-                            <p class="mt-3" style="font-size: 1.1rem; color: var(--text-secondary);">
-                                Sorularınız, önerileriniz veya geri bildirimleriniz için bizimle iletişime geçebilirsiniz.
-                            </p>
-                        </div>
-                        <div class="ud-contact-info-wrapper">
-
-                            <!-- Location info -->
-                            <div class="ud-single-info">
-                                <div class="ud-info-icon">
-                                    <i class="lni lni-map-marker"></i>
-                                </div>
-                                <div class="ud-info-meta">
-                                    <h3>Adresimiz</h3>
-                                    <p>Dallas, Texas, ABD</p>
-                                </div>
-                            </div>
-
-                            <!-- Email info -->
-                            <div class="ud-single-info">
-                                <div class="ud-info-icon">
-                                    <i class="lni lni-envelope"></i>
-                                </div>
-                                <div class="ud-info-meta">
-                                    <h3>Bize Ulaşın</h3>
-                                    <p>info@sohbetterapi.com</p>
-                                    <p>support@sohbetterapi.com</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form (Right Side) -->
-                <div class="col-xl-4 col-lg-5">
-                    <div class="ud-contact-form-wrapper">
-                        <h3 class="ud-contact-form-title">Mesaj Gönderin</h3>
-
-                        <!-- FormSubmit.co Contact Form -->
-                        <form action="https://formsubmit.co/sefu_40@hotmail.com" method="POST" class="ud-contact-form">
-
-                            <!-- Optional Settings -->
-                            <input type="hidden" name="_captcha" value="false">
-
-                            <!-- Redirect From "formsubmit.co" we will add exact path to here for redirecting -->
-                            <input type="hidden" name="_next" value="https://chat-therapy.solarityai.com/thanks.html">
-                            <input type="hidden" name="_error" value="https://chat-therapy.solarityai.com/error.html">
-                            <input type="hidden" name="_subject" value="Yeni mesaj - Sohbet Terapi">
-
-                            <!-- Full Name -->
-                            <div class="ud-form-group">
-                                <label for="name">Ad Soyad*</label>
-                                <input id="name" type="text" name="name" placeholder="Adınızı giriniz" required />
-                            </div>
-
-                            <!-- Email -->
-                            <div class="ud-form-group">
-                                <label for="email">E-posta*</label>
-                                <!-- Make this field "user_email" from "email" for avoiding formsubmit to send email to your email regardless email verification user can send invalid email our priority is feedback -->
-                                <input id="email" type="email" name="user_email" placeholder="ornek@mail.com" required>
-                            </div>
-
-                            <!-- Message -->
-                            <div class="ud-form-group">
-                                <label for="message">Mesajınız*</label>
-                                <textarea id="message" name="message" rows="3" placeholder="Mesajınız..." required></textarea>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <div class="ud-form-group mb-0">
-                                <button type="submit" class="ud-main-btn">Gönder</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
+    <!-- ============================================
+         NUMBERS SECTION
+         ============================================ -->
+    <section class="numbers" id="numbers">
+      <div class="container">
+        <div class="numbers-header reveal" id="numbersHeader"></div>
+        <div class="numbers-grid reveal" id="numbersGrid"></div>
+      </div>
     </section>
-    <!-- ====== Contact End ====== -->
 
-    <!-- ====== Social Media Follow Start ====== -->
-    <section class="ud-social-follow">
-        <div class="container text-center">
-            <div class="ud-section-title mx-auto text-center">
-                <h2>Sosyal Medyada Biz</h2>
-            </div>
-            <ul class="ud-social-icons">
-                <li>
-                    <a href="https://www.instagram.com/sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram hesabımızı aç">
-                        <i class="lni lni-instagram-filled"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/@sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube kanalımızı aç">
-                        <i class="lni lni-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="TikTok hesabımızı aç">
-                        <i class="lni lni-tiktok"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/share/1BFGePd8Kc" target="_blank" rel="noopener noreferrer" aria-label="Facebook sayfamızı aç">
-                        <i class="lni lni-facebook-filled"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <!-- ============================================
+         FEATURES SECTION 01 — Two cards
+         ============================================ -->
+    <section class="features-01" id="features">
+      <div class="container">
+        <div class="section-header reveal" id="features01Header"></div>
+        <div class="features-01-grid reveal" id="features01Grid"></div>
+      </div>
     </section>
-    <!-- ====== Social Media Follow End ====== -->
 
-    </main>
+    <!-- ============================================
+         FEATURES SECTION 02 — Tabs + Phone
+         ============================================ -->
+    <section class="features-02">
+      <div class="container">
+        <div class="section-header reveal" id="features02Header"></div>
+        <div class="features-02-grid reveal" id="features02Grid"></div>
+      </div>
+    </section>
 
-    <!-- ====== Footer Start ====== -->
-    <footer class="ud-footer">
-        <div class="ud-footer-widgets">
-            <div class="container">
-                <div class="row">
+    <!-- ============================================
+         FEATURES SECTION 03 — Alternating rows
+         ============================================ -->
+    <section class="features-03">
+      <div class="container">
+        <div class="section-header reveal" id="features03Header"></div>
+        <div id="features03Rows"></div>
+      </div>
+    </section>
 
-                    <!-- Logo ve kısa açıklama -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="ud-widget">
-                            <a href="index.html" class="ud-footer-logo">
-                                <img src="assets/images/logo/logo-128.webp" alt="Sohbet Terapi" loading="lazy" width="100" height="100" decoding="async" />
-                            </a>
-                            <p class="ud-widget-desc">
-                                Yapay zekâ destekli sohbet ile kendini daha iyi hisset.
-                                Anonim, güvenli ve 7/24 erişilebilir.
-                            </p>
-                        </div>
-                    </div>
+    <!-- ============================================
+         KEY BENEFITS
+         ============================================ -->
+    <section class="benefits">
+      <div class="container">
+        <div class="section-header reveal" id="benefitsHeader"></div>
+        <div class="benefits-grid reveal" id="benefitsGrid"></div>
+      </div>
+    </section>
 
-                    <!-- Hızlı Linkler -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="ud-widget">
-                            <h3 class="ud-widget-title">Hızlı Erişim</h3>
-                            <ul class="ud-widget-links">
-                                <li><a href="#home">Sohbet Terapi</a></li>
-                                <li><a href="#features">Özellikler</a></li>
-                                <li><a href="#testimonials">Gerçek Deneyimler</a></li>
-                                <li><a href="#pricing">Paketlerimiz</a></li>
-                                <li><a href="#faq">S.S.S.</a></li>
-<!--                                <li><a href="blog.html">Blog</a></li>-->
-                                <li><a href="#contact">İletişim</a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- ============================================
+         TOOLS SECTION
+         ============================================ -->
+    <section class="tools">
+      <div class="container">
+        <div class="section-header reveal" id="toolsHeader"></div>
+        <div class="tools-layout reveal" id="toolsLayout"></div>
+      </div>
+    </section>
 
-                    <!-- Social Media -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="ud-widget">
-                            <h3 class="ud-widget-title">Bizi Takip Edin</h3>
-                            <ul class="ud-widget-socials">
-                                <li>
-                                    <a href="https://www.youtube.com/@sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube kanalımızı aç">
-                                        <i class="lni lni-youtube"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram hesabımızı aç">
-                                        <i class="lni lni-instagram-filled"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.tiktok.com/@sohbet_terapi_app" target="_blank" rel="noopener noreferrer" aria-label="TikTok hesabımızı aç">
-                                        <i class="lni lni-tiktok"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/share/1BFGePd8Kc" target="_blank" rel="noopener noreferrer" aria-label="Facebook sayfamızı aç">
-                                        <i class="lni lni-facebook-filled"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <!-- Yasal Linkler -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="ud-widget">
-                            <h3 class="ud-widget-title">Yasal</h3>
-                            <ul class="ud-widget-links">
-                                <li><a href="/privacy-policy.html">Gizlilik Politikası</a></li>
-                                <li><a href="/data-deletion.html">Veri Silme</a></li>
-                                <li><a href="/footer-pages/terms.html">Kullanım Şartları</a></li>
-                                <li><a href="/footer-pages/kvkk.html">KVKK Aydınlatma</a></li>
-                                <li><a href="/footer-pages/cookies.html">Çerez Politikası</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Acil Durum -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="ud-widget">
-                            <h3 class="ud-widget-title">Acil Durum</h3>
-                            <p>Acil bir durumda lütfen <strong>112</strong>’yi arayın.
-                                Sohbet Terapi profesyonel terapi veya kriz müdahalesi yerine geçmez.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    <!-- ============================================
+         PRICING
+         ============================================ -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header reveal" id="pricingHeader"></div>
+        <div class="pricing-toggle reveal">
+          <span class="toggle-label toggle-label--active" data-toggle="monthly">Monthly</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="pricingToggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-label" data-toggle="yearly">Yearly</span>
         </div>
+        <div class="pricing-grid reveal" id="pricingGrid"></div>
+      </div>
+    </section>
 
-        <div class="ud-footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="ud-footer-bottom-right">
-                            © 2025 Sohbet Terapi • Tüm hakları saklıdır
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ====== Footer End ====== -->
+    <!-- ============================================
+         TESTIMONIALS
+         ============================================ -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal" id="testimonialsHeader"></div>
+      </div>
+      <div class="testimonials-track reveal" id="testimonialsTrack"></div>
+    </section>
 
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content reveal" id="ctaContent"></div>
+        <div class="cta-illustration reveal" id="ctaIllustration"></div>
+      </div>
+    </section>
 
-    <!-- ====== Back To Top Start ====== -->
-    <a href="#home" class="back-to-top" aria-label="Sayfanın üstüne dön">
-      <i class="lni lni-chevron-up"> </i>
-    </a>
-    <!-- ====== Back To Top End ====== -->
+  </main>
 
-    <!-- ====== All Javascript Files ====== -->
-    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="assets/js/main.js?v=20260305" defer></script>
-    <script>
-      // Lazy-load analytics after first interaction or post-load idle window.
-      (function () {
-        let loaded = false;
-        function loadAnalytics() {
-          if (loaded) return;
-          loaded = true;
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" id="footerGrid"></div>
+      <div class="footer-bottom" id="footerBottom"></div>
+    </div>
+  </footer>
 
-          var script = document.createElement("script");
-          script.src = "https://www.googletagmanager.com/gtag/js?id=G-3SE53Z2S2Z";
-          script.async = true;
-          document.head.appendChild(script);
+  <!-- ============================================
+       TEMPLATE ENGINE — Renders everything from config
+       ============================================ -->
+  <script>
+  (function() {
+    var C = PRODUCT_CONFIG;
 
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            window.dataLayer.push(arguments);
-          }
-          window.gtag = gtag;
-          gtag("js", new Date());
-          gtag("config", "G-3SE53Z2S2Z");
-        }
+    // ── Helpers ────────────────────────────────────
+    function esc(s) {
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
 
-        ["pointerdown", "keydown", "touchstart"].forEach(function (eventName) {
-          window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+    function starsSvg(count) {
+      var s = '';
+      for (var i = 0; i < (count || 5); i++) {
+        s += '<svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-star)"><polygon points="8,1 10,6 15,6 11,9.5 12.5,15 8,11.5 3.5,15 5,9.5 1,6 6,6"/></svg>';
+      }
+      return s;
+    }
+
+    function checkSvg() {
+      return '<svg width="18" height="18" viewBox="0 0 18 18" fill="var(--accent-green)"><circle cx="9" cy="9" r="9"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    }
+
+    function checkSvg20() {
+      return '<svg width="20" height="20" viewBox="0 0 20 20" fill="var(--accent-green)"><circle cx="10" cy="10" r="10"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    }
+
+    var TAB_ICONS = {
+      layout: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>',
+      target: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>',
+      'check-circle': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>',
+      users: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    };
+
+    var TOOL_ICONS = [
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+    ];
+
+    var BENEFIT_ICONS = {
+      management: '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--accent-green)" stroke-width="2"><rect x="4" y="8" width="24" height="18" rx="3"/><path d="M4 14h24"/><circle cx="10" cy="20" r="2"/></svg>',
+      security: '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--accent-green)" stroke-width="2"><rect x="6" y="4" width="20" height="24" rx="3"/><path d="M12 12h8M12 16h8M12 20h5"/><circle cx="16" cy="8" r="1" fill="var(--accent-green)"/></svg>',
+      insights: '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M16 4v24M4 16h24"/><circle cx="16" cy="16" r="12"/><path d="M10 20l4-8 4 4 4-8"/></svg>',
+    };
+
+    function brandSvg(i) {
+      return '<svg width="120" height="40" viewBox="0 0 120 40"><rect width="120" height="40" rx="4" fill="#e5e7eb"/><text x="60" y="24" text-anchor="middle" fill="#4b4b57" font-size="14" font-family="Plus Jakarta Sans">Brand ' + (i + 1) + '</text></svg>';
+    }
+
+    function integrationSvg() {
+      var shapes = [
+        '<rect x="12" y="12" width="16" height="16" rx="4" fill="#e5e7eb"/>',
+        '<circle cx="20" cy="20" r="8" fill="#e5e7eb"/>',
+        '<polygon points="20,10 28,26 12,26" fill="#e5e7eb"/>',
+        '<rect x="14" y="14" width="12" height="12" rx="2" fill="#e5e7eb"/>',
+        '<circle cx="20" cy="20" r="6" fill="#e5e7eb"/>',
+        '<rect x="12" y="16" width="16" height="8" rx="2" fill="#e5e7eb"/>',
+        '<rect x="14" y="10" width="12" height="20" rx="3" fill="#e5e7eb"/>',
+        '<rect x="14" y="14" width="12" height="12" rx="6" fill="#e5e7eb"/>',
+      ];
+      var s = shapes[Math.floor(Math.random() * shapes.length)];
+      return '<svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#f9fafb"/>' + s + '</svg>';
+    }
+
+    // ── Translation helper ──────────────────────────
+    // t(section, key) returns translated value or falls back to English (default config)
+    var currentLang = (C.langSwitch && C.langSwitch.default) || 'en';
+
+    var defaultLang = (C.langSwitch && C.langSwitch.default) || 'en';
+
+    function t(section, key, index) {
+      if (currentLang === defaultLang || !C.translations || !C.translations[currentLang]) return undefined;
+      var tr = C.translations[currentLang];
+      if (!tr[section]) return undefined;
+      if (index !== undefined) {
+        var arr = tr[section][key] || tr[section];
+        if (Array.isArray(arr)) return arr[index];
+        if (arr && Array.isArray(arr[key])) return arr[key][index];
+        return undefined;
+      }
+      if (key !== undefined) return tr[section][key];
+      return tr[section];
+    }
+
+    // Deep merge: returns translated value if exists, otherwise original
+    function tx(section, key) {
+      var val = t(section, key);
+      return val !== undefined ? val : C[section][key];
+    }
+
+    function renderAll() {
+    // ── NAV ───────────────────────────────────────
+    var navLogo = document.getElementById('navLogo');
+    navLogo.innerHTML = C.logoSvg + '<span>' + esc(C.name) + '</span>';
+
+    var trNavLinks = t('navLinks');
+    var navItems = trNavLinks || C.navLinks;
+    var navLinksHtml = '';
+    var mobileNavLinksHtml = '';
+    navItems.forEach(function(link) {
+      navLinksHtml += '<li><a href="' + link.href + '">' + esc(link.label) + '</a></li>';
+      mobileNavLinksHtml += '<li><a href="' + link.href + '">' + esc(link.label) + '</a></li>';
+    });
+    document.getElementById('navLinks').innerHTML = navLinksHtml;
+    document.getElementById('mobileNavLinks').innerHTML = mobileNavLinksHtml;
+
+    if (C.langSwitch) {
+      var langHtml = '<div class="lang-switch" role="group" aria-label="Language selector">';
+      C.langSwitch.options.forEach(function(opt) {
+        var active = opt.code === currentLang ? ' is-active' : '';
+        langHtml += '<button type="button" class="lang-btn' + active + '" data-lang="' + opt.code + '" aria-pressed="' + (active ? 'true' : 'false') + '">' + opt.flag + '</button>';
+      });
+      langHtml += '</div>';
+      document.getElementById('navActions').innerHTML = langHtml;
+      document.getElementById('mobileNavActions').innerHTML = langHtml.replace('lang-switch', 'lang-switch lang-switch--mobile');
+    } else {
+      document.getElementById('navActions').innerHTML =
+        '<a href="' + C.navCta.loginHref + '" class="btn btn-sm btn-outline">' + esc(C.navCta.loginLabel) + '</a>' +
+        '<a href="' + C.navCta.primaryHref + '" class="btn btn-sm btn-primary">' + esc(C.navCta.primaryLabel) + '</a>';
+      document.getElementById('mobileNavActions').innerHTML =
+        '<a href="' + C.navCta.loginHref + '" class="btn btn-outline">' + esc(C.navCta.loginLabel) + '</a>' +
+        '<a href="' + C.navCta.primaryHref + '" class="btn btn-primary">' + esc(C.navCta.primaryLabel) + '</a>';
+    }
+
+    // ── HERO ──────────────────────────────────────
+    var trHero = t('hero') || {};
+    var hero = C.hero;
+    document.getElementById('heroBadge').textContent = trHero.badge || hero.badge;
+    document.getElementById('heroTitle').textContent = trHero.title || hero.title;
+    document.getElementById('heroSubtitle').textContent = trHero.subtitle || hero.subtitle;
+
+    var ctaPrimary = trHero.ctaPrimary || hero.ctaPrimary;
+    var ctaSecondary = trHero.ctaSecondary || hero.ctaSecondary;
+    var primaryIcon = (ctaPrimary.icon || hero.ctaPrimary.icon) === 'arrow-up-right' ? ' <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>' : '';
+    var heroCtasHtml = '<a href="' + ctaPrimary.href + '" class="btn btn-primary btn-lg">' + esc(ctaPrimary.label) + primaryIcon + '</a>';
+    if (ctaSecondary) {
+      heroCtasHtml += '<a href="' + ctaSecondary.href + '" class="btn btn-outline btn-lg">' + esc(ctaSecondary.label) + '</a>';
+    }
+    document.getElementById('heroCtas').innerHTML = heroCtasHtml;
+
+    var heroImg = document.getElementById('heroPhoneImg');
+    heroImg.src = hero.phoneImage;
+    heroImg.alt = hero.phoneImageAlt;
+
+    var cardLeft = trHero.cardLeft || hero.cardLeft;
+    document.getElementById('heroCardLeft').innerHTML =
+      '<div class="hero-card-title">' + esc(cardLeft.title) + '</div>' +
+      (cardLeft.description ? '<p class="hero-card-desc">' + esc(cardLeft.description) + '</p>' : '') +
+      '<div class="hero-card-avatars">' +
+      ((cardLeft.avatars || hero.cardLeft.avatars) ? (cardLeft.avatars || hero.cardLeft.avatars).map(function(src) {
+        return '<img class="avatar" src="' + src + '" alt="" loading="lazy">';
+      }).join('') :
+        '<span class="avatar" style="background:#2563eb;"></span>' +
+        '<span class="avatar" style="background:#38bdf8;"></span>' +
+        '<span class="avatar" style="background:#f59e0b;"></span>' +
+        '<span class="avatar" style="background:#ef4444;"></span>') +
+      '</div>' +
+      '<div class="hero-card-stat"><strong>' + esc(cardLeft.stat) + '</strong> ' + esc(cardLeft.statLabel) + '</div>';
+
+    var cardRight = trHero.cardRight || hero.cardRight;
+    document.getElementById('heroCardRight').innerHTML =
+      '<div class="hero-card-stars">' + starsSvg(5) + '</div>' +
+      (cardRight.title ? '<p class="hero-card-review-title">' + esc(cardRight.title) + '</p>' : '') +
+      '<p class="hero-card-review-text">' + esc(cardRight.quote) + '</p>' +
+      (cardRight.author ? '<span class="hero-card-author">' + esc(cardRight.author) + '</span>' : '');
+
+    // ── BRANDS ────────────────────────────────────
+    var trBrands = t('brands') || {};
+    document.getElementById('brandsLabel').textContent = trBrands.label || C.brands.label;
+    var brandsHtml = '';
+    for (var i = 0; i < C.brands.count; i++) {
+      brandsHtml += '<div class="brand-logo">' + brandSvg(i) + '</div>';
+    }
+    document.getElementById('brandsGrid').innerHTML = brandsHtml;
+
+    // ── NUMBERS ───────────────────────────────────
+    var trNumbers = t('numbers') || {};
+    document.getElementById('numbersHeader').innerHTML =
+      '<span class="section-badge">' + esc(trNumbers.badge || C.numbers.badge) + '</span>' +
+      '<h2>' + esc(trNumbers.title || C.numbers.title) + '</h2>' +
+      '<p>' + esc(trNumbers.subtitle || C.numbers.subtitle) + '</p>';
+
+    var numbersStats = trNumbers.stats || C.numbers.stats;
+    var numbersStatsHtml = '<div class="numbers-stats">';
+    numbersStats.forEach(function(s) {
+      numbersStatsHtml += '<div class="stat-item"><span class="stat-number">' + esc(s.value) + '</span><span class="stat-label">' + esc(s.label) + '</span></div>';
+    });
+    numbersStatsHtml += '</div>';
+    numbersStatsHtml += '<div class="numbers-image"><img src="' + C.numbers.image + '" alt="' + esc(C.numbers.imageAlt) + '" loading="lazy">' +
+      (C.numbers.imageCaption ? '<span class="image-caption">' + esc(C.numbers.imageCaption) + '</span>' : '') + '</div>';
+    document.getElementById('numbersGrid').innerHTML = numbersStatsHtml;
+
+    // ── FEATURES 01 ──────────────────────────────
+    var trF01 = t('features01') || {};
+    document.getElementById('features01Header').innerHTML =
+      '<span class="section-badge">' + esc(trF01.badge || C.features01.badge) + '</span>' +
+      '<h2>' + esc(trF01.title || C.features01.title) + '</h2>';
+
+    var f01Html = '';
+    C.features01.cards.forEach(function(card, idx) {
+      var trCard = (trF01.cards && trF01.cards[idx]) || {};
+      f01Html += '<article class="feature-card-lg">' +
+        '<div class="feature-card-lg-img"><img src="' + (trCard.image || card.image) + '" alt="' + esc(trCard.imageAlt || card.imageAlt) + '" loading="lazy">' +
+        (card.imageCaption ? '<span class="image-caption">' + esc(card.imageCaption) + '</span>' : '') + '</div>' +
+        '<h3>' + esc(trCard.title || card.title) + '</h3>' +
+        '<p>' + esc(trCard.description || card.description) + '</p>' +
+        '</article>';
+    });
+    document.getElementById('features01Grid').innerHTML = f01Html;
+
+    // ── FEATURES 02 ──────────────────────────────
+    var trF02 = t('features02') || {};
+    document.getElementById('features02Header').innerHTML =
+      '<span class="section-badge">' + esc(trF02.badge || C.features02.badge) + '</span>' +
+      '<h2>' + esc(trF02.title || C.features02.title) + '</h2>';
+
+    var f02TabsHtml = '<div class="features-tabs">';
+    C.features02.tabs.forEach(function(tab, idx) {
+      var trTab = (trF02.tabs && trF02.tabs[idx]) || {};
+      var activeClass = idx === 0 ? ' tab-item--active' : '';
+      var iconSvg = TAB_ICONS[tab.icon] || TAB_ICONS.layout;
+      f02TabsHtml += '<div class="tab-item' + activeClass + '">' +
+        '<div class="tab-icon">' + iconSvg + '</div>' +
+        '<div><h4>' + esc(trTab.title || tab.title) + '</h4><p>' + esc(trTab.description || tab.description) + '</p></div>' +
+        '</div>';
+    });
+    f02TabsHtml += '</div>';
+    f02TabsHtml += '<div class="features-02-phone"><img src="' + C.features02.phoneImage + '" alt="' + esc(C.features02.phoneImageAlt) + '" loading="lazy"></div>';
+    document.getElementById('features02Grid').innerHTML = f02TabsHtml;
+
+    // ── FEATURES 03 ──────────────────────────────
+    var trF03 = t('features03') || {};
+    document.getElementById('features03Header').innerHTML =
+      '<span class="section-badge">' + esc(trF03.badge || C.features03.badge) + '</span>' +
+      '<h2>' + esc(trF03.title || C.features03.title) + '</h2>';
+
+    var f03Html = '';
+    C.features03.rows.forEach(function(row, idx) {
+      var trRow = (trF03.rows && trF03.rows[idx]) || {};
+      var reverseClass = row.reverse ? ' feature-row--reverse' : '';
+      var textContent = '<h3>' + esc(trRow.title || row.title) + '</h3><p>' + esc(trRow.description || row.description) + '</p>';
+
+      var rowCta = trRow.cta || row.cta;
+      if (rowCta) {
+        textContent += '<a href="' + rowCta.href + '" class="btn btn-outline">' + esc(rowCta.label) + '</a>';
+      }
+      var rowCounters = trRow.counters || row.counters;
+      if (rowCounters) {
+        textContent += '<div class="feature-counters">';
+        rowCounters.forEach(function(c) {
+          textContent += '<div class="counter-item"><span class="counter-value">' + esc(c.value) + '</span><span class="counter-label">' + esc(c.label) + '</span></div>';
         });
-        window.addEventListener("load", function () {
-          window.setTimeout(loadAnalytics, 12000);
-        }, { once: true });
-      })();
-    </script>
-  </body>
+        textContent += '</div>';
+      }
+      var rowBullets = trRow.bulletPoints || row.bulletPoints;
+      if (rowBullets) {
+        textContent += '<ul class="feature-list">';
+        rowBullets.forEach(function(bp) {
+          textContent += '<li>' + checkSvg20() + ' ' + esc(bp) + '</li>';
+        });
+        textContent += '</ul>';
+      }
+
+      f03Html += '<div class="feature-row' + reverseClass + ' reveal">' +
+        '<div class="feature-row-img"><img src="' + (trRow.image || row.image) + '" alt="' + esc(trRow.imageAlt || row.imageAlt) + '" loading="lazy">' +
+        (row.imageCaption ? '<span class="image-caption">' + esc(row.imageCaption) + '</span>' : '') + '</div>' +
+        '<div class="feature-row-text">' + textContent + '</div>' +
+        '</div>';
+    });
+    document.getElementById('features03Rows').innerHTML = f03Html;
+
+    // ── BENEFITS ──────────────────────────────────
+    var trBenefits = t('benefits') || {};
+    document.getElementById('benefitsHeader').innerHTML =
+      '<span class="section-badge">' + esc(trBenefits.badge || C.benefits.badge) + '</span>' +
+      '<h2>' + esc(trBenefits.title || C.benefits.title) + '</h2>';
+
+    var benefitsHtml = '';
+    C.benefits.items.forEach(function(b, idx) {
+      var trB = (trBenefits.items && trBenefits.items[idx]) || {};
+      var iconSvg = BENEFIT_ICONS[b.icon] || BENEFIT_ICONS.management;
+      benefitsHtml += '<article class="benefit-card">' +
+        '<div class="benefit-icon">' + iconSvg + '</div>' +
+        '<h3>' + esc(trB.title || b.title) + '</h3>' +
+        '<p>' + esc(trB.description || b.description) + '</p>' +
+        '</article>';
+    });
+    document.getElementById('benefitsGrid').innerHTML = benefitsHtml;
+
+    // ── TOOLS ─────────────────────────────────────
+    var trTools = t('tools') || {};
+    document.getElementById('toolsHeader').innerHTML =
+      '<span class="section-badge">' + esc(trTools.badge || C.tools.badge) + '</span>' +
+      '<h2>' + esc(trTools.title || C.tools.title) + '</h2>';
+
+    var trToolsLeft = trTools.left || C.tools.left;
+    var trToolsRight = trTools.right || C.tools.right;
+    var toolsHtml = '<div class="tools-col tools-col--left">';
+    trToolsLeft.forEach(function(ti, idx) {
+      toolsHtml += '<div class="tool-item"><div class="tool-icon">' + TOOL_ICONS[idx] + '</div><h4>' + esc(ti.title) + '</h4><p>' + esc(ti.description) + '</p></div>';
+    });
+    toolsHtml += '</div>';
+    toolsHtml += '<div class="tools-phone"><img src="' + C.tools.phoneImage + '" alt="' + esc(C.tools.phoneImageAlt) + '" loading="lazy"></div>';
+    toolsHtml += '<div class="tools-col tools-col--right">';
+    trToolsRight.forEach(function(ti, idx) {
+      toolsHtml += '<div class="tool-item"><div class="tool-icon">' + TOOL_ICONS[idx + 3] + '</div><h4>' + esc(ti.title) + '</h4><p>' + esc(ti.description) + '</p></div>';
+    });
+    toolsHtml += '</div>';
+    document.getElementById('toolsLayout').innerHTML = toolsHtml;
+
+
+    // ── PRICING ───────────────────────────────────
+    var trPricing = t('pricing') || {};
+    document.getElementById('pricingHeader').innerHTML =
+      '<span class="section-badge">' + esc(trPricing.badge || C.pricing.badge) + '</span>' +
+      '<h2>' + esc(trPricing.title || C.pricing.title) + '</h2>';
+
+    // Update toggle labels if translated
+    var toggleLabels = document.querySelectorAll('.toggle-label');
+    if (toggleLabels.length >= 2) {
+      toggleLabels[0].textContent = (trPricing.toggleMonthly || 'Monthly');
+      toggleLabels[1].textContent = (trPricing.toggleYearly || 'Yearly');
+    }
+
+    var pricingPlans = trPricing.plans || C.pricing.plans;
+    var pricingHtml = '';
+    C.pricing.plans.forEach(function(plan, idx) {
+      var trPlan = (trPricing.plans && trPricing.plans[idx]) || {};
+      var featured = plan.featured ? ' pricing-card--featured' : '';
+      var btnStyle = (trPlan.cta && trPlan.cta.style) || plan.cta.style;
+      var btnClass = btnStyle === 'primary' ? 'btn-primary' : 'btn-outline';
+      var popularLabel = currentLang === 'tr' ? 'En Populer' : 'Most Popular';
+      var periodLabel = currentLang === 'tr' ? '/ay' : '/month';
+      pricingHtml += '<article class="pricing-card' + featured + '">';
+      if (plan.featured) pricingHtml += '<div class="pricing-popular">' + popularLabel + '</div>';
+      pricingHtml += '<div class="pricing-card-header"><h3>' + esc(trPlan.name || plan.name) + '</h3><p class="pricing-desc">' + esc(trPlan.description || plan.description) + '</p></div>';
+      pricingHtml += '<div class="pricing-price"><span class="price-monthly">' + esc(trPlan.priceMonthly || plan.priceMonthly) + '</span><span class="price-yearly">' + esc(trPlan.priceYearly || plan.priceYearly) + '</span><span class="price-period">' + periodLabel + '</span></div>';
+      var ctaLabel = (trPlan.cta && trPlan.cta.label) || plan.cta.label;
+      var ctaHref = (trPlan.cta && trPlan.cta.href) || plan.cta.href;
+      pricingHtml += '<a href="' + ctaHref + '" class="btn ' + btnClass + ' btn-block">' + esc(ctaLabel) + '</a>';
+      pricingHtml += '<ul class="pricing-features">';
+      var features = trPlan.features || plan.features;
+      features.forEach(function(f) {
+        pricingHtml += '<li>' + checkSvg() + ' ' + esc(f) + '</li>';
+      });
+      pricingHtml += '</ul></article>';
+    });
+    document.getElementById('pricingGrid').innerHTML = pricingHtml;
+
+    // ── TESTIMONIALS ──────────────────────────────
+    var trTest = t('testimonials') || {};
+    document.getElementById('testimonialsHeader').innerHTML =
+      '<span class="section-badge">' + esc(trTest.badge || C.testimonials.badge) + '</span>' +
+      '<h2>' + esc(trTest.title || C.testimonials.title) + '</h2>';
+
+    var appStoreLabel = currentLang === 'tr' ? 'App Store\'da Gor' : 'View on App Store';
+    var testHtml = '';
+    C.testimonials.items.forEach(function(ti, idx) {
+      var trTi = (trTest.items && trTest.items[idx]) || {};
+      testHtml += '<article class="testimonial-card">' +
+        '<div class="testimonial-stars">' + starsSvg(5) + '</div>' +
+        '<blockquote>"' + esc(trTi.quote || ti.quote) + '"</blockquote>' +
+        '<div class="testimonial-author">' +
+          (ti.avatarImage
+            ? '<img class="testimonial-avatar" src="' + ti.avatarImage + '" alt="' + esc(trTi.name || ti.name) + '" loading="lazy">'
+            : '<div class="testimonial-avatar testimonial-avatar--initials" style="background:' + (ti.avatarColor || '#82CDE0') + ';">' + (trTi.name || ti.name).charAt(0).toUpperCase() + '</div>') +
+          '<div><strong>' + esc(trTi.name || ti.name) + '</strong><span>' + esc(trTi.role || ti.role) + '</span></div>' +
+        '</div>' +
+        '<a href="#" class="testimonial-appstore">' + appStoreLabel + '</a>' +
+        '</article>';
+    });
+    document.getElementById('testimonialsTrack').innerHTML = testHtml;
+
+    // ── CTA ───────────────────────────────────────
+    var trCta = t('cta') || {};
+    document.getElementById('ctaContent').innerHTML =
+      '<h2>' + esc(trCta.title || C.cta.title) + '</h2>' +
+      '<p>' + esc(trCta.subtitle || C.cta.subtitle) + '</p>' +
+      '<a href="' + C.cta.buttonHref + '" class="btn btn-dark btn-lg">' + esc(trCta.buttonLabel || C.cta.buttonLabel) + '</a>';
+    document.getElementById('ctaIllustration').innerHTML =
+      '<img src="' + (trCta.image || C.cta.image) + '" alt="' + esc(trCta.imageAlt || C.cta.imageAlt) + '" loading="lazy">' +
+      (C.cta.imageCaption ? '<span class="image-caption">' + esc(C.cta.imageCaption) + '</span>' : '');
+
+    // ── FOOTER ────────────────────────────────────
+    var trFooter = t('footer') || {};
+    var trDesc = (t('meta') && t('meta').description) || C.description;
+    var footerHtml = '<div class="footer-brand"><a href="#" class="nav-logo">' + C.logoSvg + '<span>' + esc(C.name) + '</span></a><p>' + esc(trDesc) + '</p></div>';
+    var footerCols = trFooter.columns || C.footer.columns;
+    var supportText = (trFooter.supportText || C.footer.supportText) || '';
+    footerCols.forEach(function(col) {
+      footerHtml += '<div class="footer-col"><h4>' + esc(col.title) + '</h4><ul>';
+      col.links.forEach(function(link) {
+        footerHtml += '<li><a href="' + link.href + '">' + esc(link.label) + '</a></li>';
+      });
+      footerHtml += '</ul>';
+      if (supportText && (col.title === 'Support' || col.title === 'Destek')) {
+        footerHtml += '<p class="footer-support">' + esc(supportText) + '</p>';
+      }
+      footerHtml += '</div>';
+    });
+    if (C.footer.appStore && C.footer.appStore.show) {
+      var appStoreTitle = (trFooter.appStore && trFooter.appStore.title) || 'Get the App';
+      footerHtml += '<div class="footer-col"><h4>' + esc(appStoreTitle) + '</h4><div class="store-buttons">' +
+        '<a href="' + C.footer.appStore.googlePlayHref + '" class="store-btn">' +
+          '<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.5 1.275a1 1 0 0 0-.5.866v15.718a1 1 0 0 0 .5.866l.062.036L12.063 10 3.562 1.24l-.062.035z" fill="#4285F4"/><path d="M15.4 6.955L12.063 10l3.337 3.045 3.77-2.143a1 1 0 0 0 0-1.804L15.4 6.955z" fill="#FBBC04"/><path d="M3.5 18.859a1 1 0 0 0 .5-.134l.062-.036L15.4 13.045 12.063 10 3.5 18.859z" fill="#EA4335"/><path d="M3.5 1.141a1 1 0 0 1 .5.134l.062.036L15.4 6.955 12.063 10 3.5 1.141z" fill="#34A853"/></svg>' +
+          '<div><small>' + (currentLang === 'tr' ? 'Şimdi indir' : 'Get it on') + '</small><strong>Google Play</strong></div></a>' +
+        '<a href="' + C.footer.appStore.appStoreHref + '" class="store-btn">' +
+          '<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M14.94 10.55c-.02-2.12 1.73-3.14 1.81-3.19-1-1.45-2.54-1.65-3.08-1.67-1.3-.14-2.56.78-3.23.78-.68 0-1.71-.76-2.82-.74-1.44.02-2.78.85-3.52 2.15-1.51 2.62-.39 6.49 1.07 8.62.72 1.04 1.57 2.2 2.68 2.16 1.08-.04 1.49-.7 2.8-.7 1.3 0 1.67.7 2.8.67 1.16-.02 1.89-1.05 2.59-2.1.83-1.2 1.17-2.37 1.18-2.43-.03-.01-2.27-.87-2.28-3.45zM12.82 3.88c.58-.72.98-1.7.87-2.7-.84.04-1.88.58-2.49 1.28-.54.63-1.02 1.65-.9 2.62.95.07 1.92-.48 2.52-1.2z"/></svg>' +
+          '<div><small>' + (currentLang === 'tr' ? 'Şimdi indir' : 'Download on the') + '</small><strong>App Store</strong></div></a>' +
+        '</div></div>';
+    }
+    document.getElementById('footerGrid').innerHTML = footerHtml;
+
+    var rightsText = currentLang === 'tr' ? 'Tüm hakları saklıdır.' : 'All rights reserved.';
+    var copyrightName = C.copyrightName || C.name;
+    var footerBottomHtml = '<div class="footer-legal-row"><p>&copy; ' + esc(C.year) + ' ' + esc(copyrightName) + '. ' + rightsText + '</p><div class="footer-links">';
+    var footerLegal = trFooter.legal || C.footer.legal;
+    footerLegal.forEach(function(l) {
+      footerBottomHtml += '<a href="' + l.href + '">' + esc(l.label) + '</a>';
+    });
+    footerBottomHtml += '</div></div>';
+    document.getElementById('footerBottom').innerHTML = footerBottomHtml;
+
+    } // end renderAll()
+
+    // Initial render
+    renderAll();
+
+    // ── Google Analytics (lazy) ───────────────────
+    if (C.analyticsId) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      var loaded = false;
+      function loadAnalytics() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + C.analyticsId;
+        s.onload = function() { gtag('config', C.analyticsId, { transport_type: 'beacon' }); };
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function(evt) {
+        window.addEventListener(evt, loadAnalytics, { once: true, passive: true });
+      });
+    }
+
+    // ── Mobile menu toggle ────────────────────────
+    var toggleBtn = document.getElementById('menuToggle');
+    var mobileMenu = document.getElementById('mobileMenu');
+    toggleBtn.addEventListener('click', function() {
+      toggleBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggleBtn.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // ── Scroll reveal ─────────────────────────────
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function(el) { observer.observe(el); });
+
+    // ── Header scroll effect ──────────────────────
+    var headerEl = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+      headerEl.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ── Language switch ───────────────────────────
+    function bindLangSwitch() {
+      if (!C.langSwitch) return;
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var lang = this.getAttribute('data-lang');
+          if (lang === currentLang) return;
+          currentLang = lang;
+          document.documentElement.lang = lang;
+          document.documentElement.setAttribute('data-lang', lang);
+          if (C.langSwitch.storageKey) {
+            localStorage.setItem(C.langSwitch.storageKey, lang);
+          }
+          renderAll();
+          bindLangSwitch();
+          // Re-observe new .reveal elements
+          document.querySelectorAll('.reveal:not(.revealed)').forEach(function(el) {
+            observer.observe(el);
+          });
+        });
+      });
+    }
+    bindLangSwitch();
+
+    // Restore saved language
+    if (C.langSwitch && C.langSwitch.storageKey) {
+      var savedLang = localStorage.getItem(C.langSwitch.storageKey);
+      if (savedLang && savedLang !== currentLang) {
+        currentLang = savedLang;
+        document.documentElement.lang = savedLang;
+        document.documentElement.setAttribute('data-lang', savedLang);
+        renderAll();
+        bindLangSwitch();
+        // Update toggle button state
+        document.querySelectorAll('.lang-btn').forEach(function(b) {
+          b.classList.toggle('is-active', b.getAttribute('data-lang') === savedLang);
+          b.setAttribute('aria-pressed', b.getAttribute('data-lang') === savedLang ? 'true' : 'false');
+        });
+        document.querySelectorAll('.reveal:not(.revealed)').forEach(function(el) {
+          observer.observe(el);
+        });
+      }
+    }
+
+  })();
+  </script>
+
+  <!-- Lazy-loaded Google Analytics -->
+  <script>
+  (function () {
+    var loaded = false;
+    function loadGA() {
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3SE53Z2S2Z';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-3SE53Z2S2Z');
+    }
+    ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(function (e) {
+      window.addEventListener(e, loadGA, { once: true, passive: true });
+    });
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadGA, { timeout: 5000 });
+    } else {
+      setTimeout(loadGA, 4000);
+    }
+  })();
+  </script>
+</body>
 </html>

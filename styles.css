@@ -1382,9 +1382,10 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 
 .store-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .store-btn {

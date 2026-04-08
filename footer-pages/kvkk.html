@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-lang="tr"
+      data-title-tr="KVKK Aydınlatma Metni | Sohbet Terapi"
+      data-title-en="GDPR Notice | Chat Therapy">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +19,18 @@
   <meta name="theme-color" content="#1e3a5f">
   <link rel="preload" href="../assets/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sohbet_terapi_lang');
+        if (saved === 'tr' || saved === 'en') {
+          document.documentElement.lang = saved;
+          document.documentElement.setAttribute('data-lang', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script src="../config.js"></script>
 </head>
 <body>
@@ -37,8 +51,14 @@
 
   <main class="legal-page">
     <div class="legal-container">
-      <h1>KVKK Aydınlatma Metni</h1>
-      <p>Bu sayfa çok yakında güncellenecektir. Sohbet Terapi kişisel verilerinizi yalnızca yasal çerçevede işler.</p>
+      <div data-lang-block="tr">
+        <h1>KVKK Aydınlatma Metni</h1>
+        <p>Bu sayfa çok yakında güncellenecektir. Sohbet Terapi kişisel verilerinizi yalnızca yasal çerçevede işler.</p>
+      </div>
+      <div data-lang-block="en">
+        <h1>Data Protection Notice</h1>
+        <p>This page will be updated soon. Chat Therapy processes your personal data only within the boundaries of applicable data protection laws.</p>
+      </div>
     </div>
   </main>
 

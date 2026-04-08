@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-lang="tr"
+      data-title-tr="Veri Silme | Sohbet Terapi"
+      data-title-en="Data Deletion | Chat Therapy">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Deletion | Sohbet Terapi</title>
-  <meta name="description" content="How users can request deletion of their Sohbet Terapi account and personal data.">
+  <title>Veri Silme | Sohbet Terapi</title>
+  <meta name="description" content="Kullanıcıların Sohbet Terapi hesabı ve kişisel verilerini nasıl silebileceği.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://chat-therapy.solarityai.com/data-deletion.html">
 
@@ -17,6 +19,18 @@
   <meta name="theme-color" content="#1e3a5f">
   <link rel="preload" href="assets/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sohbet_terapi_lang');
+        if (saved === 'tr' || saved === 'en') {
+          document.documentElement.lang = saved;
+          document.documentElement.setAttribute('data-lang', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script src="config.js"></script>
 </head>
 <body>
@@ -37,25 +51,53 @@
 
   <main class="legal-page">
     <div class="legal-container">
-      <h1>How Users Can Delete Their Data</h1>
-      <p>Users can request deletion of all personal data associated with their account at any time. The available methods are:</p>
 
-      <h2>In-App Deletion</h2>
-      <p>Users can delete their data by navigating to:</p>
-      <p><strong>Settings &rarr; Account &rarr; Delete Account</strong></p>
+      <!-- ─────────── TÜRKÇE ─────────── -->
+      <div data-lang-block="tr">
+        <h1>Verilerinizi Nasıl Silebilirsiniz</h1>
+        <p>Kullanıcılar, hesaplarıyla ilişkilendirilmiş tüm kişisel verilerinin silinmesini istedikleri zaman talep edebilir. Kullanılabilecek yöntemler şunlardır:</p>
 
-      <h2>Email Request (KVKK-Compliant)</h2>
-      <p>Users may send a deletion request to: <a href="mailto:support@solarityai.com">support@solarityai.com</a></p>
-      <p>The request must include the email or phone number used in the app.</p>
-      <p>All personal data will be permanently deleted within 30 days, in accordance with KVKK.</p>
+        <h2>Uygulama İçi Silme</h2>
+        <p>Kullanıcılar şu yolu izleyerek verilerini silebilir:</p>
+        <p><strong>Ayarlar &rarr; Hesap &rarr; Hesabı Sil</strong></p>
 
-      <h2>Device-Level Controls</h2>
-      <p>Users may also revoke permissions or delete locally stored data by:</p>
-      <ul>
-        <li>Removing the app from their device</li>
-        <li>Resetting app permissions through device settings</li>
-      </ul>
-      <p>Once deletion is complete, all associated personal information, usage data, and stored content are removed from our systems unless required by law to retain.</p>
+        <h2>E-posta ile Talep (KVKK Uyumlu)</h2>
+        <p>Kullanıcılar silme taleplerini şu adrese gönderebilir: <a href="mailto:support@solarityai.com">support@solarityai.com</a></p>
+        <p>Talep, uygulamada kullanılan e-posta veya telefon numarasını içermelidir.</p>
+        <p>Tüm kişisel veriler, KVKK'ya uygun olarak 30 gün içinde kalıcı olarak silinir.</p>
+
+        <h2>Cihaz Düzeyi Kontroller</h2>
+        <p>Kullanıcılar ayrıca şu yollarla izinleri iptal edebilir veya yerel olarak saklanan verileri silebilir:</p>
+        <ul>
+          <li>Uygulamayı cihazdan kaldırmak</li>
+          <li>Cihaz ayarlarından uygulama izinlerini sıfırlamak</li>
+        </ul>
+        <p>Silme işlemi tamamlandıktan sonra, ilgili tüm kişisel bilgiler, kullanım verisi ve saklanan içerikler sistemlerimizden kaldırılır — yasal olarak saklanması gerekenler hariç.</p>
+      </div>
+
+      <!-- ─────────── ENGLISH ─────────── -->
+      <div data-lang-block="en">
+        <h1>How Users Can Delete Their Data</h1>
+        <p>Users can request deletion of all personal data associated with their account at any time. The available methods are:</p>
+
+        <h2>In-App Deletion</h2>
+        <p>Users can delete their data by navigating to:</p>
+        <p><strong>Settings &rarr; Account &rarr; Delete Account</strong></p>
+
+        <h2>Email Request (KVKK-Compliant)</h2>
+        <p>Users may send a deletion request to: <a href="mailto:support@solarityai.com">support@solarityai.com</a></p>
+        <p>The request must include the email or phone number used in the app.</p>
+        <p>All personal data will be permanently deleted within 30 days, in accordance with KVKK.</p>
+
+        <h2>Device-Level Controls</h2>
+        <p>Users may also revoke permissions or delete locally stored data by:</p>
+        <ul>
+          <li>Removing the app from their device</li>
+          <li>Resetting app permissions through device settings</li>
+        </ul>
+        <p>Once deletion is complete, all associated personal information, usage data, and stored content are removed from our systems unless required by law to retain.</p>
+      </div>
+
     </div>
   </main>
 

@@ -150,32 +150,12 @@
     </section>
 
     <!-- ============================================
-         FEATURES SECTION 01 — Two cards
+         FEATURES SECTION — Tabs + Phone
          ============================================ -->
-    <section class="features-01" id="features">
-      <div class="container">
-        <div class="section-header reveal" id="features01Header"></div>
-        <div class="features-01-grid reveal" id="features01Grid"></div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         FEATURES SECTION 02 — Tabs + Phone
-         ============================================ -->
-    <section class="features-02">
+    <section class="features-02" id="features">
       <div class="container">
         <div class="section-header reveal" id="features02Header"></div>
         <div class="features-02-grid reveal" id="features02Grid"></div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         FEATURES SECTION 03 — Alternating rows
-         ============================================ -->
-    <section class="features-03">
-      <div class="container">
-        <div class="section-header reveal" id="features03Header"></div>
-        <div id="features03Rows"></div>
       </div>
     </section>
 
@@ -281,19 +261,32 @@
     }
 
     var TAB_ICONS = {
+      // Legacy icons (kept for backwards compatibility)
       layout: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>',
       target: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>',
       'check-circle': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>',
       users: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      // Content-aligned icons
+      clock: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+      chat: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="0.8" fill="currentColor"/><circle cx="12" cy="10" r="0.8" fill="currentColor"/><circle cx="15" cy="10" r="0.8" fill="currentColor"/></svg>',
+      incognito: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M5.5 12l1.5-6h10l1.5 6"/><circle cx="7.5" cy="16" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/><path d="M10 16h4"/></svg>',
+      'shield-lock': '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10.5 11V9.5a1.5 1.5 0 0 1 3 0V11"/></svg>',
     };
 
+    // Order matches tools.left[0..2] then tools.right[0..2]:
+    //  0 Duygusal Destek   → hand-heart
+    //  1 Stres Yönetimi    → leaf (calm)
+    //  2 Gece Desteği      → moon
+    //  3 Anonim Alan       → mask
+    //  4 Yargılanmama      → smile
+    //  5 Kolay Erişim      → devices
     var TOOL_ICONS = [
-      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
-      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>',
-      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>',
-      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
-      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
-      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="M7 20l1.6-1.4c.3-.4.8-.6 1.4-.6h3c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="M16.5 9.5a2.5 2.5 0 0 0 0-3.5 2.5 2.5 0 0 0-3.5 0l-.5.5-.5-.5a2.5 2.5 0 0 0-3.5 0 2.5 2.5 0 0 0 0 3.5L12.5 14z"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.2 2c1 1.5.5 7.3-4 11.3-2.5 2.2-5 3.2-8.2 3.2"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M5.5 12l1.5-6h10l1.5 6"/><circle cx="7.5" cy="16" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/><path d="M10 16h4"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>',
+      '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M2 18h14"/><rect x="15" y="8" width="7" height="12" rx="1.5"/><line x1="17" y1="18" x2="20" y2="18"/></svg>',
     ];
 
     var BENEFIT_ICONS = {
@@ -349,8 +342,9 @@
 
     function renderAll() {
     // ── NAV ───────────────────────────────────────
+    var brandName = t('name') !== undefined ? t('name') : C.name;
     var navLogo = document.getElementById('navLogo');
-    navLogo.innerHTML = C.logoSvg + '<span>' + esc(C.name) + '</span>';
+    navLogo.innerHTML = C.logoSvg + '<span>' + esc(brandName) + '</span>';
 
     var trNavLinks = t('navLinks');
     var navItems = trNavLinks || C.navLinks;
@@ -449,24 +443,6 @@
       (C.numbers.imageCaption ? '<span class="image-caption">' + esc(C.numbers.imageCaption) + '</span>' : '') + '</div>';
     document.getElementById('numbersGrid').innerHTML = numbersStatsHtml;
 
-    // ── FEATURES 01 ──────────────────────────────
-    var trF01 = t('features01') || {};
-    document.getElementById('features01Header').innerHTML =
-      '<span class="section-badge">' + esc(trF01.badge || C.features01.badge) + '</span>' +
-      '<h2>' + esc(trF01.title || C.features01.title) + '</h2>';
-
-    var f01Html = '';
-    C.features01.cards.forEach(function(card, idx) {
-      var trCard = (trF01.cards && trF01.cards[idx]) || {};
-      f01Html += '<article class="feature-card-lg">' +
-        '<div class="feature-card-lg-img"><img src="' + (trCard.image || card.image) + '" alt="' + esc(trCard.imageAlt || card.imageAlt) + '" loading="lazy">' +
-        (card.imageCaption ? '<span class="image-caption">' + esc(card.imageCaption) + '</span>' : '') + '</div>' +
-        '<h3>' + esc(trCard.title || card.title) + '</h3>' +
-        '<p>' + esc(trCard.description || card.description) + '</p>' +
-        '</article>';
-    });
-    document.getElementById('features01Grid').innerHTML = f01Html;
-
     // ── FEATURES 02 ──────────────────────────────
     var trF02 = t('features02') || {};
     document.getElementById('features02Header').innerHTML =
@@ -486,47 +462,6 @@
     f02TabsHtml += '</div>';
     f02TabsHtml += '<div class="features-02-phone"><img src="' + C.features02.phoneImage + '" alt="' + esc(C.features02.phoneImageAlt) + '" loading="lazy"></div>';
     document.getElementById('features02Grid').innerHTML = f02TabsHtml;
-
-    // ── FEATURES 03 ──────────────────────────────
-    var trF03 = t('features03') || {};
-    document.getElementById('features03Header').innerHTML =
-      '<span class="section-badge">' + esc(trF03.badge || C.features03.badge) + '</span>' +
-      '<h2>' + esc(trF03.title || C.features03.title) + '</h2>';
-
-    var f03Html = '';
-    C.features03.rows.forEach(function(row, idx) {
-      var trRow = (trF03.rows && trF03.rows[idx]) || {};
-      var reverseClass = row.reverse ? ' feature-row--reverse' : '';
-      var textContent = '<h3>' + esc(trRow.title || row.title) + '</h3><p>' + esc(trRow.description || row.description) + '</p>';
-
-      var rowCta = trRow.cta || row.cta;
-      if (rowCta) {
-        textContent += '<a href="' + rowCta.href + '" class="btn btn-outline">' + esc(rowCta.label) + '</a>';
-      }
-      var rowCounters = trRow.counters || row.counters;
-      if (rowCounters) {
-        textContent += '<div class="feature-counters">';
-        rowCounters.forEach(function(c) {
-          textContent += '<div class="counter-item"><span class="counter-value">' + esc(c.value) + '</span><span class="counter-label">' + esc(c.label) + '</span></div>';
-        });
-        textContent += '</div>';
-      }
-      var rowBullets = trRow.bulletPoints || row.bulletPoints;
-      if (rowBullets) {
-        textContent += '<ul class="feature-list">';
-        rowBullets.forEach(function(bp) {
-          textContent += '<li>' + checkSvg20() + ' ' + esc(bp) + '</li>';
-        });
-        textContent += '</ul>';
-      }
-
-      f03Html += '<div class="feature-row' + reverseClass + ' reveal">' +
-        '<div class="feature-row-img"><img src="' + (trRow.image || row.image) + '" alt="' + esc(trRow.imageAlt || row.imageAlt) + '" loading="lazy">' +
-        (row.imageCaption ? '<span class="image-caption">' + esc(row.imageCaption) + '</span>' : '') + '</div>' +
-        '<div class="feature-row-text">' + textContent + '</div>' +
-        '</div>';
-    });
-    document.getElementById('features03Rows').innerHTML = f03Html;
 
     // ── BENEFITS ──────────────────────────────────
     var trBenefits = t('benefits') || {};
@@ -643,7 +578,7 @@
     // ── FOOTER ────────────────────────────────────
     var trFooter = t('footer') || {};
     var trDesc = (t('meta') && t('meta').description) || C.description;
-    var footerHtml = '<div class="footer-brand"><a href="#" class="nav-logo">' + C.logoSvg + '<span>' + esc(C.name) + '</span></a><p>' + esc(trDesc) + '</p></div>';
+    var footerHtml = '<div class="footer-brand"><a href="#" class="nav-logo">' + C.logoSvg + '<span>' + esc(brandName) + '</span></a><p>' + esc(trDesc) + '</p></div>';
     var footerCols = trFooter.columns || C.footer.columns;
     var supportText = (trFooter.supportText || C.footer.supportText) || '';
     footerCols.forEach(function(col) {

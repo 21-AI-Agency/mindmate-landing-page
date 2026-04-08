@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-lang="tr"
+      data-title-tr="Teşekkürler | Sohbet Terapi"
+      data-title-en="Thank You | Chat Therapy">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +18,18 @@
   <meta name="theme-color" content="#1e3a5f">
   <link rel="preload" href="assets/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sohbet_terapi_lang');
+        if (saved === 'tr' || saved === 'en') {
+          document.documentElement.lang = saved;
+          document.documentElement.setAttribute('data-lang', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script src="config.js"></script>
 </head>
 <body>
@@ -36,9 +50,16 @@
 
   <main class="utility-page">
     <div class="utility-content">
-      <h2>Teşekkürler!</h2>
-      <p>Mesajınız başarıyla gönderildi. En kısa sürede öneriniz değerlendirilecektir.</p>
-      <a href="/" class="btn btn-primary btn-lg">Ana Sayfaya Dön</a>
+      <div data-lang-block="tr">
+        <h2>Teşekkürler!</h2>
+        <p>Mesajınız başarıyla gönderildi. En kısa sürede öneriniz değerlendirilecektir.</p>
+        <a href="/" class="btn btn-primary btn-lg">Ana Sayfaya Dön</a>
+      </div>
+      <div data-lang-block="en">
+        <h2>Thank You!</h2>
+        <p>Your message has been sent successfully. We'll review your feedback shortly.</p>
+        <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
+      </div>
     </div>
   </main>
 

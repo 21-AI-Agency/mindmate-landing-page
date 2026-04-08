@@ -76,11 +76,20 @@
   }
 
   function render() {
+    var brandName = t('name') !== undefined ? t('name') : C.name;
+
+    // ── DOCUMENT TITLE ────────────────────────────
+    // Pages may declare per-language titles via
+    // <html data-title-tr="..." data-title-en="...">
+    var htmlEl = document.documentElement;
+    var titleAttr = htmlEl.getAttribute('data-title-' + currentLang);
+    if (titleAttr) document.title = titleAttr;
+
     // ── NAV ───────────────────────────────────────
     var navLogo = document.getElementById('navLogo');
     if (navLogo) {
       navLogo.setAttribute('href', '/');
-      navLogo.innerHTML = C.logoSvg + '<span>' + esc(C.name) + '</span>';
+      navLogo.innerHTML = C.logoSvg + '<span>' + esc(brandName) + '</span>';
     }
 
     var navItems = t('navLinks') || C.navLinks || [];
@@ -120,7 +129,7 @@
     // ── FOOTER ────────────────────────────────────
     var trFooter = t('footer') || {};
     var trMetaDesc = (t('meta') && t('meta').description) || C.description;
-    var footerHtml = '<div class="footer-brand"><a href="/" class="nav-logo">' + C.logoSvg + '<span>' + esc(C.name) + '</span></a><p>' + esc(trMetaDesc) + '</p></div>';
+    var footerHtml = '<div class="footer-brand"><a href="/" class="nav-logo">' + C.logoSvg + '<span>' + esc(brandName) + '</span></a><p>' + esc(trMetaDesc) + '</p></div>';
 
     var footerCols = trFooter.columns || (C.footer && C.footer.columns) || [];
     var supportText = trFooter.supportText || (C.footer && C.footer.supportText) || '';

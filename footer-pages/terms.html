@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-lang="tr"
+      data-title-tr="Kullanım Şartları | Sohbet Terapi"
+      data-title-en="Terms of Service | Chat Therapy">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +19,18 @@
   <meta name="theme-color" content="#1e3a5f">
   <link rel="preload" href="../assets/fonts/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sohbet_terapi_lang');
+        if (saved === 'tr' || saved === 'en') {
+          document.documentElement.lang = saved;
+          document.documentElement.setAttribute('data-lang', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script src="../config.js"></script>
 </head>
 <body>
@@ -37,8 +51,14 @@
 
   <main class="legal-page">
     <div class="legal-container">
-      <h1>Kullanım Şartları</h1>
-      <p>Bu sayfa çok yakında güncellenecektir. Sohbet Terapi hizmetlerini kullanarak temel kuralları kabul etmiş olursunuz.</p>
+      <div data-lang-block="tr">
+        <h1>Kullanım Şartları</h1>
+        <p>Bu sayfa çok yakında güncellenecektir. Sohbet Terapi hizmetlerini kullanarak temel kuralları kabul etmiş olursunuz.</p>
+      </div>
+      <div data-lang-block="en">
+        <h1>Terms of Service</h1>
+        <p>This page will be updated soon. By using Chat Therapy services you agree to the basic terms of use.</p>
+      </div>
     </div>
   </main>
 

@@ -788,8 +788,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 .features-02-phone img {
   max-width: 280px;
-  border-radius: var(--radius-card-lg);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+  filter: drop-shadow(0 24px 48px rgba(30, 58, 95, 0.18));
 }
 
 /* ============================================
@@ -984,8 +983,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 }
 .tools-phone img {
   max-width: 240px;
-  border-radius: var(--radius-card-lg);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+  filter: drop-shadow(0 24px 48px rgba(30, 58, 95, 0.18));
 }
 
 /* ============================================
@@ -1622,6 +1620,20 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   .store-buttons {
     flex-direction: column;
   }
+}
+
+/* ============================================
+   BILINGUAL CONTENT TOGGLE
+   html[data-lang] is set by layout.js / boot script.
+   Blocks marked with [data-lang-block="tr"|"en"] show
+   only when the current site language matches.
+   Using a dedicated attribute (not `data-lang`) avoids
+   collisions with the lang switch buttons, which use
+   `data-lang` for click routing.
+   ============================================ */
+html[data-lang="tr"] [data-lang-block="en"],
+html[data-lang="en"] [data-lang-block="tr"] {
+  display: none !important;
 }
 
 /* ============================================

@@ -29,7 +29,7 @@ const PRODUCT_CONFIG = {
     title: "Sohbet Terapi | Yapay Zekâ Destekli Duygusal Destek",
     description: "Sohbet Terapi, yapay zekâ destekli empatik konuşmalar ve duygusal destek sunarak ruhsal iyi oluşunuza katkı sağlar. Anonim, güvenli ve 7/24 erişilebilir.",
     keywords: "sohbet terapi, yapay zeka terapi, duygusal destek, mental sağlık, psikolojik destek, AI terapi, online terapi, anonim terapi",
-    ogImage: "https://chat-therapy.solarityai.com/assets/screenshots/sohbet-terapi-hero.png",
+    ogImage: "https://chat-therapy.solarityai.com/assets/screenshots/sohbet-terapi-hero.webp",
   },
 
   navLinks: [
@@ -55,12 +55,12 @@ const PRODUCT_CONFIG = {
   },
 
   hero: {
-    badge: "Yapay Zekâ Destekli Duygusal Destek",
+    badge: "Yapay Zekâ Destekli Duygusal Destek Uygulaması",
     title: "Konuş, Paylaş, Rahatla",
-    subtitle: "Yapay zekâ destekli empatik sohbetler ile duygusal destek alın. Anonim, güvenli ve 7/24 erişilebilir bir platformda, sizi yargılamadan dinleyen, anlayan ve yanınızda olan bir destek sistemi.",
+    subtitle: "Yapay zekâ destekli empatik sohbetler ile anonim ve 7/24 duygusal destek. Sizi dinleyen, anlayan ve yargılamayan bir alan.",
     ctaPrimary: { label: "Uygulamayı İndir", href: "#", icon: "arrow-up-right" },
     ctaSecondary: { label: "Özellikleri Keşfet", href: "#features" },
-    phoneImage: "assets/screenshots/iphone-right.png",
+    phoneImage: "assets/screenshots/iphone-right.webp",
     phoneImageAlt: "Sohbet Terapi uygulama arayüzü",
     cardLeft: {
       title: "Empati Odaklı",
@@ -94,99 +94,36 @@ const PRODUCT_CONFIG = {
       { value: "7/24", label: "Erişilebilirlik" },
       { value: "100%", label: "Anonim & Güvenli" },
     ],
-    image: "assets/screenshots/sohbet-terapi-dashboard.png",
+    image: "assets/screenshots/sohbet-terapi-dashboard.webp",
     imageAlt: "Sohbet Terapi uygulama önizleme",
     imageCaption: "",
-  },
-
-  features01: {
-    badge: "Özellikler",
-    title: "Sohbet Terapi İle Öne Çıkanlar",
-    cards: [
-      {
-        image: "https://placehold.co/560x340/f9fafb/1e293b?text=Empati+Odakl%C4%B1",
-        imageAlt: "Empati Odaklı Destek",
-        imageCaption: "",
-        title: "Empati Odaklı Destek",
-        description: "Yapay zekâ destekli sohbetler ile sizi anlamaya çalışan, empati kuran bir deneyim.",
-      },
-      {
-        image: "https://placehold.co/560x340/f9fafb/1e293b?text=Gizlilik+%26+G%C3%BCvenlik",
-        imageAlt: "Gizlilik ve Güvenlik",
-        imageCaption: "",
-        title: "Gizlilik ve Güvenlik",
-        description: "Sohbetleriniz gizlilik ilkelerine uygun şekilde korunur, üçüncü kişilerle paylaşılmaz.",
-      },
-    ],
   },
 
   features02: {
     badge: "Özellikler",
     title: "Size Özel Tasarlanmış Deneyim",
-    phoneImage: "assets/screenshots/iphone-front.png",
-    phoneImageAlt: "Sohbet Terapi özellikleri",
+    phoneImage: "assets/screenshots/iphone-front2.webp",
+    phoneImageAlt: "Sohbet Terapi günce ekranı — minnet, başarı ve gelişim alanları",
     tabs: [
       {
-        icon: "layout",
+        icon: "clock",
         title: "Her Zaman Yanınızda",
         description: "Günün her saati destek almak için erişebileceğiniz bir sohbet ortamı.",
       },
       {
-        icon: "target",
+        icon: "chat",
         title: "Anlaşılmak & Yargılanmamak",
         description: "Paylaşmak isteyip anlatamadıklarınızı dinleyen, sizi yargılamayan bir ortam.",
       },
       {
-        icon: "check-circle",
+        icon: "incognito",
         title: "Anonim Kullanım",
         description: "Kimliğinizi paylaşmadan, tamamen anonim şekilde duygularınızı ifade edin.",
       },
       {
-        icon: "users",
+        icon: "shield-lock",
         title: "KVKK Uyumlu",
         description: "Verileriniz KVKK'ya uygun şekilde korunur ve işlenir.",
-      },
-    ],
-  },
-
-  features03: {
-    badge: "Özellikler",
-    title: "Tüm Yetenekleri Keşfet",
-    rows: [
-      {
-        image: "https://placehold.co/520x360/f9fafb/1e293b?text=Empati",
-        imageAlt: "Empatik Sohbet",
-        imageCaption: "",
-        title: "Empatik Sohbet Deneyimi",
-        description: "Yapay zekâ destekli sistemimiz duygularınızı anlar ve size empatiyle yanıt verir. Kendinizi güvende hissedeceğiniz bir alan.",
-        cta: { label: "Daha Fazla", href: "#" },
-        reverse: false,
-      },
-      {
-        image: "https://placehold.co/520x360/f9fafb/1e293b?text=G%C3%BCvenlik",
-        imageAlt: "Güvenlik ve Gizlilik",
-        imageCaption: "",
-        title: "Güvenliğiniz Bizim Önceliğimiz",
-        description: "Sohbetleriniz şifrelenir ve üçüncü kişilerle asla paylaşılmaz. Tamamen anonim bir deneyim.",
-        counters: [
-          { value: "100%", label: "Anonim" },
-          { value: "7/24", label: "Erişilebilir" },
-        ],
-        reverse: true,
-      },
-      {
-        image: "https://placehold.co/520x360/f9fafb/1e293b?text=Destek",
-        imageAlt: "Duygusal Destek",
-        imageCaption: "",
-        title: "Her An Yanınızda",
-        description: "Günün her saati, haftanın her günü duygusal destek alın.",
-        bulletPoints: [
-          "Anlık empatik yanıtlar",
-          "Anonim ve güvenli sohbet ortamı",
-          "Kişiselleştirilmiş destek deneyimi",
-          "Mobil ve web erişim",
-        ],
-        reverse: false,
       },
     ],
   },
@@ -216,17 +153,15 @@ const PRODUCT_CONFIG = {
   tools: {
     badge: "Nasıl Çalışır",
     title: "Sohbet Terapi ile Rahatla",
-    phoneImage: "assets/screenshots/iphone-front.png",
-    phoneImageAlt: "Sohbet Terapi araçları",
+    phoneImage: "assets/screenshots/sohbet-terapi-home.webp",
+    phoneImageAlt: "Sohbet Terapi ana ekranı — sohbet serisi ve günlük ilham",
     left: [
-      { title: "Duygusal Destek", description: "Zor anlarınızda sizi dinleyen ve anlayan bir yapay zekâ asistanı." },
-      { title: "Stres Yönetimi", description: "Yoğun iş temposunda kısa bir sohbet bile fark yaratır." },
+      { title: "Empatik Sohbet", description: "Zor anlarınızda sizi dinleyen ve yargılamayan bir yapay zekâ asistanı." },
       { title: "Gece Desteği", description: "Gece kaygılarınız arttığında yazın, içiniz sakinleşsin." },
     ],
     right: [
       { title: "Anonim Alan", description: "Kimliğinizi paylaşmadan, tamamen özgürce kendinizi ifade edin." },
-      { title: "Yargılanmama", description: "Sizi yargılamayan, anlayan bir ortamda rahatlayın." },
-      { title: "Kolay Erişim", description: "Mobil ve web üzerinden her an, her yerden erişin." },
+      { title: "Kolay Erişim", description: "Mobil ve web üzerinden her an, her yerden 7/24 ulaşın." },
     ],
   },
 
@@ -306,18 +241,6 @@ const PRODUCT_CONFIG = {
         role: "Yeni Mezun",
         avatarColor: "#f59e0b",
       },
-      {
-        quote: "Anonim bir alan olması beni rahatlatıyor. Kendimi özgürce ifade edebiliyorum.",
-        name: "Mehmet B.",
-        role: "Yazılım Geliştirici",
-        avatarColor: "#ef4444",
-      },
-      {
-        quote: "Paylaşmak gerçekten rahatlatıyor. Artık duygularımı bastırmak yerine ifade ediyorum.",
-        name: "Ayşe D.",
-        role: "Öğretmen",
-        avatarColor: "#8b5cf6",
-      },
     ],
   },
 
@@ -358,8 +281,9 @@ const PRODUCT_CONFIG = {
   // ── ENGLISH TRANSLATIONS ───────────────────────
   translations: {
     en: {
+      name: "Chat Therapy",
       meta: {
-        title: "Sohbet Terapi | AI-Powered Emotional Support",
+        title: "Chat Therapy | AI-Powered Emotional Support",
         description: "AI-powered empathetic conversations for emotional support. Anonymous, secure, and available 24/7.",
       },
       navLinks: [
@@ -368,9 +292,9 @@ const PRODUCT_CONFIG = {
         { label: "Testimonials", href: "#testimonials" },
       ],
       hero: {
-        badge: "AI-Powered Emotional Support",
+        badge: "AI-Powered Emotional Support App",
         title: "Talk, Share, Feel Better",
-        subtitle: "Get emotional support through AI-powered empathetic conversations. An anonymous, secure, and 24/7 accessible platform that listens, understands, and stands by you without judgment.",
+        subtitle: "Anonymous, 24/7 emotional support through AI-powered empathetic conversations. A space that listens, understands, and never judges.",
         ctaPrimary: { label: "Download the App", href: "#", icon: "arrow-up-right" },
         ctaSecondary: { label: "Explore Features", href: "#features" },
         cardLeft: {
@@ -397,24 +321,6 @@ const PRODUCT_CONFIG = {
           { value: "100%", label: "Anonymous & Secure" },
         ],
       },
-      features01: {
-        badge: "Features",
-        title: "What Makes Sohbet Terapi Special",
-        cards: [
-          {
-            image: "https://placehold.co/560x340/f9fafb/1e293b?text=Empathy+Focused",
-            imageAlt: "Empathy-Focused Support",
-            title: "Empathy-Focused Support",
-            description: "AI-powered conversations that try to understand and empathize with you.",
-          },
-          {
-            image: "https://placehold.co/560x340/f9fafb/1e293b?text=Privacy+%26+Security",
-            imageAlt: "Privacy & Security",
-            title: "Privacy & Security",
-            description: "Your conversations are protected and never shared with third parties.",
-          },
-        ],
-      },
       features02: {
         badge: "Features",
         title: "An Experience Designed for You",
@@ -434,41 +340,6 @@ const PRODUCT_CONFIG = {
           {
             title: "GDPR Compliant",
             description: "Your data is protected and processed in compliance with privacy regulations.",
-          },
-        ],
-      },
-      features03: {
-        badge: "Features",
-        title: "Explore All Capabilities",
-        rows: [
-          {
-            image: "https://placehold.co/520x360/f9fafb/1e293b?text=Empathy",
-            imageAlt: "Empathetic Chat",
-            title: "Empathetic Chat Experience",
-            description: "Our AI-powered system understands your emotions and responds with empathy. A space where you feel safe.",
-            cta: { label: "Learn More", href: "#" },
-          },
-          {
-            image: "https://placehold.co/520x360/f9fafb/1e293b?text=Security",
-            imageAlt: "Security & Privacy",
-            title: "Your Security Is Our Priority",
-            description: "Your conversations are encrypted and never shared. A completely anonymous experience.",
-            counters: [
-              { value: "100%", label: "Anonymous" },
-              { value: "24/7", label: "Accessible" },
-            ],
-          },
-          {
-            image: "https://placehold.co/520x360/f9fafb/1e293b?text=Support",
-            imageAlt: "Emotional Support",
-            title: "Always By Your Side",
-            description: "Get emotional support any time of day, every day of the week.",
-            bulletPoints: [
-              "Instant empathetic responses",
-              "Anonymous and secure chat environment",
-              "Personalized support experience",
-              "Mobile and web access",
-            ],
           },
         ],
       },
@@ -492,16 +363,14 @@ const PRODUCT_CONFIG = {
       },
       tools: {
         badge: "How It Works",
-        title: "Relax with Sohbet Terapi",
+        title: "Relax with Chat Therapy",
         left: [
-          { title: "Emotional Support", description: "An AI assistant that listens and understands you in your difficult moments." },
-          { title: "Stress Management", description: "Even a short chat can make a difference in a busy work schedule." },
+          { title: "Empathetic Chat", description: "An AI assistant that listens and never judges you in your difficult moments." },
           { title: "Night Support", description: "Write when your night anxieties increase, let your mind calm down." },
         ],
         right: [
           { title: "Anonymous Space", description: "Express yourself freely without sharing your identity." },
-          { title: "No Judgment", description: "Relax in an environment that understands you without judging." },
-          { title: "Easy Access", description: "Access from anywhere, anytime via mobile and web." },
+          { title: "Easy Access", description: "Reach us 24/7 from anywhere via mobile and web." },
         ],
       },
       integrations: {
@@ -573,16 +442,6 @@ const PRODUCT_CONFIG = {
             quote: "I write when my night anxieties increase; I really calm down.",
             name: "Zeynep A.",
             role: "Recent Graduate",
-          },
-          {
-            quote: "The anonymous space comforts me. I can express myself freely.",
-            name: "Mehmet B.",
-            role: "Software Developer",
-          },
-          {
-            quote: "Sharing truly relieves. Now I express my feelings instead of suppressing them.",
-            name: "Ayse D.",
-            role: "Teacher",
           },
         ],
       },

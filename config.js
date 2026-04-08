@@ -29,7 +29,7 @@ const PRODUCT_CONFIG = {
     title: "Sohbet Terapi | Yapay Zekâ Destekli Duygusal Destek",
     description: "Sohbet Terapi, yapay zekâ destekli empatik konuşmalar ve duygusal destek sunarak ruhsal iyi oluşunuza katkı sağlar. Anonim, güvenli ve 7/24 erişilebilir.",
     keywords: "sohbet terapi, yapay zeka terapi, duygusal destek, mental sağlık, psikolojik destek, AI terapi, online terapi, anonim terapi",
-    ogImage: "https://chat-therapy.solarityai.com/assets/images/hero/sohbetTerapiScreens.png",
+    ogImage: "https://chat-therapy.solarityai.com/assets/screenshots/sohbet-terapi-hero.png",
   },
 
   navLinks: [

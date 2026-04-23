@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Populated by config.js -->
-  <title>Loading...</title>
+  <title>Sohbet Terapi | Yapay Zekâ Destekli Duygusal Destek</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="Solarity AI LLC">
@@ -327,6 +327,11 @@
     }
 
     function renderAll() {
+    // ── Document title (follows current language) ──
+    var trMeta = t('meta');
+    document.title = (trMeta && trMeta.title) || C.meta.title;
+    document.documentElement.lang = currentLang;
+
     // ── NAV ───────────────────────────────────────
     var brandName = t('name') !== undefined ? t('name') : C.name;
     var navLogo = document.getElementById('navLogo');

@@ -1219,6 +1219,16 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
   padding: 0 max(20px, calc((100vw - var(--container-max)) / 2 + var(--container-padding)));
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
+  cursor: grab;
+}
+.testimonials-track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+.testimonials-track.is-dragging a,
+.testimonials-track.is-dragging img {
+  pointer-events: none;
 }
 .testimonials-track::-webkit-scrollbar {
   height: 6px;

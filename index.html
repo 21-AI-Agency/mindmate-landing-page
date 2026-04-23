@@ -692,6 +692,37 @@
     }
     bindLangSwitch();
 
+    // ── Testimonials drag-to-scroll (desktop pointer) ──
+    var testimonialsTrack = document.getElementById('testimonialsTrack');
+    if (testimonialsTrack) {
+      var dragDown = false, dragStartX = 0, dragStartScroll = 0, dragMoved = false;
+      testimonialsTrack.addEventListener('pointerdown', function(e) {
+        if (e.pointerType !== 'mouse' || e.button !== 0) return;
+        dragDown = true;
+        dragMoved = false;
+        dragStartX = e.clientX;
+        dragStartScroll = testimonialsTrack.scrollLeft;
+        testimonialsTrack.classList.add('is-dragging');
+      });
+      window.addEventListener('pointerup', function() {
+        if (!dragDown) return;
+        dragDown = false;
+        testimonialsTrack.classList.remove('is-dragging');
+      });
+      testimonialsTrack.addEventListener('pointermove', function(e) {
+        if (!dragDown) return;
+        var delta = e.clientX - dragStartX;
+        if (Math.abs(delta) > 3) dragMoved = true;
+        testimonialsTrack.scrollLeft = dragStartScroll - delta;
+      });
+      testimonialsTrack.addEventListener('click', function(e) {
+        if (dragMoved) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    }
+
     // Restore saved language
     if (C.langSwitch && C.langSwitch.storageKey) {
       var savedLang = localStorage.getItem(C.langSwitch.storageKey);

@@ -58,7 +58,7 @@ const PRODUCT_CONFIG = {
     badge: "Yapay Zekâ Destekli Duygusal Destek Uygulaması",
     title: "Konuş, Paylaş, Rahatla",
     subtitle: "Yapay zekâ destekli empatik sohbetler ile anonim ve 7/24 duygusal destek. Sizi dinleyen, anlayan ve yargılamayan bir alan.",
-    ctaPrimary: { label: "Uygulamayı İndir", href: "#", icon: "arrow-up-right" },
+    ctaStores: { googlePlayHref: "#", appStoreHref: "#" },
     ctaSecondary: { label: "Özellikleri Keşfet", href: "#features" },
     phoneImage: "assets/screenshots/iphone-right.webp",
     phoneImageAlt: "Sohbet Terapi uygulama arayüzü",
@@ -290,7 +290,7 @@ const PRODUCT_CONFIG = {
         badge: "AI-Powered Emotional Support App",
         title: "Talk, Share, Feel Better",
         subtitle: "Anonymous, 24/7 emotional support through AI-powered empathetic conversations. A space that listens, understands, and never judges.",
-        ctaPrimary: { label: "Download the App", href: "#", icon: "arrow-up-right" },
+        ctaStores: { googlePlayHref: "#", appStoreHref: "#" },
         ctaSecondary: { label: "Explore Features", href: "#features" },
         cardLeft: {
           title: "Empathy-Focused",
